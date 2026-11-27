@@ -1,0 +1,206 @@
+[
+  {
+    "name": "it-helpdesk",
+    "rc": 0,
+    "minutes": 5.4,
+    "run": "bench/runs/it-helpdesk-20261127-145907",
+    "status": "built",
+    "holdout": {
+      "passed": 11,
+      "n": 12,
+      "rate": 0.9167,
+      "ci95": [
+        0.646,
+        0.985
+      ]
+    },
+    "baseline": {
+      "passed": 11,
+      "n": 12,
+      "rate": 0.9167,
+      "ci95": [
+        0.646,
+        0.985
+      ]
+    },
+    "dev": {
+      "passed": 17,
+      "n": 17,
+      "rate": 1.0,
+      "ci95": [
+        0.816,
+        1.0
+      ]
+    },
+    "tools": [],
+    "gaps": [],
+    "cases": 29,
+    "judge": 1.0,
+    "failures": {
+      "retrieval_miss": 1
+    },
+    "expected": "build",
+    "ok": true
+  },
+  {
+    "name": "mismatch-adversarial",
+    "rc": 3,
+    "minutes": 0.8,
+    "run": "bench/runs/mismatch-adversarial-20261127-150428",
+    "status": "stopped (not groundable)",
+    "coverage": 0.0,
+    "gaps": [
+      "Indian visa application process for seafarers",
+      "Immigration rules for seafarers in foreign ports",
+      "Document checklist for Indian visa applications",
+      "Processing times for Indian visas",
+      "Fees for Indian visa applications"
+    ],
+    "expected": "stop",
+    "ok": true
+  },
+  {
+    "name": "saas-sales",
+    "rc": 0,
+    "minutes": 5.5,
+    "run": "bench/runs/saas-sales-20261127-154237",
+    "status": "built",
+    "holdout": {
+      "passed": 7,
+      "n": 8,
+      "rate": 0.875,
+      "ci95": [
+        0.529,
+        0.978
+      ]
+    },
+    "baseline": {
+      "passed": 7,
+      "n": 8,
+      "rate": 0.875,
+      "ci95": [
+        0.529,
+        0.978
+      ]
+    },
+    "dev": {
+      "passed": 17,
+      "n": 18,
+      "rate": 0.9444,
+      "ci95": [
+        0.742,
+        0.99
+      ]
+    },
+    "tools": [
+      "csv_lookup",
+      "calculator"
+    ],
+    "gaps": [
+      "Subscription status"
+    ],
+    "cases": 26,
+    "judge": 1.0,
+    "failures": {
+      "prompt_defect": 1,
+      "hallucination": 1
+    },
+    "expected": "build",
+    "ok": true
+  },
+  {
+    "name": "university-handbook",
+    "rc": 0,
+    "minutes": 7.4,
+    "run": "bench/runs/university-handbook-20261127-151244",
+    "status": "built",
+    "holdout": {
+      "passed": 8,
+      "n": 11,
+      "rate": 0.7273,
+      "ci95": [
+        0.434,
+        0.903
+      ]
+    },
+    "baseline": {
+      "passed": 8,
+      "n": 11,
+      "rate": 0.7273,
+      "ci95": [
+        0.434,
+        0.903
+      ]
+    },
+    "dev": {
+      "passed": 13,
+      "n": 18,
+      "rate": 0.7222,
+      "ci95": [
+        0.491,
+        0.875
+      ]
+    },
+    "tools": [
+      "current_date"
+    ],
+    "gaps": [
+      "elective course selection"
+    ],
+    "cases": 29,
+    "judge": 1.0,
+    "failures": {
+      "prompt_defect": 6,
+      "retrieval_miss": 1,
+      "hallucination": 1
+    },
+    "expected": "build",
+    "ok": true
+  },
+  {
+    "name": "vessel-sms",
+    "rc": 0,
+    "minutes": 6.9,
+    "run": "bench/runs/vessel-sms-20261127-152006",
+    "status": "built",
+    "holdout": {
+      "passed": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.722,
+        1.0
+      ]
+    },
+    "baseline": {
+      "passed": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.722,
+        1.0
+      ]
+    },
+    "dev": {
+      "passed": 15,
+      "n": 18,
+      "rate": 0.8333,
+      "ci95": [
+        0.608,
+        0.942
+      ]
+    },
+    "tools": [
+      "weather"
+    ],
+    "gaps": [],
+    "cases": 28,
+    "judge": 1.0,
+    "failures": {
+      "prompt_defect": 2,
+      "hallucination": 1
+    },
+    "expected": "build",
+    "ok": true
+  }
+]

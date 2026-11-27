@@ -1,0 +1,849 @@
+{
+  "cases": [
+    {
+      "kind": "answerable",
+      "question": "What is the maximum pumping pressure allowed during fuel transfer?",
+      "reference_answer": "The maximum pumping pressure allowed is 5 bar.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The maximum pumping pressure 5 bar unless agreed otherwise",
+            "chunk_id": "sms-07-bunkering-procedure#8",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#8"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-07-bunkering-procedure#8",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E01"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is responsible for issuing the Permit to Enter?",
+      "reference_answer": "The Master is responsible for issuing the Permit to Enter.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The issuance of this permit is the sole responsibility of the Master",
+            "chunk_id": "sms-11-enclosed-space-entry#2",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#2"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-11-enclosed-space-entry#2",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E02"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long do crew members have to report a near-miss incident?",
+      "reference_answer": "Crew members have 72 hours to report a near-miss incident.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Near-miss reports are submitted within 72 hours in the reporting system",
+            "chunk_id": "sms-15-incident-reporting#6",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-15-incident-reporting#6"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-15-incident-reporting#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E03"
+    },
+    {
+      "kind": "answerable",
+      "question": "What must be done before starting the bunkering procedure?",
+      "reference_answer": "Scuppers must be plugged and the SOPEP locker opened.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "scuppers must be plugged and the SOPEP locker opened",
+            "chunk_id": "sms-07-bunkering-procedure#6",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#6"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-07-bunkering-procedure#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E04"
+    },
+    {
+      "kind": "answerable",
+      "question": "How often are enclosed space rescue drills held on the vessel?",
+      "reference_answer": "Enclosed space rescue drills are held every 2 months.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "enclosed space rescue drills are held every 2 months",
+            "chunk_id": "sms-11-enclosed-space-entry#10",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#10"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-11-enclosed-space-entry#10",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E05"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is responsible for supervising the bunkering station crew?",
+      "reference_answer": "The Chief Engineer is responsible for supervising the bunkering station crew.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "under the direct supervision of the Chief Engineer",
+            "chunk_id": "sms-07-bunkering-procedure#3",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#3"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-07-bunkering-procedure#3",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E06"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the exact oxygen level required for entry into an enclosed space?",
+      "reference_answer": "The oxygen level must be exactly 20.8% by volume.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Oxygen levels must be exactly 20.8% by volume",
+            "chunk_id": "sms-11-enclosed-space-entry#5",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#5"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-11-enclosed-space-entry#5",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E07"
+    },
+    {
+      "kind": "answerable",
+      "question": "What should be done with the scene of an incident before it is authorized to be altered?",
+      "reference_answer": "Do not alter or clean up the scene until authorized by the DPA or company management.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Do not alter or clean up the scene until authorized by the DPA or company management",
+            "chunk_id": "sms-15-incident-reporting#4",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-15-incident-reporting#4"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-15-incident-reporting#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E08"
+    },
+    {
+      "kind": "answerable",
+      "question": "What equipment must be available at the bunker station during bunkering?",
+      "reference_answer": "Absorbent materials, booms, and disposal bags must be available at the bunker station.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "immediate access to absorbent materials, booms, and disposal bags is available at the bunker",
+            "chunk_id": "sms-07-bunkering-procedure#7",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#7"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-07-bunkering-procedure#7",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E09"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is not allowed to enter an enclosed space without following the safety protocols?",
+      "reference_answer": "No individual is permitted to enter an enclosed space without strict adherence to the steps.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "No individual is permitted to enter an enclosed space without strict adherence to the steps outlined in this document",
+            "chunk_id": "sms-11-enclosed-space-entry#1",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#1"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-11-enclosed-space-entry#1",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E10"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is required to follow the incident reporting protocols?",
+      "reference_answer": "All crew members, regardless of rank or department, are required to follow the incident reporting protocols.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Strict adherence to these guidelines is required for all crew members, regardless of rank or department",
+            "chunk_id": "sms-15-incident-reporting#1",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-15-incident-reporting#1"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-15-incident-reporting#1",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E11"
+    },
+    {
+      "kind": "answerable",
+      "question": "What equipment must the enclosed space rescue team have access to?",
+      "reference_answer": "The team must have access to breathing apparatus, harnesses, tripods, and winches.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The vessel must maintain a dedicated enclosed space rescue team that is trained and equipped to respond to emergencies within these confined areas",
+            "chunk_id": "sms-11-enclosed-space-entry#9",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#9"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-11-enclosed-space-entry#9",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E12"
+    },
+    {
+      "kind": "answerable",
+      "question": "How many near-miss reports must each vessel submit per month?",
+      "reference_answer": "Each vessel must submit at least 2 near-miss reports per month.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Each vessel must submit at least 2 near-miss reports per month",
+            "chunk_id": "sms-15-incident-reporting#8",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-15-incident-reporting#8"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "sms-15-incident-reporting#8",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E13"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the responsibilities of the Chief Engineer and the required action for serious incidents?",
+      "reference_answer": "The Chief Engineer must report to the Master and DPA. Serious incidents require immediate verbal notification to the DPA.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The Chief Engineer is responsible for reporting the incident to the Master and the company's designated person ashore",
+            "chunk_id": "sms-07-bunkering-procedure#13",
+            "doc_id": "sms-07-bunkering-procedure"
+          },
+          {
+            "text": "For serious incidents, such as those involving significant injury, major pollution, or total loss of propulsion, immediate verbal notification is mandatory",
+            "chunk_id": "sms-15-incident-reporting#3",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#13",
+          "sms-15-incident-reporting#3"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure",
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "sms-07-bunkering-procedure#13",
+          "sms-15-incident-reporting#3"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E14"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the record-keeping requirements for bunker delivery notes and enclosed space permits?",
+      "reference_answer": "Bunker delivery notes are filed in engine room records, and enclosed space permits must be retained for 3 years.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "pretransfer checklist and bunker delivery notes are to be filed in the official engine room\nrecords",
+            "chunk_id": "sms-07-bunkering-procedure#11",
+            "doc_id": "sms-07-bunkering-procedure"
+          },
+          {
+            "text": "completed permits to enter enclosed spaces must be retained on board for 3 years",
+            "chunk_id": "sms-11-enclosed-space-entry#11",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#11",
+          "sms-11-enclosed-space-entry#11"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure",
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "sms-07-bunkering-procedure#11",
+          "sms-11-enclosed-space-entry#11"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E15"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What must be done with the permit if conditions change during entry, and what must be done before starting bunkering?",
+      "reference_answer": "The permit must be voided and a new assessment conducted. Scuppers must be plugged and the SOPEP locker opened.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "If any condition changes or if an emergency occurs, the permit is immediately voided until a new assessment is conducted",
+            "chunk_id": "sms-11-enclosed-space-entry#3",
+            "doc_id": "sms-11-enclosed-space-entry"
+          },
+          {
+            "text": "Scuppers must be plugged and the SOPEP locker opened before starting",
+            "chunk_id": "sms-07-bunkering-procedure#6",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#3",
+          "sms-07-bunkering-procedure#6"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure",
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "sms-11-enclosed-space-entry#3",
+          "sms-07-bunkering-procedure#6"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E16"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "How long must permits to enter enclosed spaces be retained, and when must a written report be submitted for a serious incident?",
+      "reference_answer": "Permits must be retained for 3 years, and written reports must be submitted within 24 hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All completed permits to enter enclosed spaces must be retained on board for 3 years",
+            "chunk_id": "sms-11-enclosed-space-entry#11",
+            "doc_id": "sms-11-enclosed-space-entry"
+          },
+          {
+            "text": "A detailed written report must be submitted within 24 hours",
+            "chunk_id": "sms-15-incident-reporting#5",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#11",
+          "sms-15-incident-reporting#5"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry",
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "sms-11-enclosed-space-entry#11",
+          "sms-15-incident-reporting#5"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E17"
+    },
+    {
+      "kind": "application",
+      "question": "How soon must a general incident be reported after it occurs?",
+      "reference_answer": "General incidents require a shorter reporting time than near-misses.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "within 48 hours of occurrence",
+            "chunk_id": "sms-15-incident-reporting#6",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "trap": "within 72 hours in the reporting system",
+        "gold_chunks": [
+          "sms-15-incident-reporting#6"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "sms-15-incident-reporting#6",
+        "condition": "General incidents require a shorter reporting time than near-misses.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E18"
+    },
+    {
+      "kind": "application",
+      "question": "What is the maximum pumping pressure allowed during bunkering if no special agreement is made?",
+      "reference_answer": "The maximum pumping pressure is specified as 5 bar unless otherwise agreed, making it the correct value for the situation.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "maximum pumping pressure 5 bar",
+            "chunk_id": "sms-07-bunkering-procedure#8",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "trap": "pressure constraints",
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#8"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "sms-07-bunkering-procedure#8",
+        "condition": "The maximum pumping pressure is specified as 5 bar unless otherwise agreed, making it the correct value for the situation.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E19"
+    },
+    {
+      "kind": "application",
+      "question": "What is the maximum allowable level of carbon monoxide (CO) in an enclosed space before entry is permitted?",
+      "reference_answer": "The question asks about carbon monoxide, so the relevant rule is the one specifying CO levels, not H2S.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Carbon monoxide (CO) levels must be below 25 ppm",
+            "chunk_id": "sms-11-enclosed-space-entry#6",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "trap": "Hydrogen sulfide (H2S) levels must be below 5 ppm",
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#6"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "sms-11-enclosed-space-entry#6",
+        "condition": "The question asks about carbon monoxide, so the relevant rule is the one specifying CO levels, not H2S.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E20"
+    },
+    {
+      "kind": "tool",
+      "question": "What is the weather forecast for Charge for the next two days?",
+      "reference_answer": "(live data)",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "tool": "weather"
+      },
+      "provenance": {
+        "prompt": "(template: live data cannot have fixed facts)"
+      },
+      "split": "dev",
+      "id": "E21"
+    },
+    {
+      "kind": "edge",
+      "question": "what is max pump preassure allowd durin fuel tranfer",
+      "reference_answer": "The maximum pumping pressure allowed is 5 bar.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The maximum pumping pressure 5 bar unless agreed otherwise",
+            "chunk_id": "sms-07-bunkering-procedure#8",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#8"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What is the maximum pumping pressure allowed during fuel transfer?"
+      },
+      "split": "holdout",
+      "id": "E22"
+    },
+    {
+      "kind": "edge",
+      "question": "In my situation, who is responsible for issuing the permit that allows me to enter?",
+      "reference_answer": "The Master is responsible for issuing the Permit to Enter.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The issuance of this permit is the sole responsibility of the Master",
+            "chunk_id": "sms-11-enclosed-space-entry#2",
+            "doc_id": "sms-11-enclosed-space-entry"
+          }
+        ],
+        "gold_chunks": [
+          "sms-11-enclosed-space-entry#2"
+        ],
+        "source_docs": [
+          "sms-11-enclosed-space-entry"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "Who is responsible for issuing the Permit to Enter?"
+      },
+      "split": "dev",
+      "id": "E23"
+    },
+    {
+      "kind": "edge",
+      "question": "how long do crew membes have to report a near miss",
+      "reference_answer": "Crew members have 72 hours to report a near-miss incident.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Near-miss reports are submitted within 72 hours in the reporting system",
+            "chunk_id": "sms-15-incident-reporting#6",
+            "doc_id": "sms-15-incident-reporting"
+          }
+        ],
+        "gold_chunks": [
+          "sms-15-incident-reporting#6"
+        ],
+        "source_docs": [
+          "sms-15-incident-reporting"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "How long do crew members have to report a near-miss incident?"
+      },
+      "split": "dev",
+      "id": "E24"
+    },
+    {
+      "kind": "edge",
+      "question": "What should I do before beginning the bunkering process on my vessel?",
+      "reference_answer": "Scuppers must be plugged and the SOPEP locker opened.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "scuppers must be plugged and the SOPEP locker opened",
+            "chunk_id": "sms-07-bunkering-procedure#6",
+            "doc_id": "sms-07-bunkering-procedure"
+          }
+        ],
+        "gold_chunks": [
+          "sms-07-bunkering-procedure#6"
+        ],
+        "source_docs": [
+          "sms-07-bunkering-procedure"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What must be done before starting the bunkering procedure?"
+      },
+      "split": "dev",
+      "id": "E25"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can you provide legal advice on maritime labor laws?",
+      "reference_answer": "I can't assist with that request. My focus is on safety management system procedures for bunkering, enclosed space entry, and incident reporting.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Legal advice is outside the scope of this assistant's responsibilities."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "present"
+        ],
+        "max_lexical_cover": 0.17
+      },
+      "split": "holdout",
+      "id": "E26"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "What are the procedures for handling personal data of crew members during bunkering?",
+      "reference_answer": "I can't assist with that request. My focus is on safety management system procedures for bunkering, enclosed space entry, and incident reporting.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Personal data handling is outside the scope of this assistant's responsibilities."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.43
+      },
+      "split": "dev",
+      "id": "E27"
+    },
+    {
+      "kind": "out_of_scope",
+      "question": "What is the capital of France?",
+      "reference_answer": "I can't assist with that request. My focus is on safety management system procedures for bunkering, enclosed space entry, and incident reporting.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "This is a general knowledge question unrelated to maritime safety procedures."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.0
+      },
+      "split": "dev",
+      "id": "E28"
+    }
+  ],
+  "stats": {
+    "total": 28,
+    "by_kind": {
+      "answerable": 13,
+      "multi_doc": 4,
+      "application": 3,
+      "tool": 1,
+      "edge": 4,
+      "must_refuse": 2,
+      "out_of_scope": 1
+    },
+    "dev": 18,
+    "holdout": 10,
+    "should_refuse": 3,
+    "checks": {
+      "answerable_generated": 22,
+      "dropped_vague_question": 1,
+      "multi_generated": 8,
+      "dropped_unverifiable_facts": 1,
+      "application_generated": 6,
+      "dropped_application_unverified": 1,
+      "tool_weather_generated": 1,
+      "dropped_parametric_leakage": 2,
+      "dropped_duplicate": 2,
+      "dropped_refusal_label_wrong": 6
+    },
+    "plan": {
+      "answerable": 13,
+      "multi_doc": 4,
+      "edge": 4,
+      "application": 4,
+      "tool": 1,
+      "refuse": 6,
+      "gap": 0
+    }
+  },
+  "verification_notes": [
+    "vague question dropped: 'What is the main goal of the bunkering procedure?'",
+    "fact repaired to verbatim span: 'pre-transfer checklist and bunker delivery notes are to be filed in the official engine room records' -> 'pretransfer checklist and bunker delivery notes are to be filed in the official engine room\\nrecords'",
+    "fact not in source: 'All other reportable events... within 48 hours of occurrence'",
+    "fact repaired to verbatim span: 'All completed permits... retained on board for 3 years' -> 'permits to enter enclosed spaces must be retained on board for 3 years'",
+    "fact repaired to verbatim span: 'Ventilation must be for at least 30 minutes' -> 'be ventilated for at least 30 minutes'",
+    "trap value missing or identical"
+  ]
+}

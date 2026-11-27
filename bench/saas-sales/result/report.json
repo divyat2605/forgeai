@@ -1,0 +1,92 @@
+{
+  "agent": "FlowDesk Sales Assistant",
+  "holdout": {
+    "passed": 7,
+    "n": 8,
+    "rate": 0.875,
+    "ci95": [
+      0.529,
+      0.978
+    ]
+  },
+  "dev": {
+    "passed": 17,
+    "n": 18,
+    "rate": 0.9444,
+    "ci95": [
+      0.742,
+      0.99
+    ]
+  },
+  "overall": {
+    "passed": 24,
+    "n": 26,
+    "rate": 0.9231,
+    "ci95": [
+      0.759,
+      0.979
+    ]
+  },
+  "baseline": {
+    "holdout": {
+      "passed": 7,
+      "n": 8,
+      "rate": 0.875,
+      "ci95": [
+        0.529,
+        0.978
+      ]
+    },
+    "dev": {
+      "passed": 16,
+      "n": 18,
+      "rate": 0.8889,
+      "ci95": [
+        0.672,
+        0.969
+      ]
+    }
+  },
+  "failures_final": {
+    "prompt_defect": 1,
+    "hallucination": 1
+  },
+  "metrics_final": {
+    "fact_recall_mean": 0.932,
+    "grounded_rate": 0.955,
+    "retrieval_recall": 1.0,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 6.0,
+    "latency_p95_s": 20.65,
+    "runtime_errors": 0
+  },
+  "canaries": {
+    "gold_pass": 1.0,
+    "corrupted_fail": 1.0,
+    "padded_pass": 1.0,
+    "fabrication_caught": 1.0,
+    "overall": 1.0,
+    "n_canaries": 24,
+    "verbosity_effect": 0.0
+  },
+  "gaps": [
+    {
+      "topic": "Subscription status",
+      "missing": "The documents do not provide any direct information about how to check a customer's current subscription status in the billing system. They mention subscription terms, pricing, and renewal processes, but none describe the mechanism or process for checking subscription status."
+    }
+  ],
+  "tools": [
+    "csv_lookup",
+    "calculator"
+  ],
+  "iterations": 2,
+  "cost": {
+    "wall_seconds": 327.0,
+    "calls": 408,
+    "cache_hits": 211,
+    "tokens_in": 216140,
+    "tokens_out": 12492
+  }
+}

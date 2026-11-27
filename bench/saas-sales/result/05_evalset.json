@@ -1,0 +1,794 @@
+{
+  "cases": [
+    {
+      "kind": "answerable",
+      "question": "What is the monthly price for the FlowDesk Analytics Basic plan?",
+      "reference_answer": "The monthly price for the FlowDesk Analytics Basic plan is $99.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "monthly_price_usd: 99",
+            "chunk_id": "price-list#r4",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "price-list#r4"
+        ],
+        "source_docs": [
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "price-list#r4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E01"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the currency used for all transactions and invoices for FlowDesk?",
+      "reference_answer": "The currency used is United States Dollars (USD).",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The currency used for all transactions and invoices is United States Dollars (USD)",
+            "chunk_id": "commercial-terms#1",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#1"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#1",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E02"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long does FlowDesk allow for a full refund for new customers?",
+      "reference_answer": "FlowDesk allows 30 days for a full refund for new customers.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a full refund is available within 30 days of the first purchase",
+            "chunk_id": "commercial-terms#5",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#5"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#5",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E03"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long does FlowDesk take to respond to email support tickets?",
+      "reference_answer": "FlowDesk responds to email support tickets within 1 business day.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "FlowDesk commits to responding to all email support tickets within 1 business day",
+            "chunk_id": "commercial-terms#9",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#9"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#9",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E04"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the maximum percentage of the monthly fee that can be credited for a single month?",
+      "reference_answer": "The maximum percentage of the monthly fee that can be credited for a single month is 50%.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The total service credits awarded for any single month cannot exceed 50% of the monthly fee",
+            "chunk_id": "commercial-terms#8",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#8"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#8",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E05"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the monthly price for the Business plan of FlowDesk?",
+      "reference_answer": "The monthly price for the Business plan of FlowDesk is $149.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "monthly_price_usd: 149",
+            "chunk_id": "price-list#r3",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "price-list#r3"
+        ],
+        "source_docs": [
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "price-list#r3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E06"
+    },
+    {
+      "kind": "answerable",
+      "question": "What discount does FlowDesk offer for annual prepayment?",
+      "reference_answer": "FlowDesk offers a 15% discount on the monthly price for annual prepayment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "annual prepayment grants a 15% discount on the monthly price",
+            "chunk_id": "commercial-terms#3",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#3"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E07"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens to post-renewal funds if a customer cancels their subscription?",
+      "reference_answer": "Post-renewal funds are non-refundable under any circumstances.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "post-renewal funds are non-refundable under any circumstances",
+            "chunk_id": "commercial-terms#6",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#6"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E08"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the monthly price for the FlowDesk Mobile Standard plan?",
+      "reference_answer": "The monthly price for the FlowDesk Mobile Standard plan is $149.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "monthly_price_usd: 149",
+            "chunk_id": "price-list#r6",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "price-list#r6"
+        ],
+        "source_docs": [
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "price-list#r6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E09"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the process for adjusting charges before the next billing cycle?",
+      "reference_answer": "Charges must be reported and adjusted prior to the next billing cycle to avoid overpayment or service interruption due to non-payment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "reported and adjusted prior to the next billing cycle to avoid overpayment or service interruption due to non-payment",
+            "chunk_id": "commercial-terms#2",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#2"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#2",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E10"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the guaranteed monthly uptime percentage for FlowDesk?",
+      "reference_answer": "FlowDesk guarantees a monthly uptime of 99.9%.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "guarantees a monthly uptime of 99.9%",
+            "chunk_id": "commercial-terms#7",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#7"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "commercial-terms#7",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E11"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What is the monthly cost for the Team plan and what happens after renewal?",
+      "reference_answer": "The Team plan costs $29 per month, and renewal payments are final and non-refundable.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "post-renewal funds are non-refundable under any circumstances",
+            "chunk_id": "commercial-terms#6",
+            "doc_id": "commercial-terms"
+          },
+          {
+            "text": "monthly_price_usd: 29",
+            "chunk_id": "price-list#r2",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#6",
+          "price-list#r2"
+        ],
+        "source_docs": [
+          "commercial-terms",
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "commercial-terms#6",
+          "price-list#r2"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E12"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What is the refund policy for new customers and the monthly price for the Team plan?",
+      "reference_answer": "New customers can get a full refund within 30 days, and the Team plan costs $29 per month.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a full refund is available within 30 days of the first purchase",
+            "chunk_id": "commercial-terms#5",
+            "doc_id": "commercial-terms"
+          },
+          {
+            "text": "monthly_price_usd: 29",
+            "chunk_id": "price-list#r2",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#5",
+          "price-list#r2"
+        ],
+        "source_docs": [
+          "commercial-terms",
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "commercial-terms#5",
+          "price-list#r2"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E13"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What is the monthly price for FlowDesk Mobile and what happens if a customer misses their renewal deadline?",
+      "reference_answer": "The monthly price is $149, and missing the renewal deadline may result in reverting to monthly billing rates.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Failure to renew on time may result in the account reverting to monthly billing rates",
+            "chunk_id": "commercial-terms#4",
+            "doc_id": "commercial-terms"
+          },
+          {
+            "text": "monthly_price_usd: 149",
+            "chunk_id": "price-list#r6",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#4",
+          "price-list#r6"
+        ],
+        "source_docs": [
+          "commercial-terms",
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "commercial-terms#4",
+          "price-list#r6"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E14"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What is the maximum monthly credit a customer can receive for service outages, and what is the monthly fee for the FlowDesk Mobile Standard plan?",
+      "reference_answer": "The maximum monthly credit is 50% of the monthly fee, which is $149.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The total service credits awarded for any single month cannot exceed 50% of the monthly fee",
+            "chunk_id": "commercial-terms#8",
+            "doc_id": "commercial-terms"
+          },
+          {
+            "text": "monthly_price_usd: 149",
+            "chunk_id": "price-list#r6",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#8",
+          "price-list#r6"
+        ],
+        "source_docs": [
+          "commercial-terms",
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "commercial-terms#8",
+          "price-list#r6"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E15"
+    },
+    {
+      "kind": "application",
+      "question": "If a customer's monthly fee is $200, what is the maximum service credit they can receive in one month?",
+      "reference_answer": "The maximum credit is capped at 50% of the monthly fee, not based on the severity of the outage.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "total service credits awarded for any single month cannot exceed 50%",
+            "chunk_id": "commercial-terms#8",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "trap": "equal to 10% of the monthly fee",
+        "gold_chunks": [
+          "commercial-terms#8"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "commercial-terms#8",
+        "condition": "The maximum credit is capped at 50% of the monthly fee, not based on the severity of the outage.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E16"
+    },
+    {
+      "kind": "application",
+      "question": "If FlowDesk's uptime is 99.8% for a month, what is the service credit percentage?",
+      "reference_answer": "The credit calculation depends on how much the actual uptime falls below the 99.9% target.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "for each full 0.1% that the actual uptime falls below the target",
+            "chunk_id": "commercial-terms#7",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "trap": "monthly uptime of 99.9%",
+        "gold_chunks": [
+          "commercial-terms#7"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "commercial-terms#7",
+        "condition": "The credit calculation depends on how much the actual uptime falls below the 99.9% target.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E17"
+    },
+    {
+      "kind": "tool",
+      "question": "What is the monthly price for the FlowDesk Analytics Pro plan with SKU FD-202?",
+      "reference_answer": "9",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "monthly_price_usd: 9",
+            "chunk_id": "price-list#r5",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "price-list#r5"
+        ],
+        "source_docs": [
+          "price-list"
+        ],
+        "tool": "csv_lookup"
+      },
+      "provenance": {
+        "prompt": "evalgen.tool",
+        "seed_chunk": "price-list#r5"
+      },
+      "split": "dev",
+      "id": "E18"
+    },
+    {
+      "kind": "edge",
+      "question": "what iz the montly cost for flowdesk analytics basic plan?",
+      "reference_answer": "The monthly price for the FlowDesk Analytics Basic plan is $99.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "monthly_price_usd: 99",
+            "chunk_id": "price-list#r4",
+            "doc_id": "price-list"
+          }
+        ],
+        "gold_chunks": [
+          "price-list#r4"
+        ],
+        "source_docs": [
+          "price-list"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What is the monthly price for the FlowDesk Analytics Basic plan?"
+      },
+      "split": "dev",
+      "id": "E19"
+    },
+    {
+      "kind": "edge",
+      "question": "I need to know which currency I should use for all my transactions and invoices with FlowDesk.",
+      "reference_answer": "The currency used is United States Dollars (USD).",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The currency used for all transactions and invoices is United States Dollars (USD)",
+            "chunk_id": "commercial-terms#1",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#1"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What is the currency used for all transactions and invoices for FlowDesk?"
+      },
+      "split": "dev",
+      "id": "E20"
+    },
+    {
+      "kind": "edge",
+      "question": "how long flowdesk let new custumers get full refund",
+      "reference_answer": "FlowDesk allows 30 days for a full refund for new customers.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a full refund is available within 30 days of the first purchase",
+            "chunk_id": "commercial-terms#5",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#5"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "How long does FlowDesk allow for a full refund for new customers?"
+      },
+      "split": "dev",
+      "id": "E21"
+    },
+    {
+      "kind": "edge",
+      "question": "I submitted an email support ticket, how long should I expect to wait for a response from FlowDesk?",
+      "reference_answer": "FlowDesk responds to email support tickets within 1 business day.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "FlowDesk commits to responding to all email support tickets within 1 business day",
+            "chunk_id": "commercial-terms#9",
+            "doc_id": "commercial-terms"
+          }
+        ],
+        "gold_chunks": [
+          "commercial-terms#9"
+        ],
+        "source_docs": [
+          "commercial-terms"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "How long does FlowDesk take to respond to email support tickets?"
+      },
+      "split": "dev",
+      "id": "E22"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can you tell me the legal terms of the service agreement?",
+      "reference_answer": "I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Legal advice is outside the scope of this assistant."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.6
+      },
+      "split": "holdout",
+      "id": "E23"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "What personal data does FlowDesk collect about its users?",
+      "reference_answer": "I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Personal data inquiries are outside the scope of this assistant."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.4
+      },
+      "split": "dev",
+      "id": "E24"
+    },
+    {
+      "kind": "out_of_scope",
+      "question": "What is the capital of France?",
+      "reference_answer": "I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "This is a general-knowledge question unrelated to FlowDesk's domain."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.0
+      },
+      "split": "dev",
+      "id": "E25"
+    },
+    {
+      "kind": "gap",
+      "question": "How can I check if my FlowDesk subscription is active or paused?",
+      "reference_answer": "I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Subscription status is not covered by the provided documents."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.4
+      },
+      "split": "dev",
+      "id": "E26"
+    }
+  ],
+  "stats": {
+    "total": 26,
+    "by_kind": {
+      "answerable": 11,
+      "multi_doc": 4,
+      "application": 2,
+      "tool": 1,
+      "edge": 4,
+      "must_refuse": 2,
+      "out_of_scope": 1,
+      "gap": 1
+    },
+    "dev": 18,
+    "holdout": 8,
+    "should_refuse": 4,
+    "checks": {
+      "answerable_generated": 15,
+      "dropped_unverifiable_facts": 1,
+      "multi_generated": 8,
+      "application_generated": 3,
+      "dropped_application_unverified": 1,
+      "tool_csv_lookup_generated": 1,
+      "tool_calculator_generated": 1,
+      "dropped_tool_case": 1,
+      "dropped_duplicate": 3,
+      "dropped_refusal_label_wrong": 6
+    },
+    "plan": {
+      "answerable": 11,
+      "multi_doc": 4,
+      "edge": 4,
+      "application": 4,
+      "tool": 2,
+      "refuse": 6,
+      "gap": 1
+    }
+  },
+  "verification_notes": [
+    "fact repaired to verbatim span: 'FlowDesk guarantees a monthly uptime of 99.9%' -> 'guarantees a monthly uptime of 99.9%'",
+    "answer span too long to be a checkable fact: 'Failure to renew on time may result in the account reverting'",
+    "trap value missing or identical"
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "csv_lookup",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": true,
+    "model_reason": "The csv_lookup tool can be used to filter and retrieve assessment components, weightings, grading scale, and pass marks from tabular data.",
+    "final_reason": "vetoed: precondition failed (table_in_corpus)",
+    "gates": {
+      "precondition": false,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "calculator",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The calculator is not needed for the topics covered, as they are primarily based on policy text rather than arithmetic calculations.",
+    "final_reason": "The calculator is not needed for the topics covered, as they are primarily based on policy text rather than arithmetic calculations.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "weather",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The weather tool is not relevant to the topics covered, which are related to academic policies and course selection.",
+    "final_reason": "The weather tool is not relevant to the topics covered, which are related to academic policies and course selection.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "current_date",
+    "attach": true,
+    "serves_topic": "coursework deadlines and extensions",
+    "model_said": true,
+    "model_reason": "The current_date tool is needed to calculate deadlines, late submission penalties, and the validity of extension requests.",
+    "final_reason": "The current_date tool is needed to calculate deadlines, late submission penalties, and the validity of extension requests.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": true,
+      "groundability_requires": false
+    }
+  }
+]

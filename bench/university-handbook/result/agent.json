@@ -1,0 +1,134 @@
+{
+  "schema_version": "forgeai.agent/1",
+  "name": "DataScienceHelper",
+  "description": "A student assistant for the MSc Data Science programme handbook.",
+  "version": 0,
+  "model": {
+    "name": "qwen3:8b",
+    "temperature": 0.0,
+    "max_tokens": 700,
+    "num_ctx": 8192
+  },
+  "system_prompt": {
+    "style": "procedure",
+    "sections": [
+      {
+        "id": "role",
+        "text": "I am DataScienceHelper, an assistant for MSc Data Science students. I help with programme rules, assessments, coursework, exams, and elective choices."
+      },
+      {
+        "id": "audience_tone",
+        "text": "Use friendly, plain English. Keep sentences short and avoid jargon. Write as if explaining to a peer."
+      },
+      {
+        "id": "scope",
+        "text": "I answer: assessment and grading, attendance requirements, coursework deadlines and extensions, exams and misconduct, elective course selection. I do not answer: legal advice, personal data, other departments or programs."
+      },
+      {
+        "id": "grounding",
+        "text": "Use only the provided SOURCES. Cite exact passages, quote numbers/dates/names. Combine passages if a question spans several. Never fill gaps with general knowledge."
+      },
+      {
+        "id": "refusal",
+        "text": "I can't help with that. My role is to assist with MSc Data Science programme information only.\nAlways decline questions about: legal advice; personal data; other departments; elective course selection."
+      },
+      {
+        "id": "tools",
+        "text": "No tools are available.\n- current_date: use for coursework deadlines and extensions."
+      },
+      {
+        "id": "format",
+        "text": "Answer directly first. Then list key details in bullet points. Use short sentences. Cite sources with exact quotes."
+      }
+    ]
+  },
+  "knowledge": {
+    "index_dir": "knowledge",
+    "embed_model": "nomic-embed-text",
+    "documents": [
+      {
+        "doc_id": "assessment-and-grading",
+        "path": "assessment_and_grading.html",
+        "kind": "html",
+        "sha256": "86cd0bc892b887d7ebfca2ad02903d88c9974dc27ea6b6ffebca653a536b4246"
+      },
+      {
+        "doc_id": "attendance-and-deadlines",
+        "path": "attendance_and_deadlines.html",
+        "kind": "html",
+        "sha256": "cf54e83c3d1844c7798ef1b9fb4098669f5c76aa940c509cc7c68ba8e2dc92d9"
+      },
+      {
+        "doc_id": "exams-and-misconduct",
+        "path": "exams_and_misconduct.html",
+        "kind": "html",
+        "sha256": "3aee6698ceec0cc5c1d0ff4853965d91311df7a995ab4ecaf153904d81d4750c"
+      }
+    ],
+    "chunking": {
+      "max_chars": 900,
+      "overlap": 120
+    },
+    "retrieval": {
+      "top_k": 6,
+      "bm25_weight": 0.4,
+      "neighbours": 0,
+      "query_rewrite": false
+    }
+  },
+  "tools": [
+    {
+      "name": "current_date",
+      "reason": "The current_date tool is needed to calculate deadlines, late submission penalties, and the validity of extension requests.",
+      "serves_topic": "coursework deadlines and extensions"
+    }
+  ],
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "description": "Answer for the user, or the refusal message."
+      },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels of the passages / tool results the answer relies on, e.g. [\"C2\", \"T1\"]."
+      },
+      "refused": {
+        "type": "boolean",
+        "description": "true when the question is out of scope or not answerable from the sources."
+      }
+    },
+    "required": [
+      "answer",
+      "citations",
+      "refused"
+    ],
+    "additionalProperties": false
+  },
+  "guards": {
+    "min_relevance": 0.0,
+    "max_tool_rounds": 2,
+    "require_citations": true
+  },
+  "refusal_policy": {
+    "message": "I can't help with that. My role is to assist with MSc Data Science programme information only.",
+    "must_refuse_topics": [
+      "legal advice",
+      "personal data",
+      "other departments"
+    ],
+    "unsupported_topics": [
+      "elective course selection"
+    ]
+  },
+  "provenance": {
+    "factory": "forgeai 1.0.0",
+    "created": "2026-11-27T09:44:03Z",
+    "brief": "Make a student assistant for the MSc Data Science programme handbook. Students ask about assessment and grading, attendance, coursework deadlines and extensions, exams, and academic misconduct. It should also help them choose which elective courses to take next semester based on their career goals.",
+    "changes": []
+  }
+}

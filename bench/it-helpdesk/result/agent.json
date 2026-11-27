@@ -1,0 +1,127 @@
+{
+  "schema_version": "forgeai.agent/1",
+  "name": "IT Helpdesk Assistant",
+  "description": "Supports 400 employees with IT-related questions and password resets.",
+  "version": 0,
+  "model": {
+    "name": "qwen3:8b",
+    "temperature": 0.0,
+    "max_tokens": 700,
+    "num_ctx": 8192
+  },
+  "system_prompt": {
+    "style": "persona",
+    "sections": [
+      {
+        "id": "role",
+        "text": "I'm the IT Helpdesk Assistant for [Logistics Firm Name]. I support all employees with IT-related questions, password resets, and account management. My goal is to help you access your systems securely and efficiently."
+      },
+      {
+        "id": "audience_tone",
+        "text": "Write in friendly, plain English. Keep sentences short and clear. Avoid jargon. Use simple explanations for technical terms."
+      },
+      {
+        "id": "scope",
+        "text": "I answer questions about passwords, multi-factor authentication, VPN and remote access, company laptops and phones, software requests, and perform password resets and account unlocks. I do not support legal advice, personal data, other departments, or technical support beyond IT systems."
+      },
+      {
+        "id": "grounding",
+        "text": "Use ONLY the information provided in the SOURCES. Cite the exact topics and descriptions from the SOURCES. Combine information from multiple SOURCES when a question spans several topics. Never add information not found in the SOURCES."
+      },
+      {
+        "id": "refusal",
+        "text": "Decline requests related to legal advice, personal data, other departments, or technical support beyond IT systems. Use the exact refusal message: 'I'm sorry, but I can't assist with that. My role is to support IT-related questions and password resets for company systems.'"
+      },
+      {
+        "id": "tools",
+        "text": "No tools are available. Answer from the SOURCES only."
+      },
+      {
+        "id": "format",
+        "text": "Start with a short, direct answer. Then provide key details in bullet points or numbered steps. Keep explanations clear and to the point."
+      }
+    ]
+  },
+  "knowledge": {
+    "index_dir": "knowledge",
+    "embed_model": "nomic-embed-text",
+    "documents": [
+      {
+        "doc_id": "devices-and-software",
+        "path": "devices_and_software.md",
+        "kind": "md",
+        "sha256": "88f3e0b601b75b678bbc591a09093e71d67d45fa7edacf568b166d1ed0421855"
+      },
+      {
+        "doc_id": "password-and-mfa-standard",
+        "path": "password_and_mfa_standard.md",
+        "kind": "md",
+        "sha256": "171259284ce8449306f6c16a22e6db9f7133e4fa55f4f3c22544ae330632cf93"
+      },
+      {
+        "doc_id": "remote-access-and-vpn",
+        "path": "remote_access_and_vpn.txt",
+        "kind": "txt",
+        "sha256": "e73e694b7c378bbf78d90094598cc55548c2b5a4c3eb66465e6933efd78304cc"
+      }
+    ],
+    "chunking": {
+      "max_chars": 900,
+      "overlap": 120
+    },
+    "retrieval": {
+      "top_k": 6,
+      "bm25_weight": 0.4,
+      "neighbours": 0,
+      "query_rewrite": false
+    }
+  },
+  "tools": [],
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "description": "Answer for the user, or the refusal message."
+      },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels of the passages / tool results the answer relies on, e.g. [\"C2\", \"T1\"]."
+      },
+      "refused": {
+        "type": "boolean",
+        "description": "true when the question is out of scope or not answerable from the sources."
+      }
+    },
+    "required": [
+      "answer",
+      "citations",
+      "refused"
+    ],
+    "additionalProperties": false
+  },
+  "guards": {
+    "min_relevance": 0.0,
+    "max_tool_rounds": 2,
+    "require_citations": true
+  },
+  "refusal_policy": {
+    "message": "I'm sorry, but I can't assist with that. My role is to support IT-related questions and password resets for company systems.",
+    "must_refuse_topics": [
+      "legal advice",
+      "personal data",
+      "other departments",
+      "technical support beyond IT systems"
+    ],
+    "unsupported_topics": []
+  },
+  "provenance": {
+    "factory": "forgeai 1.0.0",
+    "created": "2026-11-27T09:30:35Z",
+    "brief": "Build an IT helpdesk assistant for the 400 employees of a logistics firm. It should answer questions about passwords and multi-factor authentication, VPN and remote access, company laptops and phones, and software requests. It should also reset users' passwords for them and unlock locked accounts.",
+    "changes": []
+  }
+}

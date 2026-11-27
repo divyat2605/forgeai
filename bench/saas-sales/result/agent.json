@@ -1,0 +1,135 @@
+{
+  "schema_version": "forgeai.agent/1",
+  "name": "FlowDesk Sales Assistant",
+  "description": "Helps sales reps find pricing, calculate quotes, and explain terms for FlowDesk subscriptions.",
+  "version": 1,
+  "model": {
+    "name": "qwen3:8b",
+    "temperature": 0.0,
+    "max_tokens": 700,
+    "num_ctx": 8192
+  },
+  "system_prompt": {
+    "style": "rules",
+    "sections": [
+      {
+        "id": "role",
+        "text": "I am the FlowDesk Sales Assistant. I help sales reps find pricing, calculate quotes, and explain terms for FlowDesk subscriptions. I serve sales representatives and account managers."
+      },
+      {
+        "id": "audience_tone",
+        "text": "Write in a professional, clear, and concise manner. Use plain language. Keep sentences short and direct."
+      },
+      {
+        "id": "scope",
+        "text": "I answer: plan prices and limits, quote calculation, refund policy, billing terms, SLA terms. I do not answer: subscription status."
+      },
+      {
+        "id": "grounding",
+        "text": "Use only the provided sources. Cite exact passages. Quote numbers, dates, names. Combine passages for multi-topic questions. Do not fill gaps with general knowledge."
+      },
+      {
+        "id": "refusal",
+        "text": "Decline if the topic is out of scope, unsupported, or lacks information. Use: 'I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.'\nAlways decline questions about: Legal advice; Personal data; Other departments; Subscription status."
+      },
+      {
+        "id": "tools",
+        "text": "Use csv_lookup for plan prices and limits. Use calculator for quote calculations. No tools are available for subscription status."
+      },
+      {
+        "id": "format",
+        "text": "Answer directly first. Then list key details. Use bullet points for steps or lists."
+      }
+    ]
+  },
+  "knowledge": {
+    "index_dir": "knowledge",
+    "embed_model": "nomic-embed-text",
+    "documents": [
+      {
+        "doc_id": "commercial-terms",
+        "path": "commercial_terms.docx",
+        "kind": "docx",
+        "sha256": "0409d7f0f872faf63b3d94b4af77742395de35d6b335a16f0d08df12ed0be460"
+      },
+      {
+        "doc_id": "price-list",
+        "path": "price_list.xlsx",
+        "kind": "xlsx",
+        "sha256": "7f5479582799eb81d33cd537d3c1f993187f0c86c1c9115b44786becdb21b20a"
+      }
+    ],
+    "chunking": {
+      "max_chars": 600,
+      "overlap": 100
+    },
+    "retrieval": {
+      "top_k": 6,
+      "bm25_weight": 0.25,
+      "neighbours": 1,
+      "query_rewrite": false
+    }
+  },
+  "tools": [
+    {
+      "name": "csv_lookup",
+      "reason": "added: supported topic(s) Plan prices and limits, Quote calculation are answered by table rows; exact lookup needed",
+      "serves_topic": "Plan prices and limits"
+    },
+    {
+      "name": "calculator",
+      "reason": "The calculator is needed to perform arithmetic operations for total cost calculations.",
+      "serves_topic": "Quote calculation"
+    }
+  ],
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "description": "Answer for the user, or the refusal message."
+      },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels of the passages / tool results the answer relies on, e.g. [\"C2\", \"T1\"]."
+      },
+      "refused": {
+        "type": "boolean",
+        "description": "true when the question is out of scope or not answerable from the sources."
+      }
+    },
+    "required": [
+      "answer",
+      "citations",
+      "refused"
+    ],
+    "additionalProperties": false
+  },
+  "guards": {
+    "min_relevance": 0.0,
+    "max_tool_rounds": 2,
+    "require_citations": true
+  },
+  "refusal_policy": {
+    "message": "I can't assist with that request. Please consult the appropriate team or refer to our official documentation for more information.",
+    "must_refuse_topics": [
+      "Legal advice",
+      "Personal data",
+      "Other departments"
+    ],
+    "unsupported_topics": [
+      "Subscription status"
+    ]
+  },
+  "provenance": {
+    "factory": "forgeai 1.0.0",
+    "created": "2026-11-27T10:12:54Z",
+    "brief": "Our sales reps need an assistant that knows our FlowDesk price list and commercial terms: it should look up plan prices and limits, calculate quotes for a given number of users and months, and explain refund, billing and SLA terms. It should also check a customer's current subscription status in our billing system.",
+    "changes": [
+      "P1.1"
+    ]
+  }
+}

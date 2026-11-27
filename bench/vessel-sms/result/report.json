@@ -1,0 +1,86 @@
+{
+  "agent": "SMS Safety Assistant",
+  "holdout": {
+    "passed": 10,
+    "n": 10,
+    "rate": 1.0,
+    "ci95": [
+      0.722,
+      1.0
+    ]
+  },
+  "dev": {
+    "passed": 15,
+    "n": 18,
+    "rate": 0.8333,
+    "ci95": [
+      0.608,
+      0.942
+    ]
+  },
+  "overall": {
+    "passed": 25,
+    "n": 28,
+    "rate": 0.8929,
+    "ci95": [
+      0.728,
+      0.963
+    ]
+  },
+  "baseline": {
+    "holdout": {
+      "passed": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.722,
+        1.0
+      ]
+    },
+    "dev": {
+      "passed": 15,
+      "n": 18,
+      "rate": 0.8333,
+      "ci95": [
+        0.608,
+        0.942
+      ]
+    }
+  },
+  "failures_final": {
+    "prompt_defect": 2,
+    "hallucination": 1
+  },
+  "metrics_final": {
+    "fact_recall_mean": 0.917,
+    "grounded_rate": 0.96,
+    "retrieval_recall": 1.0,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 11.7,
+    "runtime_errors": 0
+  },
+  "canaries": {
+    "gold_pass": 1.0,
+    "corrupted_fail": 1.0,
+    "padded_pass": 1.0,
+    "fabrication_caught": 1.0,
+    "overall": 1.0,
+    "n_canaries": 24,
+    "verbosity_effect": 0.0
+  },
+  "gaps": [],
+  "tools": [
+    "weather"
+  ],
+  "iterations": 1,
+  "cost": {
+    "wall_seconds": 414.6,
+    "calls": 366,
+    "cache_hits": 83,
+    "tokens_in": 199173,
+    "tokens_out": 15001
+  }
+}

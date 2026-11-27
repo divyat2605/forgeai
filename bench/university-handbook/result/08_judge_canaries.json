@@ -1,0 +1,9 @@
+{
+  "gold_pass": 1.0,
+  "corrupted_fail": 1.0,
+  "padded_pass": 1.0,
+  "fabrication_caught": 1.0,
+  "overall": 1.0,
+  "n_canaries": 24,
+  "verbosity_effect": 0.0
+}

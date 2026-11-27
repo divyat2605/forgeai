@@ -1,0 +1,83 @@
+{
+  "agent": "IT Helpdesk Assistant",
+  "holdout": {
+    "passed": 11,
+    "n": 12,
+    "rate": 0.9167,
+    "ci95": [
+      0.646,
+      0.985
+    ]
+  },
+  "dev": {
+    "passed": 17,
+    "n": 17,
+    "rate": 1.0,
+    "ci95": [
+      0.816,
+      1.0
+    ]
+  },
+  "overall": {
+    "passed": 28,
+    "n": 29,
+    "rate": 0.9655,
+    "ci95": [
+      0.828,
+      0.994
+    ]
+  },
+  "baseline": {
+    "holdout": {
+      "passed": 11,
+      "n": 12,
+      "rate": 0.9167,
+      "ci95": [
+        0.646,
+        0.985
+      ]
+    },
+    "dev": {
+      "passed": 17,
+      "n": 17,
+      "rate": 1.0,
+      "ci95": [
+        0.816,
+        1.0
+      ]
+    }
+  },
+  "failures_final": {
+    "retrieval_miss": 1
+  },
+  "metrics_final": {
+    "fact_recall_mean": 0.962,
+    "grounded_rate": 0.962,
+    "retrieval_recall": 0.962,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 8.25,
+    "runtime_errors": 0
+  },
+  "canaries": {
+    "gold_pass": 1.0,
+    "corrupted_fail": 1.0,
+    "padded_pass": 1.0,
+    "fabrication_caught": 1.0,
+    "overall": 1.0,
+    "n_canaries": 24,
+    "verbosity_effect": 0.0
+  },
+  "gaps": [],
+  "tools": [],
+  "iterations": 0,
+  "cost": {
+    "wall_seconds": 320.9,
+    "calls": 259,
+    "cache_hits": 22,
+    "tokens_in": 122333,
+    "tokens_out": 12352
+  }
+}

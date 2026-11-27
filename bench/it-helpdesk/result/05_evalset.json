@@ -1,0 +1,889 @@
+{
+  "cases": [
+    {
+      "kind": "answerable",
+      "question": "How often do user passwords expire in the logistics firm?",
+      "reference_answer": "User passwords expire every 180 days.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All user passwords expire every 180 days",
+            "chunk_id": "password-and-mfa-standard#3",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#3"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "password-and-mfa-standard#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E01"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the approved method for MFA at the company?",
+      "reference_answer": "The approved method for MFA is the Authenticator app.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The approved method for MFA is the Authenticator app",
+            "chunk_id": "password-and-mfa-standard#4",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#4"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "password-and-mfa-standard#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E02"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long do I have to report a lost or stolen company device?",
+      "reference_answer": "Employees must report lost or stolen devices within 24 hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Lost or stolen devices must be reported within 24 hours to the Service Desk",
+            "chunk_id": "devices-and-software#6",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#6"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "devices-and-software#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E03"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long does it take to install standard software after approval?",
+      "reference_answer": "Standard software is installed within 3 working days of approval.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Standard software is installed within 3 working days of approval",
+            "chunk_id": "devices-and-software#8",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#8"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "devices-and-software#8",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E04"
+    },
+    {
+      "kind": "answerable",
+      "question": "What should I do if I get error code 809 while connecting to the VPN?",
+      "reference_answer": "You should contact your IT support team to assist with router configuration.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "If you receive error code 809, this indicates that your home router is blocking the VPN port",
+            "chunk_id": "remote-access-and-vpn#6",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#6"
+        ],
+        "source_docs": [
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "remote-access-and-vpn#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E05"
+    },
+    {
+      "kind": "answerable",
+      "question": "What should users do if they cannot access their device or Authenticator app?",
+      "reference_answer": "Users should use SMS codes as a fallback option.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "SMS codes are only a fallback option",
+            "chunk_id": "password-and-mfa-standard#5",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#5"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "password-and-mfa-standard#5",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E06"
+    },
+    {
+      "kind": "answerable",
+      "question": "How long does a VPN session last before it disconnects?",
+      "reference_answer": "A VPN session disconnects after 12 hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Sessions automatically disconnect after 12 hours",
+            "chunk_id": "remote-access-and-vpn#3",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#3"
+        ],
+        "source_docs": [
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "remote-access-and-vpn#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E07"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is eligible to receive a company-funded mobile device?",
+      "reference_answer": "Only staff on the on-call rota and managers are eligible.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Company phones are issued only to staff on the on-call rota and to managers",
+            "chunk_id": "devices-and-software#4",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#4"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "devices-and-software#4",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E08"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens if an employee doesn't follow the authentication requirements?",
+      "reference_answer": "Non-compliance may result in restricted system access or disciplinary action.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Non-compliance may result in restricted system access or disciplinary action",
+            "chunk_id": "password-and-mfa-standard#1",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#1"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "password-and-mfa-standard#1",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E09"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens to network traffic when connected to the company's VPN?",
+      "reference_answer": "All network traffic is routed through the encrypted tunnel back to the corporate network.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "all network traffic generated by your device while connected to the VPN will be routed through the encrypted tunnel back to the corporate network",
+            "chunk_id": "remote-access-and-vpn#4",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#4"
+        ],
+        "source_docs": [
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "remote-access-and-vpn#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E10"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the minimum password length required for account creation?",
+      "reference_answer": "The minimum password length is 14 characters.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Every password must be a minimum of 14 characters in length",
+            "chunk_id": "password-and-mfa-standard#2",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#2"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "password-and-mfa-standard#2",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E11"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens if an on-call team member loses their issued phone?",
+      "reference_answer": "The device is subject to remote wipe and mandatory encryption.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All issued phones are subject to remote wipe capabilities and mandatory encryption protocols",
+            "chunk_id": "devices-and-software#5",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#5"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "devices-and-software#5",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E12"
+    },
+    {
+      "kind": "answerable",
+      "question": "What should I do if my VPN connection drops while on public Wi-Fi?",
+      "reference_answer": "Immediately disconnect from the public network until you can re-establish the secure tunnel.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "If your VPN connection drops while on public Wi-Fi, immediately disconnect from the public network until you can re-establish the secure tunnel",
+            "chunk_id": "remote-access-and-vpn#5",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#5"
+        ],
+        "source_docs": [
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "remote-access-and-vpn#5",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E13"
+    },
+    {
+      "kind": "answerable",
+      "question": "What must be done with the old device before handing it over?",
+      "reference_answer": "The old device must be returned in good working condition.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The old device must be returned in good working condition",
+            "chunk_id": "devices-and-software#3",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#3"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "devices-and-software#3",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E14"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the security requirements for using company devices and accessing resources remotely?",
+      "reference_answer": "Devices must be encrypted and subject to remote wipe. Public Wi-Fi requires active VPN.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All issued phones are subject to remote wipe capabilities and mandatory encryption protocols",
+            "chunk_id": "devices-and-software#5",
+            "doc_id": "devices-and-software"
+          },
+          {
+            "text": "You must never use public Wi-Fi without the VPN active",
+            "chunk_id": "remote-access-and-vpn#5",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#5",
+          "remote-access-and-vpn#5"
+        ],
+        "source_docs": [
+          "devices-and-software",
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "devices-and-software#5",
+          "remote-access-and-vpn#5"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E15"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "Who can access the company's VPN and what device access is available?",
+      "reference_answer": "Permanent employees and approved contractors can access the VPN. On-call staff and managers can get company phones.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "VPN client, GlobalConnect, is available to all permanent employees. Additionally, contractors are eligible",
+            "chunk_id": "remote-access-and-vpn#2",
+            "doc_id": "remote-access-and-vpn"
+          },
+          {
+            "text": "Company phones are issued only to staff on the on-call rota and to managers",
+            "chunk_id": "devices-and-software#4",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#2",
+          "devices-and-software#4"
+        ],
+        "source_docs": [
+          "devices-and-software",
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "remote-access-and-vpn#2",
+          "devices-and-software#4"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E16"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the time limits for VPN sessions and account lockouts?",
+      "reference_answer": "VPN sessions expire after 12 hours, and account lockouts last 30 minutes.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Sessions automatically disconnect after 12 hours",
+            "chunk_id": "remote-access-and-vpn#3",
+            "doc_id": "remote-access-and-vpn"
+          },
+          {
+            "text": "After 5 failed sign-in attempts the account locks for 30 minutes",
+            "chunk_id": "password-and-mfa-standard#6",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "remote-access-and-vpn#3",
+          "password-and-mfa-standard#6"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard",
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "remote-access-and-vpn#3",
+          "password-and-mfa-standard#6"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E17"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "How often must passwords be changed, and how long does a VPN session last?",
+      "reference_answer": "Passwords must be changed every 180 days, and VPN sessions last 12 hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All user passwords expire every 180 days",
+            "chunk_id": "password-and-mfa-standard#3",
+            "doc_id": "password-and-mfa-standard"
+          },
+          {
+            "text": "Sessions automatically disconnect after 12 hours",
+            "chunk_id": "remote-access-and-vpn#3",
+            "doc_id": "remote-access-and-vpn"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#3",
+          "remote-access-and-vpn#3"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard",
+          "remote-access-and-vpn"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "password-and-mfa-standard#3",
+          "remote-access-and-vpn#3"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E18"
+    },
+    {
+      "kind": "application",
+      "question": "What happens if a user enters the wrong password 5 times?",
+      "reference_answer": "The lockout duration is 30 minutes after 5 failed attempts, regardless of the authentication method.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "the account locks for 30 minutes",
+            "chunk_id": "password-and-mfa-standard#6",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "trap": "no login attempts will be processed",
+        "gold_chunks": [
+          "password-and-mfa-standard#6"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "password-and-mfa-standard#6",
+        "condition": "The lockout duration is 30 minutes after 5 failed attempts, regardless of the authentication method.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E19"
+    },
+    {
+      "kind": "application",
+      "question": "What should an employee do if their company-issued device is stolen?",
+      "reference_answer": "The rule for reporting a stolen device applies within 24 hours, not 48.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Reported within 24 hours to the Service Desk",
+            "chunk_id": "devices-and-software#6",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "trap": "Submitted to the IT Security team within 48 hours of the incident",
+        "gold_chunks": [
+          "devices-and-software#6"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "devices-and-software#6",
+        "condition": "The rule for reporting a stolen device applies within 24 hours, not 48.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E20"
+    },
+    {
+      "kind": "application",
+      "question": "How many days before password expiry do users receive warnings?",
+      "reference_answer": "The warning period is triggered based on the password expiry date, not the rotation frequency.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "14 days before expiry",
+            "chunk_id": "password-and-mfa-standard#3",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "trap": "every 180 days",
+        "gold_chunks": [
+          "password-and-mfa-standard#3"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "password-and-mfa-standard#3",
+        "condition": "The warning period is triggered based on the password expiry date, not the rotation frequency.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E21"
+    },
+    {
+      "kind": "application",
+      "question": "What is the minimum length for a password to be accepted by the system?",
+      "reference_answer": "The minimum password length is enforced regardless of other conditions.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "minimum of 14 characters in length",
+            "chunk_id": "password-and-mfa-standard#2",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "trap": "reuse of the last 5 passwords",
+        "gold_chunks": [
+          "password-and-mfa-standard#2"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "password-and-mfa-standard#2",
+        "condition": "The minimum password length is enforced regardless of other conditions.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E22"
+    },
+    {
+      "kind": "edge",
+      "question": "how often do user passwors expire in the logistcs firm?",
+      "reference_answer": "User passwords expire every 180 days.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "All user passwords expire every 180 days",
+            "chunk_id": "password-and-mfa-standard#3",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#3"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "How often do user passwords expire in the logistics firm?"
+      },
+      "split": "holdout",
+      "id": "E23"
+    },
+    {
+      "kind": "edge",
+      "question": "What process do I need to follow to set up multi-factor authentication for my account?",
+      "reference_answer": "The approved method for MFA is the Authenticator app.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The approved method for MFA is the Authenticator app",
+            "chunk_id": "password-and-mfa-standard#4",
+            "doc_id": "password-and-mfa-standard"
+          }
+        ],
+        "gold_chunks": [
+          "password-and-mfa-standard#4"
+        ],
+        "source_docs": [
+          "password-and-mfa-standard"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What is the approved method for MFA at the company?"
+      },
+      "split": "dev",
+      "id": "E24"
+    },
+    {
+      "kind": "edge",
+      "question": "how long do i hav to report a lost or stolen compny device",
+      "reference_answer": "Employees must report lost or stolen devices within 24 hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Lost or stolen devices must be reported within 24 hours to the Service Desk",
+            "chunk_id": "devices-and-software#6",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#6"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "How long do I have to report a lost or stolen company device?"
+      },
+      "split": "dev",
+      "id": "E25"
+    },
+    {
+      "kind": "edge",
+      "question": "How long did it take to install the software after it was approved for our system?",
+      "reference_answer": "Standard software is installed within 3 working days of approval.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Standard software is installed within 3 working days of approval",
+            "chunk_id": "devices-and-software#8",
+            "doc_id": "devices-and-software"
+          }
+        ],
+        "gold_chunks": [
+          "devices-and-software#8"
+        ],
+        "source_docs": [
+          "devices-and-software"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "How long does it take to install standard software after approval?"
+      },
+      "split": "dev",
+      "id": "E26"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can you provide legal advice on data privacy compliance?",
+      "reference_answer": "I'm sorry, but I can't assist with that. My role is to support IT-related questions and password resets for company systems.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Legal advice is outside the scope of this assistant's capabilities."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.33
+      },
+      "split": "holdout",
+      "id": "E27"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "What should I do if I receive a suspicious email claiming to be from HR?",
+      "reference_answer": "I'm sorry, but I can't assist with that. My role is to support IT-related questions and password resets for company systems.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "This is outside the scope of IT support and involves personal data concerns."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.4
+      },
+      "split": "dev",
+      "id": "E28"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can you help me troubleshoot my home internet connection?",
+      "reference_answer": "I'm sorry, but I can't assist with that. My role is to support IT-related questions and password resets for company systems.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Technical support beyond IT systems is outside the assistant's scope."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.6
+      },
+      "split": "dev",
+      "id": "E29"
+    }
+  ],
+  "stats": {
+    "total": 29,
+    "by_kind": {
+      "answerable": 14,
+      "multi_doc": 4,
+      "application": 4,
+      "edge": 4,
+      "must_refuse": 3
+    },
+    "dev": 17,
+    "holdout": 12,
+    "should_refuse": 3,
+    "checks": {
+      "answerable_generated": 23,
+      "dropped_vague_question": 4,
+      "dropped_unverifiable_facts": 3,
+      "multi_generated": 8,
+      "application_generated": 4,
+      "dropped_parametric_leakage": 2,
+      "dropped_duplicate": 2,
+      "dropped_refusal_label_wrong": 6
+    },
+    "plan": {
+      "answerable": 14,
+      "multi_doc": 4,
+      "edge": 4,
+      "application": 4,
+      "tool": 0,
+      "refuse": 6,
+      "gap": 0
+    }
+  },
+  "verification_notes": [
+    "vague question dropped: 'How often are laptops replaced according to the policy?'",
+    "answer span too long to be a checkable fact: 'If the self-service option is unavailable due to system issu'",
+    "vague question dropped: 'What is the purpose of the remote access policies?'",
+    "vague question dropped: 'What is the purpose of the devices and software policy?'",
+    "vague question dropped: 'What is the rule about installing personal software on company laptops?'",
+    "fact repaired to verbatim span: 'Permanent employees are eligible for access to the VPN client, GlobalConnect' -> 'VPN client, GlobalConnect, is available to all permanent employees. Additionally, contractors are eligible'",
+    "vague question dropped: 'What are the password length requirements and the standard software installation timeline?'",
+    "fact not in source: 'If the self-service option is unavailable... contact the Service Desk on extension 4400'",
+    "fact repaired to verbatim span: 'Permanent employees and approved contractors can access the VPN' -> 'VPN client, GlobalConnect, is available to all permanent employees. Additionally, contractors are eligible for access'"
+  ]
+}

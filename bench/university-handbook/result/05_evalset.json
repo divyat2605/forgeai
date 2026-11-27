@@ -1,0 +1,871 @@
+{
+  "cases": [
+    {
+      "kind": "answerable",
+      "question": "What percentage of a module is assessed by coursework?",
+      "reference_answer": "Coursework makes up 40% of the module assessment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "each module is assessed 40% by coursework and 60% by examination",
+            "chunk_id": "assessment-and-grading#4",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#4"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "assessment-and-grading#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E01"
+    },
+    {
+      "kind": "answerable",
+      "question": "How many days can I request as an extension before the deadline?",
+      "reference_answer": "You can request an extension of up to 7 days before the deadline.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Extensions of up to 7 days can be requested before the deadline",
+            "chunk_id": "attendance-and-deadlines#6",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "attendance-and-deadlines#6"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "attendance-and-deadlines#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E02"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the penalty for a first offence of plagiarism?",
+      "reference_answer": "A first offence of plagiarism results in a mark of zero for the assessment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "A first offence of plagiarism normally results in a mark of zero for the assessment",
+            "chunk_id": "exams-and-misconduct#7",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#7"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "exams-and-misconduct#7",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E03"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the minimum percentage required to pass a module?",
+      "reference_answer": "The minimum percentage required to pass a module is 50%.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The module pass mark is 50%",
+            "chunk_id": "assessment-and-grading#5",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#5"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "assessment-and-grading#5",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E04"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens if a student uses AI to generate core arguments without permission?",
+      "reference_answer": "It is considered academic dishonesty.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Using AI to generate core arguments, analysis, or conclusions without permission is considered academic dishonesty",
+            "chunk_id": "exams-and-misconduct#6",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#6"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "exams-and-misconduct#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E05"
+    },
+    {
+      "kind": "answerable",
+      "question": "How many percentage points are deducted per day for submitting coursework one day late?",
+      "reference_answer": "A deduction of 5 percentage points per day is applied.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a deduction of 5 percentage points per day is applied",
+            "chunk_id": "attendance-and-deadlines#5",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "attendance-and-deadlines#5"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "attendance-and-deadlines#5",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E06"
+    },
+    {
+      "kind": "answerable",
+      "question": "What percentage of the total grade is determined by coursework?",
+      "reference_answer": "Coursework contributes 40% to the total grade.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Coursework (40%): This component assesses a student’s ability to apply theoretical knowledge to practical problems, conduct independent research, and communicate findings effectively",
+            "chunk_id": "assessment-and-grading#3",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#3"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "assessment-and-grading#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E07"
+    },
+    {
+      "kind": "answerable",
+      "question": "What must candidates do with their devices during the exam?",
+      "reference_answer": "Candidates must switch off their devices and store them in designated areas outside the exam room.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "These items must be switched off and stored in designated areas outside the exam room",
+            "chunk_id": "exams-and-misconduct#3",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#3"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "exams-and-misconduct#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E08"
+    },
+    {
+      "kind": "answerable",
+      "question": "How many working days do I have to submit a mitigating circumstances claim after the deadline?",
+      "reference_answer": "You have 5 working days to submit the claim.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Claims must be made within 5 working days of the assessment date or deadline",
+            "chunk_id": "attendance-and-deadlines#7",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "attendance-and-deadlines#7"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "attendance-and-deadlines#7",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E09"
+    },
+    {
+      "kind": "answerable",
+      "question": "How are final grades rounded according to the grading policy?",
+      "reference_answer": "Final calculated averages are rounded according to rounding rules.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "It is important to note that rounding rules apply to the final calculated average to determine the official recorded grade",
+            "chunk_id": "assessment-and-grading#6",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#6"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "assessment-and-grading#6",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E10"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the latest time a student can enter the exam hall?",
+      "reference_answer": "The latest time a student can enter the exam hall is 30 minutes after the scheduled start time.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "no entry after 30 minutes of the scheduled start time will be permitted",
+            "chunk_id": "exams-and-misconduct#2",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#2"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "exams-and-misconduct#2",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E11"
+    },
+    {
+      "kind": "answerable",
+      "question": "What happens if I miss a session without a valid reason?",
+      "reference_answer": "Absence without valid justification can result in formal warnings or intervention from the student support team.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "absence without valid justification can result in formal warnings or intervention from the student support team",
+            "chunk_id": "attendance-and-deadlines#3",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "attendance-and-deadlines#3"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "attendance-and-deadlines#3",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E12"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What happens if I submit coursework more than five days late?",
+      "reference_answer": "Your coursework will receive a mark of zero and not count toward your final grade.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Rounding rules apply to the final calculated average to determine the official recorded grade",
+            "chunk_id": "assessment-and-grading#6",
+            "doc_id": "assessment-and-grading"
+          },
+          {
+            "text": "Work submitted beyond this five-day window is not marked and does not count toward your final grade",
+            "chunk_id": "attendance-and-deadlines#5",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#6",
+          "attendance-and-deadlines#5"
+        ],
+        "source_docs": [
+          "assessment-and-grading",
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "assessment-and-grading#6",
+          "attendance-and-deadlines#5"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E13"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the rules for handling electronic devices during exams and the deadline for submitting mitigating circumstances claims?",
+      "reference_answer": "Electronic devices must be switched off and stored outside the exam room. Mitigating circumstances claims must be submitted within 5 working days of the assessment date or deadline.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "These items must be switched off and stored in designated areas outside the exam room",
+            "chunk_id": "exams-and-misconduct#3",
+            "doc_id": "exams-and-misconduct"
+          },
+          {
+            "text": "Claims must be made within 5 working days of the assessment date or deadline",
+            "chunk_id": "attendance-and-deadlines#7",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#3",
+          "attendance-and-deadlines#7"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines",
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "exams-and-misconduct#3",
+          "attendance-and-deadlines#7"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E14"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the consequences of failing to meet the module pass mark and committing academic misconduct?",
+      "reference_answer": "A fail grade may result from not meeting the 50% pass mark, and plagiarism can lead to a zero mark.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The module pass mark is 50%",
+            "chunk_id": "assessment-and-grading#7",
+            "doc_id": "assessment-and-grading"
+          },
+          {
+            "text": "A first offence of plagiarism normally results in a mark of zero for the assessment",
+            "chunk_id": "exams-and-misconduct#7",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#7",
+          "exams-and-misconduct#7"
+        ],
+        "source_docs": [
+          "assessment-and-grading",
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "assessment-and-grading#7",
+          "exams-and-misconduct#7"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E15"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What is the minimum pass mark for a module and what calculators are allowed?",
+      "reference_answer": "The minimum pass mark is 50%, and approved calculators are Casio FX-83 and FX-85 series.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Only calculators from the approved list (Casio FX-83 and FX-85 series) are allowed during examinations",
+            "chunk_id": "exams-and-misconduct#4",
+            "doc_id": "exams-and-misconduct"
+          },
+          {
+            "text": "The module pass mark is 50%",
+            "chunk_id": "assessment-and-grading#7",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#4",
+          "assessment-and-grading#7"
+        ],
+        "source_docs": [
+          "assessment-and-grading",
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "exams-and-misconduct#4",
+          "assessment-and-grading#7"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E16"
+    },
+    {
+      "kind": "application",
+      "question": "If a student submits coursework 3 days late, how many percentage points are deducted?",
+      "reference_answer": "The penalty applies for submissions up to 5 days late, with a deduction of 5 percentage points per day.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a deduction of 5 percentage points per day",
+            "chunk_id": "attendance-and-deadlines#5",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "trap": "a mark of zero",
+        "gold_chunks": [
+          "attendance-and-deadlines#5"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "attendance-and-deadlines#5",
+        "condition": "The penalty applies for submissions up to 5 days late, with a deduction of 5 percentage points per day.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E17"
+    },
+    {
+      "kind": "application",
+      "question": "A student arrives 25 minutes after the exam is scheduled to start. Can they still enter?",
+      "reference_answer": "The student's arrival time is 25 minutes after the start, which is beyond the 30-minute cutoff.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "no entry after 30 minutes of the scheduled start time",
+            "chunk_id": "exams-and-misconduct#2",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "trap": "arrive at least 15 minutes before the exam start",
+        "gold_chunks": [
+          "exams-and-misconduct#2"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "exams-and-misconduct#2",
+        "condition": "The student's arrival time is 25 minutes after the start, which is beyond the 30-minute cutoff.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E18"
+    },
+    {
+      "kind": "application",
+      "question": "What percentage of the total grade is determined by the examination component for a module?",
+      "reference_answer": "The examination component contributes 60% to the total grade, as it is explicitly stated in the passage.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Examination (60%)",
+            "chunk_id": "assessment-and-grading#3",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "trap": "Coursework (40%)",
+        "gold_chunks": [
+          "assessment-and-grading#3"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "assessment-and-grading#3",
+        "condition": "The examination component contributes 60% to the total grade, as it is explicitly stated in the passage.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E19"
+    },
+    {
+      "kind": "application",
+      "question": "What time must an assignment be submitted by to be considered on-time?",
+      "reference_answer": "The submission time is specified as 14:00 on the deadline day, not related to email confirmation.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "precisely at 14:00 on the deadline day",
+            "chunk_id": "attendance-and-deadlines#4",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "trap": "automated confirmation email",
+        "gold_chunks": [
+          "attendance-and-deadlines#4"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "attendance-and-deadlines#4",
+        "condition": "The submission time is specified as 14:00 on the deadline day, not related to email confirmation.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E20"
+    },
+    {
+      "kind": "tool",
+      "question": "What is today's date?",
+      "reference_answer": "(today's date)",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "tool": "current_date"
+      },
+      "provenance": {
+        "prompt": "(template: date depends on run day)"
+      },
+      "split": "dev",
+      "id": "E21"
+    },
+    {
+      "kind": "edge",
+      "question": "what percetage of a modual is assed by courserwork",
+      "reference_answer": "Coursework makes up 40% of the module assessment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "each module is assessed 40% by coursework and 60% by examination",
+            "chunk_id": "assessment-and-grading#4",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#4"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What percentage of a module is assessed by coursework?"
+      },
+      "split": "dev",
+      "id": "E22"
+    },
+    {
+      "kind": "edge",
+      "question": "I need to know how many days I can ask for an extension before my deadline.",
+      "reference_answer": "You can request an extension of up to 7 days before the deadline.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Extensions of up to 7 days can be requested before the deadline",
+            "chunk_id": "attendance-and-deadlines#6",
+            "doc_id": "attendance-and-deadlines"
+          }
+        ],
+        "gold_chunks": [
+          "attendance-and-deadlines#6"
+        ],
+        "source_docs": [
+          "attendance-and-deadlines"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "How many days can I request as an extension before the deadline?"
+      },
+      "split": "dev",
+      "id": "E23"
+    },
+    {
+      "kind": "edge",
+      "question": "whats the penality for first plagarism",
+      "reference_answer": "A first offence of plagiarism results in a mark of zero for the assessment.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "A first offence of plagiarism normally results in a mark of zero for the assessment",
+            "chunk_id": "exams-and-misconduct#7",
+            "doc_id": "exams-and-misconduct"
+          }
+        ],
+        "gold_chunks": [
+          "exams-and-misconduct#7"
+        ],
+        "source_docs": [
+          "exams-and-misconduct"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What is the penalty for a first offence of plagiarism?"
+      },
+      "split": "holdout",
+      "id": "E24"
+    },
+    {
+      "kind": "edge",
+      "question": "What is the minimum percentage I need to achieve in order to pass this module?",
+      "reference_answer": "The minimum percentage required to pass a module is 50%.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The module pass mark is 50%",
+            "chunk_id": "assessment-and-grading#5",
+            "doc_id": "assessment-and-grading"
+          }
+        ],
+        "gold_chunks": [
+          "assessment-and-grading#5"
+        ],
+        "source_docs": [
+          "assessment-and-grading"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What is the minimum percentage required to pass a module?"
+      },
+      "split": "dev",
+      "id": "E25"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can you give me legal advice on data privacy issues related to my university's data collection practices?",
+      "reference_answer": "I can't help with that. My role is to assist with MSc Data Science programme information only.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Legal advice is outside the scope of this assistant's responsibilities."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.1
+      },
+      "split": "holdout",
+      "id": "E26"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "What personal data does the university collect about students, and how is it used?",
+      "reference_answer": "I can't help with that. My role is to assist with MSc Data Science programme information only.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Personal data inquiries are outside the scope of this assistant's responsibilities."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.33
+      },
+      "split": "dev",
+      "id": "E27"
+    },
+    {
+      "kind": "out_of_scope",
+      "question": "How do I select elective courses for my MSc Data Science programme?",
+      "reference_answer": "I can't help with that. My role is to assist with MSc Data Science programme information only.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Elective course selection is not covered by the provided documents."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.43
+      },
+      "split": "dev",
+      "id": "E28"
+    },
+    {
+      "kind": "gap",
+      "question": "What is the capital of France?",
+      "reference_answer": "I can't help with that. My role is to assist with MSc Data Science programme information only.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "This is a general-knowledge question unrelated to the domain of the MSc Data Science programme handbook."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.0
+      },
+      "split": "dev",
+      "id": "E29"
+    }
+  ],
+  "stats": {
+    "total": 29,
+    "by_kind": {
+      "answerable": 12,
+      "multi_doc": 4,
+      "application": 4,
+      "tool": 1,
+      "edge": 4,
+      "must_refuse": 2,
+      "out_of_scope": 1,
+      "gap": 1
+    },
+    "dev": 18,
+    "holdout": 11,
+    "should_refuse": 4,
+    "checks": {
+      "answerable_generated": 20,
+      "multi_generated": 8,
+      "dropped_unverifiable_facts": 1,
+      "application_generated": 8,
+      "dropped_application_unverified": 3,
+      "tool_current_date_generated": 1,
+      "dropped_parametric_leakage": 1,
+      "dropped_duplicate": 3,
+      "dropped_refusal_label_wrong": 7
+    },
+    "plan": {
+      "answerable": 12,
+      "multi_doc": 4,
+      "edge": 4,
+      "application": 4,
+      "tool": 1,
+      "refuse": 6,
+      "gap": 1
+    }
+  },
+  "verification_notes": [
+    "quantity question but the fact holds no number: 'Submissions made after this time will not be accepted as on-time'",
+    "no conditional rule",
+    "trap value missing or identical",
+    "trap value missing or identical"
+  ]
+}

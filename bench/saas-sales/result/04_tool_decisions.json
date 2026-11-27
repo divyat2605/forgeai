@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "csv_lookup",
+    "attach": true,
+    "serves_topic": "Plan prices and limits",
+    "model_said": true,
+    "model_reason": "The csv_lookup tool can check a customer's current subscription status in the billing system.",
+    "final_reason": "added: supported topic(s) Plan prices and limits, Quote calculation are answered by table rows; exact lookup needed",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "calculator",
+    "attach": true,
+    "serves_topic": "Quote calculation",
+    "model_said": true,
+    "model_reason": "The calculator is needed to perform arithmetic operations for total cost calculations.",
+    "final_reason": "The calculator is needed to perform arithmetic operations for total cost calculations.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": true,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "weather",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The weather tool is not relevant to the scope of the FlowDesk Sales Assistant.",
+    "final_reason": "The weather tool is not relevant to the scope of the FlowDesk Sales Assistant.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "current_date",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The current_date tool is not relevant to the scope of the FlowDesk Sales Assistant.",
+    "final_reason": "The current_date tool is not relevant to the scope of the FlowDesk Sales Assistant.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  }
+]
