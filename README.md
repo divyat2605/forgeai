@@ -1,127 +1,202 @@
-# ForgeAI: the agent that builds agents
+<div align="center">
 
-ForgeAI takes a **one-paragraph brief and a folder of documents**. It interviews the requester, refuses to build what the documents cannot support, generates a declarative agent, **writes its own test set**, judges the agent like a QA engineer, diagnoses every failure, applies **targeted** fixes, and ships the agent with a report that leads with the number you should trust and says plainly what still fails.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
+  <img alt="ForgeAI - the agent that builds agents" src="docs/assets/banner-light.svg" width="100%">
+</picture>
 
-Everything runs locally on small open models through Ollama (8B factory and agent, a 4B judge from a different model family, and a 137M embedder). The models were chosen by measurement ([docs/MODEL_SELECTION.md](docs/MODEL_SELECTION.md)). It works on Windows, macOS and Linux with two Python dependencies (`numpy`, `pypdf`).
+<br>
 
-```text
-forge build --brief-file brief.md --docs ./docs --unattended
-```
+[![CI](https://github.com/divyat2605/forgeai/actions/workflows/ci.yml/badge.svg)](https://github.com/divyat2605/forgeai/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/divyat2605/forgeai?color=B5603A)](https://github.com/divyat2605/forgeai/releases)
+![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20·%20macOS%20·%20Linux-555)
+![Runs locally](https://img.shields.io/badge/runs-100%25%20local%20(Ollama)-0B7F73)
+![Dependencies](https://img.shields.io/badge/runtime%20deps-2-5350C4)
 
-| | |
-|---|---|
-| **Demo 1: HR policy assistant** (3 PDFs) | [`demos/hr-shore-staff/run/REPORT.md`](demos/hr-shore-staff/run/REPORT.md) |
-| **Demo 2: ship-spares procurement** (catalogue CSV + 4 PDFs, needs tools) | [`demos/ship-spares-procurement/run/REPORT.md`](demos/ship-spares-procurement/run/REPORT.md) |
-| **Benchmark on briefs the factory was never tuned on** | [`bench/RESULTS.md`](bench/RESULTS.md) |
-| Architecture and design rationale | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) |
-| The brief (presentation deck, generated from the artifacts) | [`docs/FORGEAI.brief`](docs/FORGEAI.brief): present it in Studio → *The brief* |
-| Factory vs a hand-written agent | [`demos/hr-shore-staff/human_baseline/COMPARISON.md`](demos/hr-shore-staff/human_baseline/COMPARISON.md) |
-| Regression mode (documents changed) | [`demos/hr-shore-staff/regression/REGRESSION.md`](demos/hr-shore-staff/regression/REGRESSION.md) |
+**One paragraph and a folder of documents in. A tested, grounded agent and an honest report out.**<br>
+It runs on small local models, and every claim those models make is checked by code.
 
-![ForgeAI Studio - overview of the HR demo run](docs/screens/01_overview.png)
+[Quick start](#-quick-start) · [How it works](#-how-it-works) · [Results](#-results) · [Why trust it](#-why-trust-it) · [Studio](#-forgeai-studio) · [Docs](#-documentation)
 
-## Results at a glance
-
-| | Holdout (never seen by the optimizer) | Dev | Notes |
-|---|---|---|---|
-| **HR policy assistant** (3 PDFs) | **12/13** (92%, CI 67–99%) | 16/16 | 2 gaps flagged and declined; no tools; optimizer kept 1 retrieval patch (dev 14→16, holdout 13→12, reported) |
-| **Ship-spares procurement** (CSV + 4 PDFs) | **11/13** (85%, CI 58–96%) | 15/17 | weather tool-backed, shipment tracking a gap; tools: csv_lookup, calculator, weather |
-| **Factory vs hand-written agent** (HR) | factory **28/29** vs human 26/29 | | same model, runtime and judge |
-| **5 unseen briefs** | 5/5 correct outcomes; built agents average 88% holdout | | adversarial brief stopped at the guard ([bench/RESULTS.md](bench/RESULTS.md)) |
-| **Judge audit** | 24/24 canaries in every run | | verbosity effect +0 pts |
-| **Replay with no model** | HR 36/36, procurement 33/33 artifacts identical | | only timing fields excluded |
+</div>
 
 ---
 
-## Why trust it
+ForgeAI is an **agent factory**. Give it a brief such as *"an assistant that answers HR policy questions for our office staff"* and a folder of PDFs, Word files, spreadsheets or web pages. It then:
 
-A factory built from small models will make mistakes, so it has to distrust its own pipeline and carry the checks that catch it lying. ForgeAI follows one rule: **a small model's claim is never believed until code verifies it.**
+1. **interviews** the requester (at most five questions, each with a recorded default),
+2. **refuses to build on sand**: topics the documents cannot support are flagged before anything is generated,
+3. **generates** a declarative agent (sectioned prompt, hybrid retrieval, only the tools it needs),
+4. **writes its own exam**, then throws out the weak questions,
+5. **judges** the agent like a QA engineer and measures *why* each case failed,
+6. **repairs** it with targeted, gated patches, never a blind regeneration,
+7. **ships** the agent with a report that leads with the score you should trust.
 
-| Where a small model could lie | The check that catches it |
+```bash
+forge build --brief-file brief.md --docs ./docs      # the whole factory, unattended or interactive
+forge chat  runs/<run>                                # talk to the agent it built
+forge ui                                              # or do all of it in the browser
+```
+
+<p align="center"><img src="docs/screens/01_overview.png" alt="ForgeAI Studio - the HR demo run" width="100%"></p>
+
+## 📊 Results
+
+<table>
+<tr>
+<td align="center" width="25%"><h2>92%</h2><sub><b>HR agent, holdout</b><br>12/13 · never seen by the optimizer</sub></td>
+<td align="center" width="25%"><h2>5 / 5</h2><sub><b>unseen briefs</b><br>correct outcome, incl. an adversarial stop</sub></td>
+<td align="center" width="25%"><h2>28 vs 26</h2><sub><b>factory vs hand-written</b><br>same model, runtime and judge</sub></td>
+<td align="center" width="25%"><h2>100%</h2><sub><b>judge on known-answer canaries</b><br>every run, +0 pts verbosity effect</sub></td>
+</tr>
+</table>
+
+| Run | Holdout | Dev | What happened |
+|---|:---:|:---:|---|
+| [**HR policy assistant**](demos/hr-shore-staff/run/REPORT.md) · 3 PDFs | **12/13** (92%, CI 67–99%) | 16/16 | Payroll and health-insurance flagged as gaps and declined; no tools needed; one retrieval patch kept (dev 14→16; holdout 13→12, reported) |
+| [**Ship-spares procurement**](demos/ship-spares-procurement/run/REPORT.md) · CSV + 4 PDFs | **11/13** (85%, CI 58–96%) | 15/17 | Weather tool-backed, shipment tracking declined; `csv_lookup` + `calculator` + `weather` attached |
+| [**Factory vs hand-written agent**](demos/hr-shore-staff/human_baseline/COMPARISON.md) | factory **28/29** | human 26/29 | Identical model, runtime and judge; McNemar p = 0.62 |
+| [**Benchmark: 5 unseen briefs**](bench/RESULTS.md) | **5/5** outcomes | mean 88% | Markdown, PDF, HTML, XLSX + DOCX; the adversarial brief stopped at the guard |
+| [**Regression mode**](demos/hr-shore-staff/regression/REGRESSION.md) | 0 broke | 8 invalidated | Changed documents: stale tests separated from real breakage |
+| **Replay with no model** | 36/36 · 33/33 | | Every artifact identical apart from timing fields, verified in CI on all three OSes |
+
+## 🧭 How it works
+
+```mermaid
+flowchart LR
+    A([Brief + documents]) --> B[Read & index<br/>PDF · DOCX · XLSX · CSV · MD · HTML]
+    B --> C[Interview<br/>≤5 questions]
+    C --> D{Groundability<br/>guard}
+    D -- "coverage under 25%" --> X([Stop: build nothing])
+    D --> E[Generate agent<br/>prompt · retrieval · gated tools]
+    E --> F[Write the tests<br/>self-checked · dev / holdout]
+    F --> G[Prompt tournament]
+    G --> H[Run + judge<br/>code first, model second]
+    H --> I[Critic-optimizer<br/>targeted, gated patches]
+    I -- "kept only if dev improves" --> H
+    H --> J[Audit the judge<br/>canaries]
+    J --> K([Agent + honest report])
+    classDef guard fill:#B5603A22,stroke:#B5603A,stroke-width:2px;
+    class D,H guard;
+```
+
+Every stage writes its artifact as it finishes, so a run can be inspected, resumed after Ctrl-C, and **replayed with no model at all**. Design rationale is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+## 🛡️ Why trust it
+
+A factory built from small models will make mistakes, so it has to distrust its own pipeline. ForgeAI follows one rule: **a model's claim is never believed until code has checked it.**
+
+| When a small model says… | …code checks that |
 |---|---|
-| "The documents support this topic" | Its evidence quote must exist **verbatim** in a retrieved passage. If no quote verifies, the verdict is downgraded. A lexical cross-check overrides verdicts on vocabulary the corpus never uses. |
-| "This is the key fact for the test question" | The fact must be a verbatim span of the source passage. A paraphrase is repaired to the exact span or dropped. Boilerplate facts, and quantity questions whose fact has no number, are rejected. |
-| "This question tests grounding" | A closed-book probe asks the agent's model without documents. If it already knows the answer, the case is dropped (it would measure memory, not grounding). |
-| "The agent answered correctly" (on a conditional rule) | Rule-application tests describe a concrete situation (a city, a distance, an amount) where a condition picks the value. The correct value and the tempting wrong one are both verified verbatim. Quoting the wrong row is reported as *rule misapplied*. |
-| "This question must be refused" | The label is checked against the corpus by a second model with a verified quote and by lexical coverage. Mislabelled tests are dropped. |
-| "The answer states the fact" | Exact and numeric matching first. The LLM judge only sees one fact at a time, and its quote must be in the answer. A changed number is never forgiven. |
-| "Every claim is supported" | Each sentence is checked against what the agent actually saw. Numbers missing from every source are flagged deterministically. |
-| "This patch fixes the agent" | It must fix its targeted dev cases without breaking a regression sample. The merged iteration is kept only if dev strictly improves, with flips and a McNemar p-value reported. |
-| "The agent is 90% good" | The headline is the **holdout** score, which the optimizer never saw, with a 95% Wilson interval and the dev−holdout gap. |
-| "The judge is reliable" | Every run scores labelled canaries: correct answers, corrupted facts, padded answers (verbosity) and fabricated claims. The judge's own accuracy goes in the report. |
-| "This tool is needed" | A tool must serve a requirement the corpus/tools can support, must meet its preconditions, and must not serve a gap. Tools the agent never used are pruned empirically. |
+| "The documents support this topic" | its evidence quote exists **verbatim** in a retrieved passage; otherwise the verdict is downgraded |
+| "This is the key fact for the question" | the fact is a verbatim span of the source (repaired to the exact span or dropped) and is informative, not boilerplate |
+| "This question tests grounding" | the agent's model **cannot** answer it without the documents (closed-book leakage probe) |
+| "This question must be refused" | two model families agree the topic is absent from the corpus |
+| "The answer states the fact" | exact and numeric matching first; a model verdict needs a quote or every anchor of the fact in the answer; a changed number is never forgiven |
+| "Every claim is supported" | each sentence is backed by what the agent actually saw; numbers missing from every source are flagged |
+| "This patch fixes the agent" | it fixes its targeted cases without breaking a regression sample, and the iteration is kept only if dev strictly improves |
+| "The agent is 90% good" | the headline is the **holdout** score with a 95% interval; the optimizer never sees those cases |
+| "The judge is reliable" | it is scored every run on canaries: correct, corrupted, padded and fabricated answers |
+| "This tool is needed" | the need is evidenced by a supported topic, preconditions hold, it serves no gap, and unused tools are pruned |
 
-## Capabilities, mapped to code
+<details>
+<summary><b>Capabilities, mapped to code</b></summary>
+<br>
 
-| # | Capability | Where | How |
-|---|---|---|---|
-| 1 | Intake interviewer, ≤5 questions, structured requirements | `factory/intake.py` | Profiles each document, drafts requirements, and asks ≤5 high-impact questions, each with a stated default. Answers come from the terminal, requester notes (verbatim-quoted), an answers file, or the default. The source of every answer is recorded. Optional human checkpoint (`--approve`). |
-| 2 | Groundability guard | `factory/groundability.py` | Per-topic verdicts with verified evidence. Topics that need live data (weather, today's date) are tool-backed by registry capability, not gaps. Gaps become explicit refusal topics, and the refusal message never advertises a gap. If coverage is below 25%, the factory **stops** and builds nothing. |
-| 3 | Agent generator | `factory/generator.py`, `runtime/definition.py` | `forgeai.agent/1` JSON with a sectioned system prompt, chunking and retrieval parameters, gated tools with reasons, an output contract, guards and a refusal policy. |
-| 4 | Eval generator (≥20, generated) | `factory/evalgen.py`, `prompts/evalgen.*.md` | Case kinds: answerable, multi-document, rule application (with a verified trap value), edge (re-phrased), tool, out-of-scope, must-refuse, gap probes. Self-checks as above. Stratified dev/holdout split with no paraphrase leakage. |
-| 5 | Judge with bias defences | `factory/judge.py` | Deterministic first, then a pointwise LLM with verified quotes, a different-family judge, and a canary audit every run. |
-| 6 | Critic–optimizer, ≤3 iterations, logged | `factory/optimizer.py` | Failure categories are measured, not guessed. Targeted patches: retrieval grid search on measured recall, query rewrite, calibrated abstention threshold, or a critic edit of one prompt section (adding numbers is forbidden). Each patch is gated, then kept or reverted. `07_changes.jsonl` logs every change. |
-| 7 | Honest reporting | `factory/report.py` | Leads with holdout and its CI, then what still fails and why (by measured category, with the cases), every change tried, judge accuracy, and the limits of the evidence. |
-| 8 | Runnable product | `runtime/agent.py`, `forge chat` | A generic runner for **any** definition. It is the same runtime the evals use. |
-| 9 | Two full demonstrations | `demos/*/run/` | All artifacts committed, plus a replay cache. |
+| Capability | Where | How |
+|---|---|---|
+| Intake interviewer | `factory/intake.py` | Profiles each document, drafts requirements, asks ≤5 high-impact questions with defaults; answers from the terminal, requester notes (verbatim-quoted), an answers file or the default, with every source recorded; optional human checkpoint (`--approve`) |
+| Groundability guard | `factory/groundability.py` | Per-topic verdicts with verified evidence; live-data topics are tool-backed; gaps become refusal topics and the refusal message never advertises one; below 25% coverage the factory stops |
+| Agent generator | `factory/generator.py`, `runtime/definition.py` | `forgeai.agent/1` JSON: sectioned system prompt, chunking and retrieval, gated tools with reasons, output contract, guards, refusal policy |
+| Eval generator | `factory/evalgen.py`, `prompts/evalgen.*.md` | Answerable, multi-document, rule application (with a verified trap), edge, tool, out-of-scope, must-refuse and gap probes; stratified dev/holdout with no paraphrase leakage |
+| Judge | `factory/judge.py` | Deterministic first, pointwise model checks second, different-family judge, canary audit |
+| Critic–optimizer | `factory/optimizer.py` | Measured failure categories; retrieval grid search, query rewrite, calibrated abstention, or one prompt section; every patch gated and logged in `07_changes.jsonl` |
+| Honest report | `factory/report.py` | Holdout first with its interval, what still fails and why, every change tried, judge accuracy, limits of the evidence |
+| Runtime | `runtime/agent.py` | One generic runner for any definition, shared by chat and evaluation |
+| Extensions | `forge ui`, `forge regress`, `--max-minutes` | Prompt tournament, budget-aware early stopping, human checkpoint, regression mode, web studio, factory-vs-human baseline |
 
-**Extensions:** prompt tournament (3 styles, scored on dev, pointwise so there's no position bias) · budget enforcement (`--max-minutes/--max-tokens`; stages shrink, then the loop stops early when an iteration stops paying) · human checkpoint (`--approve`) · regression mode (`forge regress`) · web UI (`forge ui`, ForgeAI Studio) · factory-vs-human baseline ([`demos/hr-shore-staff/human_baseline/COMPARISON.md`](demos/hr-shore-staff/human_baseline/COMPARISON.md)).
+</details>
 
-## ForgeAI Studio
+## 🖥️ ForgeAI Studio
 
-`forge ui` opens a local web app built with the standard library and hand-written HTML, CSS and JS. It has no extra dependencies and works offline on Windows, macOS and Linux.
-
-- **Overview**: the run's real pipeline as an animated factory map, the headline holdout score with its interval, gaps, and judge accuracy.
-- **Build an agent**: paste a brief and drop files (or point at a folder). The factory map lights up stage by stage as the run streams its own log.
-- **Report**: requirements and interview (with answer sources), groundability evidence, tool decisions, the sectioned prompt, the prompt tournament, every optimizer patch as a word-level diff with its gate result, the judge audit, and cost by stage.
-- **Eval cases**: filter all generated tests. Click one to see the expected facts, the answer, each fact's verdict with *who decided it* (code or model), each claim, and the exact passages the agent saw.
-- **Chat**: talk to any produced agent. Citations open the exact passage, with tool calls and refusals shown.
-- **The brief**: the presentation deck (`docs/FORGEAI.brief`, the same `.brief` format as the EVIDENT deck), with every number generated from the committed artifacts by `scripts/make_brief.py`. Present it full screen with `P` autoplay and `N` speaker notes.
-- **How it works**: a scene-by-scene explainer driven by the selected run's real artifacts. Press `R` for a clean recording mode.
+`forge ui` opens a local web app with **no extra dependencies**: the standard-library server and hand-written HTML, CSS and JS. It works offline on every OS.
 
 | | |
-|---|---|
-| ![Groundability evidence](docs/screens/03_groundability.png) | ![Optimizer patches and gates](docs/screens/04_optimizer.png) |
-| ![Eval case explorer](docs/screens/05_cases.png) | ![How it works](docs/screens/07_explain.png) |
+|:---:|:---:|
+| <img src="docs/screens/03_groundability.png" alt="Groundability evidence"><br><sub><b>Groundability</b>: every verdict with its verified quote</sub> | <img src="docs/screens/04_optimizer.png" alt="Optimizer"><br><sub><b>Optimizer</b>: every patch as a diff, with its gate result</sub> |
+| <img src="docs/screens/05_cases.png" alt="Eval cases"><br><sub><b>Eval cases</b>: down to the passages the agent saw</sub> | <img src="docs/screens/07_explain.png" alt="How it works"><br><sub><b>How it works</b>: a scene-by-scene explainer from real artifacts</sub> |
 
-## Quick start
+Also in the Studio: **Build an agent** (the factory map lights up live as a run streams), **Chat** (citations open the exact passage), and **The brief**, a presentation deck whose every number is generated from the committed artifacts ([`docs/FORGEAI.brief`](docs/FORGEAI.brief)).
 
-### Windows (PowerShell)
+## 🚀 Quick start
+
+**1. Install** [Python 3.10+](https://www.python.org/downloads/) and [Ollama](https://ollama.com/download), and start Ollama.
+
+**2. Set up** (creates a virtual environment, installs, pulls the models, runs the tests and checks the machine):
 
 ```powershell
-# 1. Install Python 3.10+ (python.org) and Ollama (ollama.com/download/windows), then start Ollama.
-# 2. One-time setup: venv, install, pull models, run tests, environment check
+# Windows (PowerShell)
 powershell -ExecutionPolicy Bypass -File scripts\setup_windows.ps1
 .\.venv\Scripts\Activate.ps1
 ```
 
-### macOS / Linux
-
 ```bash
-./scripts/setup.sh            # or: python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
-source .venv/bin/activate
+# macOS / Linux
+./scripts/setup.sh && source .venv/bin/activate
 ```
 
-### Run it
+**3. Run:**
 
 ```bash
-forge doctor                                   # checks Python, Ollama, models, residency, speed
+forge doctor                                          # Python, Ollama, models, residency, speed
 forge build --brief-file demos/hr-shore-staff/brief.md --docs demos/hr-shore-staff/docs
-forge chat runs/<run-folder>                   # talk to the agent it built
+forge ui                                              # ForgeAI Studio at http://127.0.0.1:7860
 ```
 
-Useful flags: `--unattended` (no questions; defaults are recorded as assumptions), `--answers notes.md` (answer the interview from requester notes), `--approve` (human checkpoint), `--max-minutes 25` (bounded live run), `--profile laptop|standard|tiny`, and `--backend openai --host http://localhost:1234/v1` (LM Studio, llama.cpp server, vLLM).
-
-Other commands:
+<details>
+<summary><b>All commands and flags</b></summary>
+<br>
 
 ```text
-forge eval RUN [--agent-model M --judge-model J]   re-run an eval set (e.g. after hand-editing agent.json)
-forge regress RUN --docs NEW_FOLDER                documents changed: rebuild, re-run old evals, report what broke
-forge replay RUN                                   re-execute a committed run from its cache - no model needed
-forge ui                                           ForgeAI Studio: build live, inspect every artifact, chat, explain
+forge doctor                                 check the environment and recommend a profile
+forge build  --brief-file B --docs D         run the factory
+forge chat   RUN [-q "question"]             chat with a produced agent (generic runner)
+forge eval   RUN [--agent-model M]           re-run an eval set, e.g. after hand-editing agent.json
+forge regress RUN --docs NEW                 documents changed: rebuild, re-run old tests, report what broke
+forge replay RUN                             re-execute a committed run from its cache, with no model
+forge ui                                     ForgeAI Studio
 ```
 
-## What a run produces
+| Flag | Effect |
+|---|---|
+| `--unattended` | no questions; stated defaults are assumed and recorded |
+| `--answers notes.md` | answer the interview from requester notes (verbatim quotes only) |
+| `--approve` | human checkpoint: approve or edit the requirements before generation |
+| `--max-minutes N` | soft time budget: smaller test set, no tournament, early-stopped loop |
+| `--profile standard\|laptop\|tiny` | model profile (below) |
+| `--backend openai --host URL` | any OpenAI-compatible server (LM Studio, llama.cpp, vLLM) |
+| `--resume RUN` | continue an interrupted run; cached calls are free |
+
+</details>
+
+<details>
+<summary><b>Models: chosen by measurement</b></summary>
+<br>
+
+| Profile | Factory | Agent | Judge | Embeddings | For |
+|---|---|---|---|---|---|
+| `standard` | qwen3:8b | qwen3:8b | gemma3:4b | nomic-embed-text | a GPU or Apple silicon |
+| `laptop` | qwen3:4b | qwen3:4b | gemma3:4b | nomic-embed-text | 8–16 GB RAM, CPU only |
+| `tiny` | qwen3:1.7b | qwen3:1.7b | gemma3:4b | nomic-embed-text | very slow machines |
+
+The judge always comes from a different family than the agent. Each profile keeps three models resident, matching Ollama's defaults, so there's nothing to configure. The comparison that chose them is in [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md).
+
+</details>
+
+<details>
+<summary><b>What a run produces</b></summary>
+<br>
 
 ```text
 runs/<name>-<timestamp>/
@@ -132,27 +207,31 @@ runs/<name>-<timestamp>/
   05_evalset.json               generated cases, splits, self-check statistics
   06_tournament/                candidate prompts scored on dev
   06_iterations/iter_k/         responses, verdicts, scorecard per iteration
-  07_changes.jsonl              every patch: what, why, cases, gate, before/after text
+  07_changes.jsonl              every patch: what, why, cases, gate, before/after
   08_judge_canaries.json        the judge's own accuracy
-  agent/agent.json + knowledge/ the runnable agent;  agent/history/vN.json every accepted version
-  manifest.json, trace.jsonl    settings, prompt hashes, artifact hashes, every model call
+  agent/agent.json + knowledge/ the runnable agent; agent/history/ every accepted version
+  manifest.json, trace.jsonl    settings, prompt and artifact hashes, every model call
   llm_cache.sqlite              lets `forge replay` re-run everything with no model
 ```
 
-## Models
+</details>
 
-| Profile | Factory | Agent | Judge | Embeddings | For |
-|---|---|---|---|---|---|
-| `standard` (default) | qwen3:8b | qwen3:8b | gemma3:4b | nomic-embed-text | a GPU or Apple silicon; best measured quality |
-| `laptop` | qwen3:4b | qwen3:4b | gemma3:4b | nomic-embed-text | 8–16 GB RAM, CPU only |
-| `tiny` | qwen3:1.7b | qwen3:1.7b | gemma3:4b | nomic-embed-text | very slow machines |
+## 📚 Documentation
 
-Each profile keeps three models resident, which matches Ollama's defaults, so no server configuration is needed. The judge always comes from a different family than the agent. Override any role with `--factory-model/--agent-model/--judge-model/--embed-model`.
+| | |
+|---|---|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | The pipeline, and the failure mode each safeguard exists for |
+| [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md) | Seven agent/judge pairings on one frozen test set |
+| [`docs/FORGEAI.brief`](docs/FORGEAI.brief) | The presentation deck, generated from the artifacts (present it in Studio) |
+| [`bench/RESULTS.md`](bench/RESULTS.md) | Five briefs the factory was never tuned on, with per-brief reports |
+| [`CHANGELOG.md`](CHANGELOG.md) | Release notes |
 
-## Tests
+## 🧪 Tests
 
 ```bash
-python -m pytest -q         # unit tests + an offline end-to-end factory run with a scripted model
+python -m pytest -q        # unit tests + a full offline factory run driven by a scripted model
 ```
 
-The CI runs Windows, macOS and Ubuntu on Python 3.10 and 3.12, plus a replay of a committed demo run with no model installed.
+CI runs on **Windows, macOS and Ubuntu × Python 3.10 and 3.12**, and replays both committed demo runs with no model installed.
+
+<div align="center"><br><sub>Built to run on a laptop: small open models, two dependencies, and code that verifies them.</sub></div>
