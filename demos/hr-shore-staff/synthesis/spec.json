@@ -1,0 +1,8 @@
+{
+  "corpus": "Kestrel Shipmanagement (fictional) - HR policies for shore staff",
+  "documents": [
+    {"file": "leave_and_holiday_policy.pdf", "title": "Kestrel Shipmanagement - Leave and Holiday Policy (HR-POL-01)", "prompt": "synthesis/leave.md", "footer": "Kestrel Shipmanagement (fictional company) - HR-POL-01 v3.2"},
+    {"file": "travel_and_expense_policy.pdf", "title": "Kestrel Shipmanagement - Business Travel and Expense Policy (FIN-POL-04)", "prompt": "synthesis/travel.md", "footer": "Kestrel Shipmanagement (fictional company) - FIN-POL-04 v2.0"},
+    {"file": "remote_work_and_conduct.pdf", "title": "Kestrel Shipmanagement - Remote Work and Code of Conduct (HR-POL-07)", "prompt": "synthesis/conduct.md", "footer": "Kestrel Shipmanagement (fictional company) - HR-POL-07 v1.4"}
+  ]
+}

@@ -1,0 +1,1 @@
+Build an IT helpdesk assistant for the 400 employees of a logistics firm. It should answer questions about passwords and multi-factor authentication, VPN and remote access, company laptops and phones, and software requests. It should also reset users' passwords for them and unlock locked accounts.

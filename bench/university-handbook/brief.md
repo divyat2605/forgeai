@@ -1,0 +1,1 @@
+Make a student assistant for the MSc Data Science programme handbook. Students ask about assessment and grading, attendance, coursework deadlines and extensions, exams, and academic misconduct. It should also help them choose which elective courses to take next semester based on their career goals.

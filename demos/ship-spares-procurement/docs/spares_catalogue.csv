@@ -1,0 +1,26 @@
+part_no,description,system,maker,unit_price_usd,stock_qty,lead_time_days,supplier_id,min_order_qty,critical_spare
+MA-1007,Fuel injection valve,Main Engine,MAN B&W,2495.00,2,21,SUP-03,2,no
+MA-1014,Exhaust valve spindle,Main Engine,MAN B&W,2550.00,25,14,SUP-03,1,yes
+MA-1021,Piston ring set,Main Engine,WinGD,2280.00,40,45,SUP-02,10,yes
+MA-1028,Cylinder liner O-ring kit,Main Engine,MAN B&W,2675.00,40,30,SUP-03,1,no
+MA-1035,Turbocharger bearing,Main Engine,MAN B&W,685.00,0,14,SUP-01,1,no
+MA-1042,Starting air valve,Main Engine,WinGD,3005.00,12,30,SUP-03,5,no
+AU-1049,Fuel pump plunger,Auxiliary Engine,Yanmar,3695.00,0,3,SUP-01,2,yes
+AU-1056,Cooling water pump seal,Auxiliary Engine,Daihatsu,4055.00,12,14,SUP-02,5,no
+AU-1063,Thermostat element,Auxiliary Engine,Daihatsu,2250.00,12,10,SUP-02,10,yes
+AU-1070,Lube oil filter cartridge,Auxiliary Engine,Daihatsu,4160.00,2,21,SUP-03,5,no
+PU-1077,Bowl gasket set,Purifier,Alfa Laval,3005.00,4,14,SUP-02,1,yes
+PU-1084,Vertical shaft bearing,Purifier,Alfa Laval,3590.00,25,5,SUP-02,1,no
+PU-1091,Friction pad set,Purifier,Alfa Laval,100.00,12,30,SUP-01,1,no
+PU-1098,Mechanical seal 45mm,Pumps,Shinko,1600.00,10,14,SUP-03,1,yes
+PU-1105,Impeller bronze 180mm,Pumps,Azcue,50.00,0,3,SUP-01,2,no
+PU-1112,Wear ring set,Pumps,Azcue,670.00,0,21,SUP-02,1,yes
+DE-1119,Windlass brake lining,Deck Machinery,MacGregor,1595.00,40,30,SUP-03,5,no
+DE-1126,Mooring winch clutch pin,Deck Machinery,Kawasaki,2610.00,40,14,SUP-02,10,no
+DE-1133,Hydraulic hose 1/2in 2m,Deck Machinery,Kawasaki,3935.00,12,14,SUP-03,1,no
+EL-1140,Circuit breaker 63A,Electrical,ABB,65.00,12,21,SUP-01,2,no
+EL-1147,Insulation monitor relay,Electrical,Terasaki,270.00,10,45,SUP-02,10,no
+EL-1154,LED floodlight 150W,Electrical,ABB,3105.00,0,3,SUP-03,1,no
+SA-1161,Lifejacket light,Safety,Drager,2645.00,6,21,SUP-01,1,yes
+SA-1168,SCBA cylinder 6.8L,Safety,Drager,3190.00,6,14,SUP-02,1,yes
+SA-1175,Fire hose coupling 2.5in,Safety,Viking,1315.00,4,14,SUP-01,1,yes

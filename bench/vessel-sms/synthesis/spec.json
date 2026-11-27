@@ -1,0 +1,24 @@
+{
+  "corpus": "vessel-sms",
+  "documents": [
+    {
+      "file": "SMS-07_bunkering_procedure.pdf",
+      "title": "SMS-07 Bunkering Procedure",
+      "prompt": "synthesis/SMS-07_bunkering_procedure.md",
+      "footer": "SMS-07 Bunkering Procedure (fictional)"
+    },
+    {
+      "file": "SMS-11_enclosed_space_entry.pdf",
+      "title": "SMS-11 Enclosed Space Entry",
+      "prompt": "synthesis/SMS-11_enclosed_space_entry.md",
+      "footer": "SMS-11 Enclosed Space Entry (fictional)"
+    },
+    {
+      "file": "SMS-15_incident_reporting.pdf",
+      "title": "SMS-15 Incident and Near-Miss Reporting",
+      "prompt": "synthesis/SMS-15_incident_reporting.md",
+      "footer": "SMS-15 Incident and Near-Miss Reporting (fictional)"
+    }
+  ],
+  "tables": []
+}

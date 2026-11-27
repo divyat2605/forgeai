@@ -1,0 +1,4 @@
+v2 document set for the regression demo:
+- HR-POL-01 v3.3: annual leave raised from 24 to 26 days per year.
+- HR-POL-07 v1.5: internet reimbursement raised from INR 1,000 to INR 1,500 per month.
+- FIN-POL-04 (travel and expense) withdrawn for revision - not in this folder.

@@ -1,0 +1,24 @@
+{
+  "corpus": "it-helpdesk",
+  "documents": [
+    {
+      "file": "password_and_mfa_standard.md",
+      "title": "Password and MFA Standard (IT-STD-02)",
+      "prompt": "synthesis/password_and_mfa_standard.md",
+      "footer": "Password and MFA Standard (IT-STD-02) (fictional)"
+    },
+    {
+      "file": "remote_access_and_vpn.txt",
+      "title": "Remote Access and VPN Guide",
+      "prompt": "synthesis/remote_access_and_vpn.md",
+      "footer": "Remote Access and VPN Guide (fictional)"
+    },
+    {
+      "file": "devices_and_software.md",
+      "title": "Devices and Software Requests",
+      "prompt": "synthesis/devices_and_software.md",
+      "footer": "Devices and Software Requests (fictional)"
+    }
+  ],
+  "tables": []
+}

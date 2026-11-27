@@ -1,0 +1,18 @@
+{
+  "corpus": "saas-sales",
+  "documents": [
+    {
+      "file": "commercial_terms.docx",
+      "title": "FlowDesk Commercial Terms",
+      "prompt": "synthesis/commercial_terms.md",
+      "footer": "FlowDesk Commercial Terms (fictional)"
+    }
+  ],
+  "tables": [
+    {
+      "file": "price_list.xlsx",
+      "generator": "product_prices_xlsx",
+      "seed": 5
+    }
+  ]
+}

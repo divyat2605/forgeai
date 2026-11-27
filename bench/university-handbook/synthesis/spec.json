@@ -1,0 +1,24 @@
+{
+  "corpus": "university-handbook",
+  "documents": [
+    {
+      "file": "assessment_and_grading.html",
+      "title": "MSc Data Science - Assessment and Grading",
+      "prompt": "synthesis/assessment_and_grading.md",
+      "footer": "MSc Data Science - Assessment and Grading (fictional)"
+    },
+    {
+      "file": "attendance_and_deadlines.html",
+      "title": "MSc Data Science - Attendance, Deadlines and Extensions",
+      "prompt": "synthesis/attendance_and_deadlines.md",
+      "footer": "MSc Data Science - Attendance, Deadlines and Extensions (fictional)"
+    },
+    {
+      "file": "exams_and_misconduct.html",
+      "title": "MSc Data Science - Exams and Academic Misconduct",
+      "prompt": "synthesis/exams_and_misconduct.md",
+      "footer": "MSc Data Science - Exams and Academic Misconduct (fictional)"
+    }
+  ],
+  "tables": []
+}

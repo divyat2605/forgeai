@@ -1,0 +1,29 @@
+# Weekly Kitchen Cleaning Rota and Instructions
+
+## Purpose and Scope
+
+This document establishes the mandatory cleaning schedule for all kitchen staff to ensure hygiene compliance and equipment longevity. Adherence to this rota is non-negotiable. All tasks must be completed before the next service begins or as specified by the shift handover protocol. Failure to follow these instructions may result in health code violations or equipment failure.
+
+## Daily Floor Maintenance
+
+Hygiene standards require that floors are mopped after every service. This task is assigned to the closing team immediately upon completion of all food preparation and dishwashing duties. Staff must ensure that all debris is swept up prior to mopping to prevent clogging drains. The floor must be left dry before any staff member leaves the premises to prevent slip hazards. This routine applies to all kitchen zones, including the prep area, cooking line, and dishwashing station.
+
+## Weekly Deep Cleaning Schedule
+
+Specific high-touch and high-risk areas require intensive weekly attention. These tasks are assigned to specific days to ensure consistent coverage without disrupting daily operations.
+
+### Sunday: Extraction Hood Filters
+
+Extraction hood filters are cleaned weekly on Sundays. This task is critical for fire safety and air quality control. Staff must allow the extraction system to cool completely before attempting removal of the filters. Once removed, filters should be soaked in degreaser solution and scrubbed thoroughly. Rinse with hot water and allow to air dry completely before reinstallation. Ensure all clips and locks are secure upon reassembly to prevent vibration during operation.
+
+### Monday: Refrigeration Units
+
+Fridges are deep-cleaned every Monday. This task must be performed when the kitchen is least busy to minimize temperature fluctuations. Remove all food items and place them in temporary storage units if necessary. Empty shelves and drawers should be washed with hot, soapy water. Wipe down interior walls, ceilings, and door seals with a food-safe sanitizer. Check expiration dates of any remaining stock during this process and discard spoiled items immediately. Restock food items only after surfaces are fully dry to prevent bacterial growth.
+
+## Chemical Storage Protocol
+
+Safety is paramount regarding the handling and storage of cleaning agents. Cleaning chemicals are kept in the locked store, never in the galley. This rule exists to prevent accidental contamination of food or injury to staff. No chemical bottles are permitted on kitchen counters, under sinks, or near food prep areas. Staff must retrieve only the necessary amount of chemicals for immediate use from the locked store and return all remaining product immediately after use. The lock key must be kept on the designated keyring worn by the head chef or duty manager at all times. Unauthorized access to the chemical store is strictly prohibited.
+
+## Accountability
+
+The Head Chef is responsible for auditing this rota weekly. Any missed tasks must be rescheduled within 24 hours. Staff members are expected to report any maintenance issues, such as broken mops or leaking hoods, to management immediately.

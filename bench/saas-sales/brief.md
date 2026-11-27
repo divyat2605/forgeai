@@ -1,0 +1,1 @@
+Our sales reps need an assistant that knows our FlowDesk price list and commercial terms: it should look up plan prices and limits, calculate quotes for a given number of users and months, and explain refund, billing and SLA terms. It should also check a customer's current subscription status in our billing system.

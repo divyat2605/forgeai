@@ -1,0 +1,18 @@
+{
+  "corpus": "mismatch-adversarial",
+  "documents": [
+    {
+      "file": "kitchen_food_safety_sop.md",
+      "title": "Galley Food Safety SOP",
+      "prompt": "synthesis/kitchen_food_safety_sop.md",
+      "footer": "Galley Food Safety SOP (fictional)"
+    },
+    {
+      "file": "galley_cleaning_rota.txt",
+      "title": "Galley Cleaning Rota",
+      "prompt": "synthesis/galley_cleaning_rota.md",
+      "footer": "Galley Cleaning Rota (fictional)"
+    }
+  ],
+  "tables": []
+}

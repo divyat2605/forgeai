@@ -1,0 +1,1 @@
+Our ship officers need an assistant for our Safety Management System procedures: bunkering, enclosed space entry, and incident reporting. Officers should be able to ask what the procedure requires at each step. It should also tell them whether the weather at their next port is suitable for bunkering.

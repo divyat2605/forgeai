@@ -1,0 +1,12 @@
+{
+  "corpus": "Fleet spares procurement (fictional suppliers) - catalogue CSV, supplier terms, purchasing policy",
+  "tables": [
+    {"file": "spares_catalogue.csv", "generator": "spares_catalogue", "seed": 3}
+  ],
+  "documents": [
+    {"file": "supplier_terms_SUP-01_harbourline.pdf", "title": "Supplier Terms - SUP-01 Harbourline Marine Supplies (Rotterdam)", "prompt": "synthesis/sup01.md", "footer": "Fictional supplier - terms of supply 2026"},
+    {"file": "supplier_terms_SUP-02_straits.pdf", "title": "Supplier Terms - SUP-02 Straits Ship Chandlers (Singapore)", "prompt": "synthesis/sup02.md", "footer": "Fictional supplier - terms of supply 2026"},
+    {"file": "supplier_terms_SUP-03_gulfmarine.pdf", "title": "Supplier Terms - SUP-03 Gulf Marine Spares (Fujairah)", "prompt": "synthesis/sup03.md", "footer": "Fictional supplier - terms of supply 2026"},
+    {"file": "purchasing_policy.pdf", "title": "Fleet Purchasing Policy for Spares and Stores (PUR-POL-02)", "prompt": "synthesis/policy.md", "footer": "Fictional fleet operator - PUR-POL-02 v4"}
+  ]
+}
