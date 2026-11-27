@@ -1,0 +1,12 @@
+# Check out text with LF on every OS. Demo documents and run artifacts are hashed,
+# so a CRLF conversion on Windows would change their fingerprints and break replay.
+* text=auto eol=lf
+
+# Byte-exact files (hashed inputs or binary formats)
+*.csv     -text
+*.pdf     binary
+*.docx    binary
+*.xlsx    binary
+*.png     binary
+*.npy     binary
+*.sqlite  binary
