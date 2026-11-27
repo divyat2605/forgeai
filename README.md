@@ -218,7 +218,7 @@ runs/<name>-<timestamp>/
 
 ## 📚 Documentation
 
-| | |
+| Document | What it covers |
 |---|---|
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | The pipeline, and the failure mode each safeguard exists for |
 | [`docs/MODEL_SELECTION.md`](docs/MODEL_SELECTION.md) | Seven agent/judge pairings on one frozen test set |
@@ -229,7 +229,7 @@ runs/<name>-<timestamp>/
 ## 🧪 Tests
 
 ```bash
-python -m pytest -q        # unit tests + a full offline factory run driven by a scripted model
+python -m pytest -q   # unit tests + an offline end-to-end run
 ```
 
 CI runs on **Windows, macOS and Ubuntu × Python 3.10 and 3.12**, and replays both committed demo runs with no model installed.
