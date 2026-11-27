@@ -181,7 +181,7 @@ def main() -> int:
         add("```visual")
         add(f"metrics: Factory (one paragraph) = {m_all.group(1)} | Hand-written by the developer = {m_all.group(2)} | Paired test p-value = {m_p.group(1) if m_p else 'n/a'}")
         add("```")
-        add("> Within noise of a hand-tuned agent, with zero human effort, and the factory also flagged the gaps, wrote and verified the tests, and audited its own judge.")
+        add("> From one paragraph and zero human effort, the factory's agent matched or beat a hand-tuned one on the same tests - and the factory also flagged the gaps, wrote and verified the tests, and audited its own judge. The paired difference is not statistically significant, and the report says so.")
         add("")
     if bench:
         add("## Briefs it had never seen")
