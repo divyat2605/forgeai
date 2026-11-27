@@ -262,9 +262,13 @@ VOLATILE = {"latency_s", "seconds", "fresh_tokens", "wall_seconds", "model_secon
             "secs", "started", "created", "elapsed", "cost", "platform", "status"}
 
 
+def _volatile(key: str) -> bool:
+    return key in VOLATILE or key.startswith("latency") or key.endswith("_seconds")
+
+
 def _strip(obj):
     if isinstance(obj, dict):
-        return {k: _strip(v) for k, v in obj.items() if k not in VOLATILE}
+        return {k: _strip(v) for k, v in obj.items() if not _volatile(k)}
     if isinstance(obj, list):
         return [_strip(v) for v in obj]
     return obj
