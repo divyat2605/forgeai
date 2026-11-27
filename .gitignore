@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.forge_cache/
+runs/_scratch*/
+.DS_Store
+Thumbs.db
+runs/_*
+runs/*.log
+bench/runs/

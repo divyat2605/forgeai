@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forgeai"
+version = "1.0.0"
+description = "ForgeAI: an agent factory that interviews, builds, tests, diagnoses and repairs grounded agents on small local models, and reports honestly."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pypdf>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+forge = "forgeai.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["forgeai*"]
+
+[tool.setuptools.package-data]
+forgeai = ["prompts/*.md", "studio/static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
