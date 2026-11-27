@@ -34,9 +34,9 @@ ForgeAI is an **agent factory**. Give it a brief such as *"an assistant that ans
 7. **ships** the agent with a report that leads with the score you should trust.
 
 ```bash
-forge build --brief-file brief.md --docs ./docs      # the whole factory, unattended or interactive
-forge chat  runs/<run>                                # talk to the agent it built
-forge ui                                              # or do all of it in the browser
+forge build --brief-file brief.md --docs ./docs   # run the factory
+forge chat  runs/<run>                             # talk to its agent
+forge ui                                           # or use the Studio
 ```
 
 <p align="center"><img src="docs/screens/01_overview.png" alt="ForgeAI Studio - the HR demo run" width="100%"></p>
@@ -64,7 +64,7 @@ forge ui                                              # or do all of it in the b
 ## 🧭 How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
     A([Brief + documents]) --> B[Read & index<br/>PDF · DOCX · XLSX · CSV · MD · HTML]
     B --> C[Interview<br/>≤5 questions]
     C --> D{Groundability<br/>guard}
@@ -149,9 +149,9 @@ powershell -ExecutionPolicy Bypass -File scripts\setup_windows.ps1
 **3. Run:**
 
 ```bash
-forge doctor                                          # Python, Ollama, models, residency, speed
+forge doctor          # check Python, Ollama, models and speed
 forge build --brief-file demos/hr-shore-staff/brief.md --docs demos/hr-shore-staff/docs
-forge ui                                              # ForgeAI Studio at http://127.0.0.1:7860
+forge ui              # ForgeAI Studio at http://127.0.0.1:7860
 ```
 
 <details>
