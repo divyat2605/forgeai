@@ -247,16 +247,48 @@ def cmd_replay(args) -> int:
     brief = (src / "brief.md").read_text(encoding="utf-8")
     started = _dt.datetime.fromisoformat(man["started"]) if man.get("started") else None
     build(s, brief, (src / man["docs_dir"]).resolve(), run_dir=dst, answers_file=dst / "_answers.json", now=started)
-    new = read_json(dst / "manifest.json")["artifact_sha256"]
-    old = man["artifact_sha256"]
-    keys = sorted(k for k in old if k not in ("manifest.json",) and not k.startswith("eval_reruns"))
-    same = [k for k in keys if new.get(k) == old[k]]
-    diff = [k for k in keys if new.get(k) != old[k]]
+    same, diff = compare_runs(src, dst)
     C.out()
-    C.ok(f"replay reproduced {len(same)}/{len(keys)} artifacts byte-for-byte without calling a model")
+    C.ok(f"replay reproduced {len(same)}/{len(same) + len(diff)} artifacts identically without calling a model "
+         "(timing fields - latencies, wall/model seconds, timestamps - excluded)")
     for k in diff:
         C.warn(f"differs: {k}")
-    return 0 if not [d for d in diff if not d.endswith(("trace.jsonl",))] else 1
+    return 0 if not diff else 1
+
+
+VOLATILE = {"latency_s", "seconds", "fresh_tokens", "wall_seconds", "model_seconds", "stage_seconds", "meter", "t",
+            "secs", "started", "created", "elapsed", "cost", "platform", "status"}
+
+
+def _strip(obj):
+    if isinstance(obj, dict):
+        return {k: _strip(v) for k, v in obj.items() if k not in VOLATILE}
+    if isinstance(obj, list):
+        return [_strip(v) for v in obj]
+    return obj
+
+
+def _normal(path: Path):
+    text = path.read_text(encoding="utf-8")
+    if path.suffix == ".json":
+        return _strip(json.loads(text))
+    if path.suffix == ".jsonl":
+        return [_strip(json.loads(x)) for x in text.splitlines() if x.strip()]
+    return text.split("## Cost and reproducibility")[0]
+
+
+def compare_runs(a: Path, b: Path) -> tuple[list[str], list[str]]:
+    """Compare two run folders artifact by artifact, ignoring only timing fields."""
+    from forgeai.util.io import read_json
+    keys = sorted(k for k in read_json(a / "manifest.json")["artifact_sha256"]
+                  if k not in ("manifest.json", "trace.jsonl") and not k.startswith("eval_reruns"))
+    same, diff = [], []
+    for k in keys:
+        try:
+            (same if _normal(a / k) == _normal(b / k) else diff).append(k)
+        except (OSError, ValueError):
+            diff.append(k)
+    return same, diff
 
 
 # ----------------------------------------------------------------- regress

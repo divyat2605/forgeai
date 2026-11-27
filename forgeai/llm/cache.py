@@ -3,7 +3,7 @@
 Two layers are used during a run: a machine-wide cache (speeds up re-runs) and
 a per-run cache stored inside the run folder. Because the per-run cache holds
 every response that produced the run, `forge replay` can re-execute a committed
-run byte-for-byte on a machine with no model installed.
+run on a machine with no model installed (identical artifacts apart from timing fields).
 """
 
 from __future__ import annotations

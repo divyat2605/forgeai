@@ -156,7 +156,7 @@ class ToolBox:
                  timezone_offset_hours: float = 5.5, now: Callable[[], _dt.datetime] | None = None,
                  offline: bool = False, record: dict | None = None):
         self.enabled = [t for t in enabled if t in REGISTRY]
-        self.record = record          # network results, recorded so runs replay byte-identically
+        self.record = record          # network results, recorded so replays get the same tool results
         self.tables = tables or {}       # name -> {"columns": [...], "rows": [...], "doc_id": ...}
         self.tz = _dt.timezone(_dt.timedelta(hours=timezone_offset_hours))
         self._now = now
