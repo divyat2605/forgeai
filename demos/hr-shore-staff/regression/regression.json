@@ -1,0 +1,446 @@
+{
+  "doc_changes": {
+    "added": [],
+    "removed": [
+      "travel_and_expense_policy.pdf"
+    ],
+    "modified": [
+      "leave_and_holiday_policy.pdf",
+      "remote_work_and_conduct.pdf"
+    ]
+  },
+  "groundability_changes": [
+    [
+      "Business travel and expense claims",
+      "supported",
+      "unsupported"
+    ]
+  ],
+  "cases": [
+    {
+      "id": "E01",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E02",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E03",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E04",
+      "kind": "answerable",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "line manager approves claims up to INR 50,000"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "refused_no_evidence",
+        "detail": "refused; gold passage not retrieved"
+      }
+    },
+    {
+      "id": "E05",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E06",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E07",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E08",
+      "kind": "answerable",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "up to 70% of the estimated trip cost"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "refused_no_evidence",
+        "detail": "refused; gold passage not retrieved"
+      }
+    },
+    {
+      "id": "E09",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E10",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E11",
+      "kind": "answerable",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "Failure to comply may result in the denial of reimbursement or disciplinary action"
+      ],
+      "failure": {
+        "category": "hallucination",
+        "subtype": "unsupported_claims",
+        "detail": "If a shore-based employee fails to follow the travel policy, they may face disciplinary action."
+      }
+    },
+    {
+      "id": "E12",
+      "kind": "answerable",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E13",
+      "kind": "multi_doc",
+      "before": false,
+      "after": false,
+      "outcome": "unchanged-fail",
+      "missing_facts": [],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "fact_passage_not_retrieved",
+        "detail": "1 missing fact(s) were in passages never retrieved"
+      }
+    },
+    {
+      "id": "E14",
+      "kind": "multi_doc",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "All domestic and international travel authorized by the company"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "fact_passage_not_retrieved",
+        "detail": "1 missing fact(s) were in passages never retrieved"
+      }
+    },
+    {
+      "id": "E15",
+      "kind": "multi_doc",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "All international travel needs a travel request at least 21 days before departure and approval from the CFO"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "refused_no_evidence",
+        "detail": "refused; gold passage not retrieved"
+      }
+    },
+    {
+      "id": "E16",
+      "kind": "multi_doc",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E17",
+      "kind": "application",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "24 days of annual leave per calendar year"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "fact_passage_not_retrieved",
+        "detail": "1 missing fact(s) were in passages never retrieved"
+      }
+    },
+    {
+      "id": "E18",
+      "kind": "application",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "USD 60 per day for international travel"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "refused_no_evidence",
+        "detail": "refused; gold passage not retrieved"
+      }
+    },
+    {
+      "id": "E19",
+      "kind": "application",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E20",
+      "kind": "application",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E21",
+      "kind": "edge",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E22",
+      "kind": "edge",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E23",
+      "kind": "edge",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E24",
+      "kind": "edge",
+      "before": true,
+      "after": false,
+      "outcome": "invalidated",
+      "missing_facts": [
+        "line manager approves claims up to INR 50,000"
+      ],
+      "failure": {
+        "category": "retrieval_miss",
+        "subtype": "refused_no_evidence",
+        "detail": "refused; gold passage not retrieved"
+      }
+    },
+    {
+      "id": "E25",
+      "kind": "must_refuse",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E26",
+      "kind": "must_refuse",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E27",
+      "kind": "must_refuse",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E28",
+      "kind": "gap",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    },
+    {
+      "id": "E29",
+      "kind": "gap",
+      "before": true,
+      "after": true,
+      "outcome": "unchanged-pass",
+      "missing_facts": [],
+      "failure": null
+    }
+  ],
+  "scorecard": {
+    "label": "regression",
+    "agent_fingerprint": "94fa26ef0814",
+    "overall": {
+      "passed": 20,
+      "n": 29,
+      "rate": 0.6897,
+      "ci95": [
+        0.508,
+        0.827
+      ]
+    },
+    "dev": {
+      "passed": 11,
+      "n": 16,
+      "rate": 0.6875,
+      "ci95": [
+        0.444,
+        0.858
+      ]
+    },
+    "holdout": {
+      "passed": 9,
+      "n": 13,
+      "rate": 0.6923,
+      "ci95": [
+        0.424,
+        0.873
+      ]
+    },
+    "by_kind": {
+      "answerable": {
+        "passed": 9,
+        "n": 12,
+        "rate": 0.75,
+        "ci95": [
+          0.468,
+          0.911
+        ]
+      },
+      "application": {
+        "passed": 2,
+        "n": 4,
+        "rate": 0.5,
+        "ci95": [
+          0.15,
+          0.85
+        ]
+      },
+      "edge": {
+        "passed": 3,
+        "n": 4,
+        "rate": 0.75,
+        "ci95": [
+          0.301,
+          0.954
+        ]
+      },
+      "gap": {
+        "passed": 2,
+        "n": 2,
+        "rate": 1.0,
+        "ci95": [
+          0.342,
+          1.0
+        ]
+      },
+      "multi_doc": {
+        "passed": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95": [
+          0.046,
+          0.699
+        ]
+      },
+      "must_refuse": {
+        "passed": 3,
+        "n": 3,
+        "rate": 1.0,
+        "ci95": [
+          0.438,
+          1.0
+        ]
+      }
+    },
+    "metrics": {
+      "fact_recall_mean": 0.895,
+      "grounded_rate": 0.947,
+      "retrieval_recall": 0.625,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.208,
+      "citation_rate": 1.0,
+      "latency_p50_s": 0.0,
+      "latency_p95_s": 0.01,
+      "runtime_errors": 0
+    },
+    "failures": {
+      "retrieval_miss": 8,
+      "hallucination": 1
+    },
+    "failures_dev": {
+      "retrieval_miss": 4,
+      "hallucination": 1
+    },
+    "failure_subtypes": {
+      "retrieval_miss/refused_no_evidence": 5,
+      "hallucination/unsupported_claims": 1,
+      "retrieval_miss/fact_passage_not_retrieved": 3
+    },
+    "tools_used": {}
+  }
+}

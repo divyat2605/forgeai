@@ -1,0 +1,268 @@
+{
+  "topics": [
+    {
+      "topic": "Leave and holidays",
+      "description": "Includes annual leave, sick leave, parental leave, and public holidays.",
+      "verdict": "partial",
+      "model_verdict": "partial",
+      "evidence": [
+        {
+          "quote": "Employees are entitled to 12 days of paid sick leave per year.",
+          "chunk_id": "leave-and-holiday-policy#7"
+        },
+        {
+          "quote": "The company observes 12 public holidays per year.",
+          "chunk_id": "leave-and-holiday-policy#14"
+        },
+        {
+          "quote": "Permanent shore staff are entitled to 26 days of annual leave per calendar year.",
+          "chunk_id": "leave-and-holiday-policy#4"
+        }
+      ],
+      "tool": "",
+      "missing": "The documents do not provide information about parental leave, compensatory days off for public holidays, or the specific days of public holidays. They also do not mention how parental leave is calculated or what benefits are provided during this period.",
+      "lexical_coverage": 1.0,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "leave-and-holiday-policy#7",
+          "dense": 0.817
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#9",
+          "dense": 0.8
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#14",
+          "dense": 0.807
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#15",
+          "dense": 0.788
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#4",
+          "dense": 0.784
+        }
+      ]
+    },
+    {
+      "topic": "Business travel and expense claims",
+      "description": "Covers travel booking, accommodation, daily allowances, and expense claim procedures.",
+      "verdict": "unsupported",
+      "model_verdict": "unsupported",
+      "evidence": [],
+      "tool": "",
+      "missing": "The documents do not provide information on business travel booking, accommodation, daily allowances, or expense claim procedures. They only mention remote work allowances, leave entitlements, and HR contact details, which are unrelated to the required topic of business travel and expense claims.",
+      "lexical_coverage": 0.6,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "leave-and-holiday-policy#20",
+          "dense": 0.674
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#7",
+          "dense": 0.696
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#14",
+          "dense": 0.655
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#4",
+          "dense": 0.645
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#2",
+          "dense": 0.673
+        }
+      ]
+    },
+    {
+      "topic": "Remote working",
+      "description": "Includes eligibility, working hours, equipment, and grievance procedures for remote work.",
+      "verdict": "supported",
+      "model_verdict": "supported",
+      "evidence": [
+        {
+          "quote": "Confirmed employees may work remotely up to 2 days per week, provided this arrangement is explicitly agreed upon with their manager.",
+          "chunk_id": "remote-work-and-conduct#3"
+        },
+        {
+          "quote": "Employees are expected to respond to urgent inquiries within a reasonable timeframe during core hours.",
+          "chunk_id": "remote-work-and-conduct#6"
+        },
+        {
+          "quote": "Kestrel Shipmanagement provides necessary tools to support remote work while ensuring data security and operational efficiency.",
+          "chunk_id": "remote-work-and-conduct#7"
+        }
+      ],
+      "tool": "",
+      "missing": "",
+      "lexical_coverage": 1.0,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "remote-work-and-conduct#3",
+          "dense": 0.828
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#6",
+          "dense": 0.824
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#2",
+          "dense": 0.804
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#7",
+          "dense": 0.799
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#4",
+          "dense": 0.814
+        }
+      ]
+    },
+    {
+      "topic": "Conduct rules",
+      "description": "Covers code of conduct, gifts, conflicts of interest, and managerial approval.",
+      "verdict": "supported",
+      "model_verdict": "supported",
+      "evidence": [
+        {
+          "quote": "To maintain objectivity and prevent undue influence, strict guidelines govern the acceptance of gifts and hospitality from external parties.",
+          "chunk_id": "remote-work-and-conduct#9"
+        },
+        {
+          "quote": "A conflict of interest declaration must be submitted every year by 30 April.",
+          "chunk_id": "remote-work-and-conduct#11"
+        },
+        {
+          "quote": "Any request for remote work must be discussed and approved by the direct manager prior to implementation.",
+          "chunk_id": "remote-work-and-conduct#4"
+        }
+      ],
+      "tool": "",
+      "missing": "",
+      "lexical_coverage": 1.0,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "remote-work-and-conduct#9",
+          "dense": 0.766
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#11",
+          "dense": 0.731
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#10",
+          "dense": 0.722
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#1",
+          "dense": 0.714
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#4",
+          "dense": 0.712
+        }
+      ]
+    },
+    {
+      "topic": "Payroll and income-tax deductions",
+      "description": "Answers questions about payroll processes and income-tax deductions.",
+      "verdict": "unsupported",
+      "model_verdict": "unsupported",
+      "evidence": [],
+      "tool": "",
+      "missing": "The documents do not provide any information about payroll processes or income-tax deductions. They only mention financial allowances like internet reimbursement, but do not explain how these are handled in payroll or how income-tax deductions are calculated or applied.",
+      "lexical_coverage": 0.57,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "remote-work-and-conduct#7",
+          "dense": 0.638
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#20",
+          "dense": 0.617
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#8",
+          "dense": 0.609
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#14",
+          "dense": 0.666
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#15",
+          "dense": 0.646
+        }
+      ]
+    },
+    {
+      "topic": "Health insurance claims",
+      "description": "Guides staff through the process of submitting health insurance claims.",
+      "verdict": "unsupported",
+      "model_verdict": "unsupported",
+      "evidence": [],
+      "tool": "",
+      "missing": "The documents do not provide any information about the process of submitting health insurance claims. They only discuss sick leave policies, remote work conduct, and leave request procedures, which are related but not directly relevant to health insurance claims submission.",
+      "lexical_coverage": 0.75,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "leave-and-holiday-policy#8",
+          "dense": 0.703
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#16",
+          "dense": 0.672
+        },
+        {
+          "chunk_id": "leave-and-holiday-policy#7",
+          "dense": 0.662
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#11",
+          "dense": 0.68
+        },
+        {
+          "chunk_id": "remote-work-and-conduct#16",
+          "dense": 0.684
+        }
+      ]
+    }
+  ],
+  "coverage": 0.417,
+  "supported": [
+    "Remote working",
+    "Conduct rules"
+  ],
+  "tool_backed": [],
+  "partial": [
+    {
+      "topic": "Leave and holidays",
+      "missing": "The documents do not provide information about parental leave, compensatory days off for public holidays, or the specific days of public holidays. They also do not mention how parental leave is calculated or what benefits are provided during this period."
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Business travel and expense claims",
+      "missing": "The documents do not provide information on business travel booking, accommodation, daily allowances, or expense claim procedures. They only mention remote work allowances, leave entitlements, and HR contact details, which are unrelated to the required topic of business travel and expense claims."
+    },
+    {
+      "topic": "Payroll and income-tax deductions",
+      "missing": "The documents do not provide any information about payroll processes or income-tax deductions. They only mention financial allowances like internet reimbursement, but do not explain how these are handled in payroll or how income-tax deductions are calculated or applied."
+    },
+    {
+      "topic": "Health insurance claims",
+      "missing": "The documents do not provide any information about the process of submitting health insurance claims. They only discuss sick leave policies, remote work conduct, and leave request procedures, which are related but not directly relevant to health insurance claims submission."
+    }
+  ],
+  "disagreements": 0
+}
