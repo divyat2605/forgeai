@@ -271,7 +271,9 @@ def optimize(run: Run, defn: dict, cases: list[dict], first: dict) -> tuple[dict
 
         def critic(item):
             sid, vs = item
-            cat = max({v["failure"]["category"] for v in vs}, key=lambda c: sum(1 for v in vs if v["failure"]["category"] == c))
+            # deterministic: most frequent category, ties broken by name (a set's order varies between processes)
+            cats = sorted({v["failure"]["category"] for v in vs})
+            cat = max(cats, key=lambda c: (sum(1 for v in vs if v["failure"]["category"] == c), [-ord(ch) for ch in c]))
             return critic_result(sid, vs, cat)
 
         def critic_result(sid, vs, cat):

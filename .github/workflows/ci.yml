@@ -18,3 +18,6 @@ jobs:
       - name: replay a committed demo run without any model
         if: hashFiles('demos/hr-shore-staff/run/manifest.json') != ''
         run: python -m forgeai replay demos/hr-shore-staff/run --out ${{ runner.temp }}/replay-hr
+      - name: replay the procurement demo without any model
+        if: hashFiles('demos/ship-spares-procurement/run/manifest.json') != ''
+        run: python -m forgeai replay demos/ship-spares-procurement/run --out ${{ runner.temp }}/replay-proc
