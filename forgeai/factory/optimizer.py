@@ -264,10 +264,10 @@ def optimize(run: Run, defn: dict, cases: list[dict], first: dict) -> tuple[dict
                 key = f"{cat}/{v['failure']['subtype']}"
                 if key in SECTION_FOR:
                     by_section[SECTION_FOR[key]].append(v)
-        if any(v["failure"]["subtype"] == "missed_refusal" for v in dev_fail):
+        if any(v["should_refuse"] for v in dev_fail):
             p = _threshold_patch(current, [v for v in cur_eval["verdicts"] if v["split"] == "dev"], responses)
-            if p:
-                proposals.append((p, [v["id"] for v in dev_fail if v["failure"]["subtype"] == "missed_refusal"]))
+            if p:   # targets: every should-refuse dev case it answered (missed refusal OR answered with invented content)
+                proposals.append((p, [v["id"] for v in dev_fail if v["should_refuse"]]))
 
         def critic(item):
             sid, vs = item

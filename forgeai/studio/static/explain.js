@@ -231,7 +231,9 @@
     root.querySelector("#x-next").onclick = () => show(idx + 1);
     root.querySelector("#x-play").onclick = toggle;
     root.querySelectorAll(".tl i").forEach(x => x.onclick = () => show(+x.dataset.i));
-    show(0);
+    const qs = new URLSearchParams(location.search);
+    show(+(qs.get("scene") || 0));
+    if (qs.get("still")) { playing = false; root.classList.add("rec"); }
     raf = requestAnimationFrame(loop);
   }
 

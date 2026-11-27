@@ -50,6 +50,11 @@ def build(ctx: dict) -> tuple[str, dict]:
     L.append(f"The holdout score is the number to trust. Dev minus holdout is {100 * gap:+.0f} points"
              + (" - a large gap means the fixes partly fitted the dev cases." if gap > 0.15 else
                 " - no sign that the fixes over-fitted the dev cases." if gap <= 0.05 else "."))
+    dh = (scf["holdout"]["passed"] or 0) - (sc0["holdout"]["passed"] or 0)
+    dd = (scf["dev"]["passed"] or 0) - (sc0["dev"]["passed"] or 0)
+    if dh < 0:
+        L.append(f"Note the trade-off: the accepted changes fixed {dd:+d} dev case(s) but the holdout moved by {dh:+d}. "
+                 "The holdout was never used to decide, so this is reported, not tuned away.")
     L.append(f"With {scf['holdout']['n']} holdout cases the 95% interval is wide; treat differences under "
              f"~{100 * (scf['holdout']['ci95'][1] - scf['holdout']['ci95'][0]) / 2:.0f} points as noise.")
     L.append("")
@@ -190,6 +195,9 @@ def build(ctx: dict) -> tuple[str, dict]:
           "test set would be a stronger check.",
           "- Faithfulness checks compare each claim with the passages the agent saw. Correct general knowledge "
           "that is not in the sources is counted as unsupported, which is deliberate for a grounded agent.",
+          "- Near-miss out-of-scope tests are the hardest to label: a question can be partly covered by the documents. "
+          "Two model families must agree a topic is absent before such a test is kept, but a few labels may still be "
+          "debatable; each is inspectable in `05_evalset.json` (`label_votes`).",
           "- Weather and date cases check that the tool was called, not the live values.", ""]
 
     # -------------------------------------------------------------- cost

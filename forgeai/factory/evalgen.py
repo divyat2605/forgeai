@@ -368,12 +368,15 @@ def generate(run: Run, agent_defn: dict) -> dict:
         passages = "\n\n".join(f"[{h.chunk.chunk_id}] {h.chunk.text[:700]}" for h in hits)
         try:
             pid = "evalgen.verify_gap" if case["kind"] == "gap" else "evalgen.verify_oos"
-            v = run.gw.run_prompt("judge", pid, VERIFY_SCHEMA, stage="evalgen.verify_refusal",
-                                  question=case["question"], passages=passages or "(none)")
+            # two model families must agree the topic is absent (judge family + factory family)
+            vs = [run.gw.run_prompt(role, pid, VERIFY_SCHEMA, stage="evalgen.verify_refusal",
+                                    question=case["question"], passages=passages or "(none)") for role in ("judge", "factory")]
         except LLMError:
             return True
         from forgeai.util.text import content_tokens, quote_in
-        really = v["answerable"] and v.get("quote") and any(quote_in(v["quote"], h.chunk.text) for h in hits)
+        really = any(v["answerable"] and (not v.get("quote") or any(quote_in(v["quote"], h.chunk.text) for h in hits))
+                     for v in vs)
+        case["provenance"]["label_votes"] = ["present" if v["answerable"] else "absent" for v in vs]
         # deterministic second opinion: if one passage covers most of the question's content words,
         # the "must refuse" label is doubtful - drop it rather than keep a possibly wrong test
         qt = set(content_tokens(case["question"]))

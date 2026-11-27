@@ -250,6 +250,17 @@ def make_handler(studio: Studio):
                     return self._json({"text": _read(p, "")})
                 if u.path == "/api/job":
                     return self._json(studio.job(q["id"], int(q.get("since", 0))))
+                if u.path == "/api/brief":
+                    briefs = sorted(studio.root.glob("docs/*.brief")) + sorted(studio.root.glob("*.brief"))
+                    if not briefs:
+                        return self._json({"error": "no .brief deck found in docs/"}, 404)
+                    b = briefs[0]
+                    return self._json({"path": b.relative_to(studio.root).as_posix(), "text": b.read_text(encoding="utf-8")})
+                if u.path == "/api/asset":
+                    f = (studio.root / q["path"]).resolve()
+                    if studio.root not in f.parents or not f.is_file() or f.suffix.lower() not in (".png", ".jpg", ".jpeg", ".svg", ".gif", ".webp"):
+                        return self._json({"error": "not found"}, 404)
+                    return self._send(200, f.read_bytes(), mimetypes.guess_type(f.name)[0] or "application/octet-stream")
                 if u.path == "/api/env":
                     s = studio.settings
                     return self._json({"version": __version__, "profile": s.profile, "profiles": PROFILES,

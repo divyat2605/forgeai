@@ -16,7 +16,9 @@
   window.Studio = S;
 
   // ------------------------------------------------------------- theme
-  const savedTheme = (() => { try { return localStorage.getItem("forge-theme"); } catch (e) { return null; } })();
+  const QS = new URLSearchParams(location.search);
+  if (QS.get("static")) document.documentElement.classList.add("noanim");
+  const savedTheme = QS.get("theme") || (() => { try { return localStorage.getItem("forge-theme"); } catch (e) { return null; } })();
   if (savedTheme) document.documentElement.dataset.theme = savedTheme;
   $("#theme").onclick = () => {
     const dark = getComputedStyle(document.documentElement).colorScheme === "dark";
@@ -29,6 +31,7 @@
     S.runs = await api("/api/runs");
     const done = S.runs.filter(r => r.status === "complete");
     let saved = null; try { saved = localStorage.getItem("forge-run"); } catch (e) { }
+    if (!select && !S.run && QS.get("run") && S.runs.find(r => r.id === QS.get("run"))) select = QS.get("run");
     if (!select && !S.run && saved && S.runs.find(r => r.id === saved)) select = saved;
     const pref = select || S.run || (done.find(r => r.id.startsWith("demos/")) || done[0] || S.runs[0] || {}).id;
     renderPicker();
@@ -52,7 +55,7 @@
   }
 
   // ------------------------------------------------------------- routing
-  const TITLES = { overview: "Overview", build: "Build an agent", report: "Report", cases: "Eval cases", chat: "Chat with the agent", explain: "How it works" };
+  const TITLES = { overview: "Overview", build: "Build an agent", report: "Report", cases: "Eval cases", chat: "Chat with the agent", explain: "How it works", brief: "The brief" };
   function go(route, tab) { location.hash = "#/" + route + (tab ? "/" + tab : ""); }
   function parse() {
     const [, route, tab] = (location.hash || "#/overview").split("/");
@@ -69,7 +72,7 @@
     const page = $("#page");
     page.className = "page fade";
     void page.offsetWidth;
-    ({ overview, build, report, cases, chat, explain })[S.route](page);
+    ({ overview, build, report, cases, chat, explain, brief: p => window.Brief.mount(p) })[S.route](page);
   }
 
   // ------------------------------------------------------------- shared bits
@@ -402,7 +405,7 @@
         <span class="faint" style="font-size:12.5px">iteration ${esc(p.iteration)} · addresses ${(p.addresses || []).join(", ") || "-"} · gate: fixed ${(p.gate.fixed || []).length}, broke ${(p.gate.broke || []).length}</span></div>
         <h3 class="h3" style="margin-top:12px">${esc(p.change_summary)}</h3><p class="muted" style="margin:4px 0 12px">Why: ${esc(p.diagnosis)}</p>
         <div class="diff">${typeof p.before === "string" ? wordDiff(p.before, p.after) : `<del>${esc(JSON.stringify(p.before))}</del>\n<ins>${esc(JSON.stringify(p.after))}</ins>`}</div>
-        ${p.iteration_decision ? `<p class="faint" style="font-size:12.5px;margin:10px 0 0">${esc(p.iteration_decision)}</p>` : ""}</div>`).join("")
+        ${p.iteration_decision ? `<p class="faint" style="font-size:12.5px;margin:10px 0 0">Iteration ${esc(p.iteration)} outcome (all accepted patches merged and re-evaluated): ${esc(p.iteration_decision)}</p>` : ""}</div>`).join("")
         : `<div class="empty">No patches were needed or proposed.</div>`}
       <p class="faint" style="font-size:12.5px">${its.filter(h => String(h.decision || "").startsWith("stopped")).map(h => "Iteration " + h.iteration + ": " + h.decision).join(" · ")}</p>`;
   }

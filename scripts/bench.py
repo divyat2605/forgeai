@@ -53,6 +53,18 @@ def main() -> int:
             row.update(status="stopped (not groundable)", coverage=g["coverage"], gaps=[x["topic"] for x in g["gaps"]])
         else:
             row.update(status=f"error rc={rc}")
+        if run:   # keep the human-readable evidence next to the brief (run folders themselves are not committed)
+            import shutil
+            dst = ROOT / "bench" / name / "result"
+            if dst.exists():
+                shutil.rmtree(dst)
+            dst.mkdir(parents=True)
+            for f in ("REPORT.md", "report.json", "02_requirements.md", "03_groundability.md", "04_tool_decisions.json",
+                      "05_evalset.json", "07_changes.jsonl", "08_judge_canaries.json"):
+                if (run / f).exists():
+                    shutil.copy2(run / f, dst / f)
+            if (run / "agent" / "agent.json").exists():
+                shutil.copy2(run / "agent" / "agent.json", dst / "agent.json")
         row["expected"] = "stop" if name in EXPECT_STOP else "build"
         row["ok"] = (row["status"].startswith("stopped")) == (name in EXPECT_STOP)
         rows.append(row)
