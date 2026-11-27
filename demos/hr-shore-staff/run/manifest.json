@@ -1,0 +1,327 @@
+{
+  "forgeai_version": "1.0.0",
+  "status": "complete",
+  "started": "2026-11-27T15:38:07.359536+05:30",
+  "platform": {
+    "python": "3.12.16",
+    "os": "macOS-26.7.3-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "settings": {
+    "profile": "standard",
+    "backend": "ollama",
+    "host": "http://localhost:11434",
+    "factory_model": "qwen3:8b",
+    "agent_model": "qwen3:8b",
+    "judge_model": "gemma3:4b",
+    "embed_model": "nomic-embed-text",
+    "workers": 4,
+    "max_iterations": 3,
+    "eval_target": 32,
+    "holdout_frac": 0.4,
+    "seed": 7,
+    "max_minutes": 0.0,
+    "max_tokens": 0,
+    "min_gain": 0.03,
+    "max_questions": 5,
+    "interactive": false,
+    "approve_requirements": false,
+    "tournament": true,
+    "offline_tools": false,
+    "num_ctx": 8192,
+    "cache_dir": ".forge_cache",
+    "replay": false
+  },
+  "docs_dir": "../docs",
+  "answers_file": "../requester_notes.md",
+  "documents": [
+    {
+      "path": "leave_and_holiday_policy.pdf",
+      "sha256": "76b444b8007df85fdf59e97bd824ada6927f1e85fcb997c7679c45db4d84a0be"
+    },
+    {
+      "path": "remote_work_and_conduct.pdf",
+      "sha256": "a4880af75f864c3d6be02c70de458c8e26dbd73916133462908c4c36f6e72503"
+    },
+    {
+      "path": "travel_and_expense_policy.pdf",
+      "sha256": "f10b2f184efae623b0e8d648cdb5e163b8b3a7c6d6aca46f7ec09cd860f36a83"
+    }
+  ],
+  "prompt_sha256": {
+    "agent.query_rewrite": "e282344efe4bb051c15cd682bbe1f660d3a6532010ffc552c677e0edd2c376cf",
+    "critic.patch": "d1a36812d99cabe7bd03e6461c9776d988f6fed7847b06b93e57603fb20c87b6",
+    "evalgen.answerable": "d26146d75a900b63c3444afcbf59f99014e11979252efe67e1b61cb5ba4c400c",
+    "evalgen.application": "87af006bc2257011e20a2d4f3e37a789cb7da70b7f957efd66a85ce29fecfc74",
+    "evalgen.closed_book": "001227594b7c09423ac2c54711c7ee87b7aa56e30200d846e2e4030cf8d8f522",
+    "evalgen.multidoc": "2e3989e322c276e2028c5460f0b9f104cec49e8e9b46306ddf02fccb5968274a",
+    "evalgen.out_of_scope": "af46c3b50e9a50f7146c6bbe7d92ca3a21386939bbc85098650595b533e3f920",
+    "evalgen.rephrase": "3f48aa341931cc0c5f09efbc8761d257d4c4b2e32f88120debe83ac66d44582a",
+    "evalgen.tool": "4a4cd88df0d0a0560d55e48c7ccb6e28aea741cbd56756130073fb2859d3c11f",
+    "evalgen.verify_gap": "81e31e7d669d5936e9aabdc2e46a94274ae4b4f3a73ba0de25cdc8d1e7464684",
+    "evalgen.verify_oos": "690976510dad2b8834697afc6ef13e0861bbec7f66334e0beac3d5635771a196",
+    "gen.system_prompt": "6c9aa7ddba451fd247ae9b5df0ba4be73a5d887275de5e4c94c68b7ca97a15ae",
+    "gen.tools": "444b3762ce77613daf86bf1533fbf6efc5263809f320fe451a3bafa0a1ffa584",
+    "ground.topic": "0307f1394f046b1bafad980ac84a2b161fe617c1a8628dc030f52db3b5ab816b",
+    "intake.answer_from_notes": "6f9a4afe78514623c42fcfe4a4d9688e34afd36f479c55f70830480dbbcc5547",
+    "intake.draft": "3c04ce6abffc881c5418a58972961297a17193bfa8f18af5698ea31212558a64",
+    "intake.finalize": "8d3e4b6e06435b42ba738abfb94b3fb1b1eeb296f12cc878d74c0029b7adb868",
+    "intake.profile_doc": "dbdbb42baa789350e633b81fd9aaa6b5b1fe3a8922a9d57b44b24cf3d87d115c",
+    "intake.questions": "b2999643b26db4c64fc5acae49af599418999d50a41b0d02b9598700a31fc1ff",
+    "judge.claims": "7faf747dd87129a8d6d53e754e0918e110ea8cb4a78d8ccccb927aa7dc6dabb8",
+    "judge.fact": "efe212accd2ee206a3060c1f0655f944f25b92f770529131e32da3b6d022626b"
+  },
+  "meter": {
+    "wall_seconds": 0.4,
+    "calls": 346,
+    "cache_hits": 346,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "model_seconds": 0.0,
+    "repairs": 0,
+    "failures": 0,
+    "by_stage": {
+      "intake.profile": {
+        "calls": 3,
+        "cache_hits": 3,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "intake.draft": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "intake.questions": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "intake.notes": {
+        "calls": 5,
+        "cache_hits": 5,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "intake.finalize": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "groundability": {
+        "calls": 6,
+        "cache_hits": 6,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "generate.tools": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "generate.prompt": {
+        "calls": 3,
+        "cache_hits": 3,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.answerable": {
+        "calls": 21,
+        "cache_hits": 21,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.multidoc": {
+        "calls": 8,
+        "cache_hits": 8,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.application": {
+        "calls": 12,
+        "cache_hits": 12,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.leakage": {
+        "calls": 36,
+        "cache_hits": 36,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.edge": {
+        "calls": 4,
+        "cache_hits": 4,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.out_of_scope": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.gap": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "evalgen.verify_refusal": {
+        "calls": 24,
+        "cache_hits": 24,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "tournament.agent": {
+        "calls": 48,
+        "cache_hits": 48,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "tournament.judge.fact": {
+        "calls": 26,
+        "cache_hits": 26,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "tournament.judge.claims": {
+        "calls": 11,
+        "cache_hits": 11,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "eval.agent": {
+        "calls": 58,
+        "cache_hits": 58,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "eval.judge.fact": {
+        "calls": 27,
+        "cache_hits": 27,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "eval.judge.claims": {
+        "calls": 13,
+        "cache_hits": 13,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "optimize.critic": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "optimize.gate.agent": {
+        "calls": 18,
+        "cache_hits": 18,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "optimize.gate.judge.fact": {
+        "calls": 12,
+        "cache_hits": 12,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "optimize.gate.judge.claims": {
+        "calls": 3,
+        "cache_hits": 3,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      },
+      "canary.fact": {
+        "calls": 1,
+        "cache_hits": 1,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "model_seconds": 0.0
+      }
+    }
+  },
+  "stage_seconds": {
+    "ingest": 0.0,
+    "intake": 0.0,
+    "groundability": 0.0,
+    "generate": 0.0,
+    "evalgen": 0.1,
+    "tournament": 0.0,
+    "baseline_eval": 0.0,
+    "optimize": 0.2,
+    "judge_audit": 0.0
+  },
+  "artifact_sha256": {
+    "01_corpus.json": "e298e4fd1e15c963",
+    "02_requirements.json": "188ab5371e988cd8",
+    "02_requirements.md": "e007a1b712c29a37",
+    "03_groundability.json": "a97e0de2ba092fb1",
+    "03_groundability.md": "f883318623eb2967",
+    "04_tool_decisions.json": "e53b7a6268f4fa70",
+    "05_evalset.json": "9d891a3c33868b2e",
+    "06_iterations/iter_0/responses.jsonl": "037ca0c8ce935afa",
+    "06_iterations/iter_0/scorecard.json": "4426831bccf40808",
+    "06_iterations/iter_0/verdicts.jsonl": "6479c66fbc2a8cfe",
+    "06_iterations/iter_1/responses.jsonl": "7e3aeec1b7afea10",
+    "06_iterations/iter_1/scorecard.json": "4780d9babb7dfb16",
+    "06_iterations/iter_1/verdicts.jsonl": "bfa0bd864e2debb6",
+    "06_tournament/persona/responses.jsonl": "9b8759faa299e5e6",
+    "06_tournament/persona/scorecard.json": "7d5e5dae842fe3ec",
+    "06_tournament/persona/verdicts.jsonl": "3848018935b803c0",
+    "06_tournament/procedure/responses.jsonl": "623e4ff176b44e96",
+    "06_tournament/procedure/scorecard.json": "a3f8104241a36738",
+    "06_tournament/procedure/verdicts.jsonl": "ef81d179eb51c399",
+    "06_tournament/rules/responses.jsonl": "d3be05ed7a65e1ec",
+    "06_tournament/rules/scorecard.json": "ac9cb92785d27f27",
+    "06_tournament/rules/verdicts.jsonl": "886f3f0942639ab3",
+    "06_tournament/tournament.json": "d2924a0d1df5cd74",
+    "07_changes.jsonl": "da4e21eaa0873a8f",
+    "07_iterations.json": "2afdbb04137aaf45",
+    "08_judge_canaries.json": "604134854f2eb3da",
+    "09_final_responses.jsonl": "7e3aeec1b7afea10",
+    "09_final_scorecard.json": "4780d9babb7dfb16",
+    "09_final_verdicts.jsonl": "bfa0bd864e2debb6",
+    "REPORT.md": "6547a4b2d091e37b",
+    "agent/agent.json": "a251164e98a1c38d",
+    "agent/knowledge/chunks.json": "21b1a2e11ed4dfe7",
+    "agent/knowledge/tables.json": "ca3d163bab055381",
+    "brief.md": "1801de533f0e206e",
+    "manifest.json": "2e00aeb008fd24c8",
+    "report.json": "e25eab4279bb9dcd",
+    "tool_record.json": "ca3d163bab055381",
+    "trace.jsonl": "2ec26d0f53e179e3"
+  },
+  "agent": "agent/agent.json"
+}

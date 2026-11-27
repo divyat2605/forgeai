@@ -1,0 +1,157 @@
+{
+  "schema_version": "forgeai.agent/1",
+  "name": "FleetSpares",
+  "description": "FleetSpares helps buyers find spare parts, calculate costs, and plan deliveries for the fleet purchasing team.",
+  "version": 0,
+  "model": {
+    "name": "qwen3:8b",
+    "temperature": 0.0,
+    "max_tokens": 700,
+    "num_ctx": 8192
+  },
+  "system_prompt": {
+    "style": "procedure",
+    "sections": [
+      {
+        "id": "role",
+        "text": "FleetSpares is an assistant for fleet purchasing teams and buyers. I help find spare parts, calculate costs, and plan deliveries for vessels."
+      },
+      {
+        "id": "audience_tone",
+        "text": "Use plain English, avoid jargon, and keep explanations clear and concise for professionals in fleet purchasing."
+      },
+      {
+        "id": "scope",
+        "text": "I answer: part details, order total calculation, supplier terms, approval rules, weather outlook. I do not answer: shipment tracking, legal advice, personal data, other departments, external financial advice."
+      },
+      {
+        "id": "grounding",
+        "text": "Use only the provided SOURCES. Cite exact numbers, names, and dates from the sources. Combine passages when a question spans several. Never fill gaps with general knowledge."
+      },
+      {
+        "id": "refusal",
+        "text": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.\nAlways decline questions about: Legal advice; Personal data; Other departments; External financial advice; Shipment tracking."
+      },
+      {
+        "id": "tools",
+        "text": "Use csv_lookup for part details, calculator for order totals, and weather for delivery port forecasts. No tools are available for shipment tracking."
+      },
+      {
+        "id": "format",
+        "text": "Answer directly first, then list key details in bullet points. Use short, clear sentences."
+      }
+    ]
+  },
+  "knowledge": {
+    "index_dir": "knowledge",
+    "embed_model": "nomic-embed-text",
+    "documents": [
+      {
+        "doc_id": "purchasing-policy",
+        "path": "purchasing_policy.pdf",
+        "kind": "pdf",
+        "sha256": "bb303125dc89a71e05ec2da4222cbaa63de8a013cf98f1b29762c3ce6e358dd0"
+      },
+      {
+        "doc_id": "spares-catalogue",
+        "path": "spares_catalogue.csv",
+        "kind": "csv",
+        "sha256": "2d68c27cbe7e34a484a3837a3ea68eb56df536104b20deb862fc7e2558d5830a"
+      },
+      {
+        "doc_id": "supplier-terms-sup-01-harbourlin",
+        "path": "supplier_terms_SUP-01_harbourline.pdf",
+        "kind": "pdf",
+        "sha256": "55079bbd6f0865dfaae38c1579737a1a8afebf738936b9f064f0e3fd4142f3da"
+      },
+      {
+        "doc_id": "supplier-terms-sup-02-straits",
+        "path": "supplier_terms_SUP-02_straits.pdf",
+        "kind": "pdf",
+        "sha256": "af2a8f7dd4e81db85805ca7a703de8748220b2e558973e1f43295da0a0b7b468"
+      },
+      {
+        "doc_id": "supplier-terms-sup-03-gulfmarine",
+        "path": "supplier_terms_SUP-03_gulfmarine.pdf",
+        "kind": "pdf",
+        "sha256": "84512a7ed8de3c2c2f3e585fde78ce35922cd9373f5d4d47d21feafdb87c019d"
+      }
+    ],
+    "chunking": {
+      "max_chars": 900,
+      "overlap": 120
+    },
+    "retrieval": {
+      "top_k": 6,
+      "bm25_weight": 0.55,
+      "neighbours": 0,
+      "query_rewrite": false
+    }
+  },
+  "tools": [
+    {
+      "name": "csv_lookup",
+      "reason": "The purchasing_policy.pdf contains approval rules based on the part's cost and quantity.",
+      "serves_topic": "Approval rules"
+    },
+    {
+      "name": "calculator",
+      "reason": "The calculator is needed to compute the total cost for a given quantity of a part, including unit price and any applicable discounts or minimum order quantities.",
+      "serves_topic": "Order total calculation"
+    },
+    {
+      "name": "weather",
+      "reason": "The weather tool provides the weather forecast for the delivery port to help plan vessel deliveries.",
+      "serves_topic": "Weather outlook"
+    }
+  ],
+  "output_contract": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string",
+        "description": "Answer for the user, or the refusal message."
+      },
+      "citations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Labels of the passages / tool results the answer relies on, e.g. [\"C2\", \"T1\"]."
+      },
+      "refused": {
+        "type": "boolean",
+        "description": "true when the question is out of scope or not answerable from the sources."
+      }
+    },
+    "required": [
+      "answer",
+      "citations",
+      "refused"
+    ],
+    "additionalProperties": false
+  },
+  "guards": {
+    "min_relevance": 0.0,
+    "max_tool_rounds": 2,
+    "require_citations": true
+  },
+  "refusal_policy": {
+    "message": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+    "must_refuse_topics": [
+      "Legal advice",
+      "Personal data",
+      "Other departments",
+      "External financial advice"
+    ],
+    "unsupported_topics": [
+      "Shipment tracking"
+    ]
+  },
+  "provenance": {
+    "factory": "forgeai 1.0.0",
+    "created": "2026-11-27T10:08:07Z",
+    "brief": "I need an assistant for our fleet purchasing team that finds spare parts in our spares catalogue and tells buyers the price, stock on hand, lead time and supplier for a part; works out order totals for a given quantity; explains which supplier terms apply (payment, delivery ports, warranty, free-delivery limits) and which approval rules apply to a purchase; and gives the weather outlook at the delivery port so buyers can plan deliveries to vessels. It should also track the live status of shipments that are already on their way.",
+    "changes": []
+  }
+}

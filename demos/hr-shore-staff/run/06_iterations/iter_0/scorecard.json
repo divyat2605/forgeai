@@ -1,0 +1,111 @@
+{
+  "label": "iteration 0",
+  "agent_fingerprint": "1c288506f1d0",
+  "overall": {
+    "passed": 27,
+    "n": 29,
+    "rate": 0.931,
+    "ci95": [
+      0.78,
+      0.981
+    ]
+  },
+  "dev": {
+    "passed": 14,
+    "n": 16,
+    "rate": 0.875,
+    "ci95": [
+      0.64,
+      0.965
+    ]
+  },
+  "holdout": {
+    "passed": 13,
+    "n": 13,
+    "rate": 1.0,
+    "ci95": [
+      0.772,
+      1.0
+    ]
+  },
+  "by_kind": {
+    "answerable": {
+      "passed": 11,
+      "n": 12,
+      "rate": 0.9167,
+      "ci95": [
+        0.646,
+        0.985
+      ]
+    },
+    "application": {
+      "passed": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+        0.51,
+        1.0
+      ]
+    },
+    "edge": {
+      "passed": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+        0.51,
+        1.0
+      ]
+    },
+    "gap": {
+      "passed": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+        0.342,
+        1.0
+      ]
+    },
+    "multi_doc": {
+      "passed": 3,
+      "n": 4,
+      "rate": 0.75,
+      "ci95": [
+        0.301,
+        0.954
+      ]
+    },
+    "must_refuse": {
+      "passed": 3,
+      "n": 3,
+      "rate": 1.0,
+      "ci95": [
+        0.438,
+        1.0
+      ]
+    }
+  },
+  "metrics": {
+    "fact_recall_mean": 0.938,
+    "grounded_rate": 0.958,
+    "retrieval_recall": 0.958,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 0.0,
+    "runtime_errors": 0
+  },
+  "failures": {
+    "retrieval_miss": 1,
+    "prompt_defect": 1
+  },
+  "failures_dev": {
+    "retrieval_miss": 1,
+    "prompt_defect": 1
+  },
+  "failure_subtypes": {
+    "retrieval_miss/fact_passage_not_retrieved": 1,
+    "prompt_defect/incomplete_or_wrong": 1
+  },
+  "tools_used": {}
+}

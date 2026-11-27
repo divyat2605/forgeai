@@ -1,0 +1,93 @@
+{
+  "agent": "FleetSpares",
+  "holdout": {
+    "passed": 11,
+    "n": 13,
+    "rate": 0.8462,
+    "ci95": [
+      0.578,
+      0.957
+    ]
+  },
+  "dev": {
+    "passed": 15,
+    "n": 17,
+    "rate": 0.8824,
+    "ci95": [
+      0.657,
+      0.967
+    ]
+  },
+  "overall": {
+    "passed": 26,
+    "n": 30,
+    "rate": 0.8667,
+    "ci95": [
+      0.703,
+      0.947
+    ]
+  },
+  "baseline": {
+    "holdout": {
+      "passed": 11,
+      "n": 13,
+      "rate": 0.8462,
+      "ci95": [
+        0.578,
+        0.957
+      ]
+    },
+    "dev": {
+      "passed": 15,
+      "n": 17,
+      "rate": 0.8824,
+      "ci95": [
+        0.657,
+        0.967
+      ]
+    }
+  },
+  "failures_final": {
+    "prompt_defect": 3,
+    "hallucination": 1
+  },
+  "metrics_final": {
+    "fact_recall_mean": 0.917,
+    "grounded_rate": 0.96,
+    "retrieval_recall": 1.0,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 0.0,
+    "runtime_errors": 0
+  },
+  "canaries": {
+    "gold_pass": 1.0,
+    "corrupted_fail": 1.0,
+    "padded_pass": 1.0,
+    "fabrication_caught": 1.0,
+    "overall": 1.0,
+    "n_canaries": 24,
+    "verbosity_effect": 0.0
+  },
+  "gaps": [
+    {
+      "topic": "Shipment tracking",
+      "missing": "The documents do not provide any information about tracking the live status of shipments in transit. They only discuss order placement, delivery charges, and logistical planning, but no mention is made of tracking systems, real-time updates, or status monitoring tools."
+    }
+  ],
+  "tools": [
+    "csv_lookup",
+    "calculator",
+    "weather"
+  ],
+  "iterations": 1,
+  "cost": {
+    "wall_seconds": 0.3,
+    "calls": 344,
+    "cache_hits": 344,
+    "tokens_in": 0,
+    "tokens_out": 0
+  }
+}

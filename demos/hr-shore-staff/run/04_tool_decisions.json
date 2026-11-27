@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "csv_lookup",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The tool is unavailable as the precondition is not met.",
+    "final_reason": "The tool is unavailable as the precondition is not met.",
+    "gates": {
+      "precondition": false,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "calculator",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": true,
+    "model_reason": "The calculator is needed to compute totals, pro-rata entitlements, and percentages related to payroll and income-tax deductions.",
+    "final_reason": "vetoed: the topic it would serve ('Payroll and income-tax deductions') is a groundability gap the agent must decline",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "weather",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The weather tool is not relevant to the HR policy topics outlined in the requirements.",
+    "final_reason": "The weather tool is not relevant to the HR policy topics outlined in the requirements.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "current_date",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": true,
+    "model_reason": "The current date tool is needed to determine deadlines, validity windows, and days remaining for leave and holiday-related inquiries.",
+    "final_reason": "vetoed: no supported requirement mentions a need this tool serves",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  }
+]

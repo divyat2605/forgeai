@@ -1,0 +1,190 @@
+{
+  "documents": [
+    {
+      "doc_id": "purchasing-policy",
+      "path": "purchasing_policy.pdf",
+      "kind": "pdf",
+      "sha256": "bb303125dc89a71e05ec2da4222cbaa63de8a013cf98f1b29762c3ce6e358dd0",
+      "title": "Version: 4",
+      "chars": 8357,
+      "headings": [
+        "Version: 4",
+        "Requisitions",
+        "Approval Limits",
+        "Approval Limits",
+        "Quotations",
+        "Critical Spares",
+        "Critical Spares",
+        "Delivery Planning",
+        "Supplier Selection by Region",
+        "Receiving and Inspection",
+        "Receiving and Inspection",
+        "Records"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the Fleet Purchasing Policy for spares and stores, detailing the procurement process, approval limits, and responsibilities for ensuring efficient and controlled purchasing across the company's fleet.",
+        "topics": [
+          "purchasing process",
+          "requisition procedures",
+          "approval limits",
+          "supplier selection",
+          "inventory control",
+          "cost management",
+          "operational efficiency",
+          "financial controls"
+        ]
+      }
+    },
+    {
+      "doc_id": "spares-catalogue",
+      "path": "spares_catalogue.csv",
+      "kind": "csv",
+      "sha256": "2d68c27cbe7e34a484a3837a3ea68eb56df536104b20deb862fc7e2558d5830a",
+      "title": "spares catalogue",
+      "chars": 131,
+      "headings": [
+        "spares catalogue (table, 25 rows)"
+      ],
+      "table_columns": [
+        "part_no",
+        "description",
+        "system",
+        "maker",
+        "unit_price_usd",
+        "stock_qty",
+        "lead_time_days",
+        "supplier_id",
+        "min_order_qty",
+        "critical_spare"
+      ],
+      "table_rows": 25,
+      "warnings": [],
+      "profile": {
+        "summary": "The document is a CSV file containing a spares catalogue with 25 entries, detailing parts, their descriptions, systems, suppliers, pricing, and stock information.",
+        "topics": [
+          "spare parts inventory",
+          "part pricing",
+          "supplier information",
+          "stock levels",
+          "lead times",
+          "critical spare parts",
+          "part system classification",
+          "minimum order quantities"
+        ]
+      }
+    },
+    {
+      "doc_id": "supplier-terms-sup-01-harbourlin",
+      "path": "supplier_terms_SUP-01_harbourline.pdf",
+      "kind": "pdf",
+      "sha256": "55079bbd6f0865dfaae38c1579737a1a8afebf738936b9f064f0e3fd4142f3da",
+      "title": "Terms of Supply for Ship Spare Parts",
+      "chars": 6066,
+      "headings": [
+        "Terms of Supply for Ship Spare Parts",
+        "Supplier Profile",
+        "Ordering Procedures",
+        "Prices and Payment",
+        "Prices and Payment",
+        "Delivery Logistics",
+        "Warranty and Returns",
+        "Warranty and Returns"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the commercial terms and conditions for the supply of ship spare parts by Harbourline Marine Supplies B.V., including ordering procedures, pricing, payment, and delivery logistics.",
+        "topics": [
+          "ship spare parts supply",
+          "ordering procedures",
+          "payment terms",
+          "delivery logistics",
+          "supplier profile",
+          "price currency",
+          "express delivery options"
+        ]
+      }
+    },
+    {
+      "doc_id": "supplier-terms-sup-02-straits",
+      "path": "supplier_terms_SUP-02_straits.pdf",
+      "kind": "pdf",
+      "sha256": "af2a8f7dd4e81db85805ca7a703de8748220b2e558973e1f43295da0a0b7b468",
+      "title": "Ordering Procedures",
+      "chars": 5489,
+      "headings": [
+        "Ordering Procedures",
+        "Prices and Payment",
+        "Prices and Payment",
+        "Delivery Logistics",
+        "Warranty and Returns",
+        "Contacts",
+        "Contacts"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the commercial terms and conditions for procuring ship spare parts from Straits Ship Chandlers Pte Ltd, including ordering procedures, pricing, payment terms, and delivery logistics.",
+        "topics": [
+          "ordering procedures",
+          "payment terms",
+          "price agreements",
+          "delivery logistics",
+          "warranty policies",
+          "return procedures",
+          "contact information"
+        ]
+      }
+    },
+    {
+      "doc_id": "supplier-terms-sup-03-gulfmarine",
+      "path": "supplier_terms_SUP-03_gulfmarine.pdf",
+      "kind": "pdf",
+      "sha256": "84512a7ed8de3c2c2f3e585fde78ce35922cd9373f5d4d47d21feafdb87c019d",
+      "title": "Terms of Supply: SUP-03",
+      "chars": 6099,
+      "headings": [
+        "Terms of Supply: SUP-03",
+        "Supplier Profile",
+        "Ordering Procedures",
+        "Prices and Payment",
+        "Prices and Payment",
+        "Delivery Logistics",
+        "Warranty Coverage",
+        "Returns Policy",
+        "Contacts"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the terms of supply for Gulf Marine Spares LLC (SUP-03), including supplier profile, ordering procedures, pricing, payment terms, and logistics.",
+        "topics": [
+          "supplier profile",
+          "ordering procedures",
+          "payment terms",
+          "currency used",
+          "delivery logistics",
+          "price stability",
+          "international shipping",
+          "part specifications"
+        ]
+      }
+    }
+  ],
+  "skipped": [],
+  "chunks": 75
+}

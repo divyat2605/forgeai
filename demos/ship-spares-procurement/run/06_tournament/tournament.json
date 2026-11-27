@@ -1,0 +1,53 @@
+[
+  {
+    "style": "rules",
+    "dev": {
+      "passed": 14,
+      "n": 17,
+      "rate": 0.8235,
+      "ci95": [
+        0.59,
+        0.938
+      ]
+    },
+    "fact_recall": 0.962,
+    "grounded": 0.857,
+    "prompt_chars": 1101,
+    "fingerprint": "da5d4a42f321",
+    "winner": false
+  },
+  {
+    "style": "persona",
+    "dev": {
+      "passed": 15,
+      "n": 17,
+      "rate": 0.8824,
+      "ci95": [
+        0.657,
+        0.967
+      ]
+    },
+    "fact_recall": 0.962,
+    "grounded": 0.929,
+    "prompt_chars": 1497,
+    "fingerprint": "6410e284f3ec",
+    "winner": false
+  },
+  {
+    "style": "procedure",
+    "dev": {
+      "passed": 15,
+      "n": 17,
+      "rate": 0.8824,
+      "ci95": [
+        0.657,
+        0.967
+      ]
+    },
+    "fact_recall": 0.962,
+    "grounded": 0.929,
+    "prompt_chars": 1214,
+    "fingerprint": "016fe657ab28",
+    "winner": true
+  }
+]

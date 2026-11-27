@@ -1,0 +1,6 @@
+{
+  "{\"days\": 2, \"location\": \"Fujairah\"}": {
+    "ok": true,
+    "result": "Fujairah, United Arab Emirates: now 27.4°C, wind 14.5 km/h, precipitation 0.0 mm.\n2026-11-27: 24.1-28.4°C, rain 0.0 mm, max wind 14.5 km/h\n2026-11-28: 23.7-28.3°C, rain 0.0 mm, max wind 13.5 km/h\n(source: open-meteo.com)"
+  }
+}

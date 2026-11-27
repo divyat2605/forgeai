@@ -1,0 +1,144 @@
+{
+  "documents": [
+    {
+      "doc_id": "leave-and-holiday-policy",
+      "path": "leave_and_holiday_policy.pdf",
+      "kind": "pdf",
+      "sha256": "76b444b8007df85fdf59e97bd824ada6927f1e85fcb997c7679c45db4d84a0be",
+      "title": "Leave and Holiday Policy",
+      "chars": 8921,
+      "headings": [
+        "Leave and Holiday Policy",
+        "Policy Number: HR-POL-01",
+        "Version: 3.2",
+        "Annual Leave",
+        "Carry Forward Rules",
+        "Carry Forward Rules",
+        "Sick Leave",
+        "Medical Certification",
+        "Parental Leave",
+        "Maternity Leave",
+        "Paternity Leave",
+        "Paternity Leave",
+        "Bereavement Leave",
+        "Public Holidays and Compensatory Off",
+        "Working on Public Holidays",
+        "Applying for Leave",
+        "Applying for Leave",
+        "Leave During Probation",
+        "Leave Encashment on Exit",
+        "Contacts"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the leave and holiday policy for permanent shore-based staff at Kestrel Shipmanagement, including annual leave entitlements, carry forward rules, sick leave, parental leave, and procedures for applying for leave.",
+        "topics": [
+          "annual leave entitlement",
+          "carry forward rules",
+          "sick leave policy",
+          "parental leave",
+          "maternity leave",
+          "paternity leave",
+          "bereavement leave",
+          "public holidays"
+        ]
+      }
+    },
+    {
+      "doc_id": "remote-work-and-conduct",
+      "path": "remote_work_and_conduct.pdf",
+      "kind": "pdf",
+      "sha256": "a4880af75f864c3d6be02c70de458c8e26dbd73916133462908c4c36f6e72503",
+      "title": "Remote Work and Code of Conduct Policy",
+      "chars": 8064,
+      "headings": [
+        "Remote Work and Code of Conduct Policy",
+        "Policy Number: HR-POL-07",
+        "Version: 1.4",
+        "Effective Date: Immediate",
+        "Applicability: Shore Staff, Kestrel Shipmanagement",
+        "Introduction and Purpose",
+        "Hybrid and Remote Work",
+        "Working Hours and Availability",
+        "Working Hours and Availability",
+        "Equipment and Allowances",
+        "Gifts and Hospitality",
+        "Conflicts of Interest",
+        "Conflicts of Interest",
+        "Raising a Grievance",
+        "Prevention of Sexual Harassment",
+        "Notice Period and Exit",
+        "Notice Period and Exit"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines Kestrel Shipmanagement's remote work policy and code of conduct for shore staff, covering eligibility, working hours, equipment, and grievance procedures.",
+        "topics": [
+          "remote work eligibility",
+          "working hours policy",
+          "equipment and allowances",
+          "grievance procedures",
+          "code of conduct",
+          "managerial approval",
+          "core hours availability"
+        ]
+      }
+    },
+    {
+      "doc_id": "travel-and-expense-policy",
+      "path": "travel_and_expense_policy.pdf",
+      "kind": "pdf",
+      "sha256": "f10b2f184efae623b0e8d648cdb5e163b8b3a7c6d6aca46f7ec09cd860f36a83",
+      "title": "Business Travel and Expense Policy",
+      "chars": 8826,
+      "headings": [
+        "Business Travel and Expense Policy",
+        "Policy Number: FIN-POL-04",
+        "Version: 2.0",
+        "Effective Date: Immediate",
+        "Applicability: Shore Staff of Kestrel Shipmanagement",
+        "Scope",
+        "Travel Booking and Mode of Travel",
+        "Accommodation",
+        "Accommodation",
+        "Daily Allowance",
+        "International Travel",
+        "Travel Advances",
+        "Travel Advances",
+        "Expense Claims",
+        "Approvals",
+        "Personal Vehicle Use",
+        "Personal Vehicle Use",
+        "Ship and Port Visits"
+      ],
+      "table_columns": null,
+      "table_rows": null,
+      "warnings": [
+        "removed 1 running header/footer line(s)"
+      ],
+      "profile": {
+        "summary": "This document outlines the business travel and expense policy for shore staff of Kestrel Shipmanagement, covering booking procedures, accommodation standards, daily allowances, and expense claims.",
+        "topics": [
+          "travel booking guidelines",
+          "mode of travel",
+          "accommodation standards",
+          "daily allowances",
+          "international travel",
+          "travel advances",
+          "expense claims",
+          "personal vehicle use"
+        ]
+      }
+    }
+  ],
+  "skipped": [],
+  "chunks": 52
+}

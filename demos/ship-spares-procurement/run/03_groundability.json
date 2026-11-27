@@ -1,0 +1,284 @@
+{
+  "topics": [
+    {
+      "topic": "Part details",
+      "description": "Provide part number, description, system, maker, price, stock, lead time, and supplier for a given part.",
+      "verdict": "supported",
+      "model_verdict": "supported",
+      "evidence": [
+        {
+          "quote": "part_no: MA-1021",
+          "chunk_id": "spares-catalogue#r3"
+        },
+        {
+          "quote": "description: Piston ring set",
+          "chunk_id": "spares-catalogue#r3"
+        },
+        {
+          "quote": "system: Main Engine",
+          "chunk_id": "spares-catalogue#r3"
+        }
+      ],
+      "tool": "",
+      "missing": "",
+      "lexical_coverage": 0.92,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "spares-catalogue#r3",
+          "dense": 0.721
+        },
+        {
+          "chunk_id": "spares-catalogue#r9",
+          "dense": 0.705
+        },
+        {
+          "chunk_id": "spares-catalogue#r4",
+          "dense": 0.717
+        },
+        {
+          "chunk_id": "spares-catalogue#r16",
+          "dense": 0.704
+        },
+        {
+          "chunk_id": "spares-catalogue#r20",
+          "dense": 0.69
+        }
+      ]
+    },
+    {
+      "topic": "Order total calculation",
+      "description": "Calculate the total cost for a given quantity of a part, including unit price and any applicable discounts or minimum order quantities.",
+      "verdict": "partial",
+      "model_verdict": "partial",
+      "evidence": [
+        {
+          "quote": "The supplier offers a structured delivery charge policy based on the total value of the purchase order. Free delivery to the vessel for orders above USD 2,500 is provided as a standard benefit.",
+          "chunk_id": "supplier-terms-sup-01-harbourlin#6"
+        },
+        {
+          "quote": "part_no: PU-1112; description: Wear ring set; system: Pumps; maker: Azcue; unit_price_usd: 670.00; stock_qty: 0; lead_time_days: 21; supplier_id: SUP-02; min_order_qty: 1; critical_spare: yes",
+          "chunk_id": "spares-catalogue#r16"
+        },
+        {
+          "quote": "part_no: AU-1063; description: Thermostat element; system: Auxiliary Engine; maker: Daihatsu; unit_price_usd: 2250.00; stock_qty: 12; lead_time_days: 10; supplier_id: SUP-02; min_order_qty: 10; critical_spare: yes",
+          "chunk_id": "spares-catalogue#r9"
+        }
+      ],
+      "tool": "",
+      "missing": "The documents do not specify how discounts are applied or calculated, nor do they provide a clear method for handling minimum order quantities in the total cost calculation.",
+      "lexical_coverage": 0.71,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#2",
+          "dense": 0.692
+        },
+        {
+          "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+          "dense": 0.674
+        },
+        {
+          "chunk_id": "purchasing-policy#5",
+          "dense": 0.674
+        },
+        {
+          "chunk_id": "spares-catalogue#r16",
+          "dense": 0.688
+        },
+        {
+          "chunk_id": "spares-catalogue#r9",
+          "dense": 0.686
+        }
+      ]
+    },
+    {
+      "topic": "Supplier terms",
+      "description": "Explain payment terms, delivery ports, warranty, and free-delivery limits for the part's supplier.",
+      "verdict": "partial",
+      "model_verdict": "partial",
+      "evidence": [
+        {
+          "quote": "Free delivery to the vessel for orders above USD 2,500 is provided as a standard benefit.",
+          "chunk_id": "supplier-terms-sup-01-harbourlin#6"
+        },
+        {
+          "quote": "All spare parts supplied under this agreement carry a warranty period of 6 months from delivery.",
+          "chunk_id": "supplier-terms-sup-02-straits#8"
+        },
+        {
+          "quote": "The supplier maintains a strategic logistical network to support vessels across key maritime hubs. The designated delivery ports are Singapore, Port Klang and Colombo.",
+          "chunk_id": "supplier-terms-sup-02-straits#6"
+        }
+      ],
+      "tool": "",
+      "missing": "The documents do not specify the free-delivery limits for the part's supplier. They mention USD 2,500 for one supplier and USD 1,500 for another, but not a unified limit for the part's supplier.",
+      "lexical_coverage": 0.9,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+          "dense": 0.797
+        },
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#7",
+          "dense": 0.797
+        },
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#8",
+          "dense": 0.781
+        },
+        {
+          "chunk_id": "supplier-terms-sup-03-gulfmarine#7",
+          "dense": 0.761
+        },
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#6",
+          "dense": 0.754
+        }
+      ]
+    },
+    {
+      "topic": "Approval rules",
+      "description": "Identify which approval rules apply to the purchase based on the part's cost and quantity.",
+      "verdict": "supported",
+      "model_verdict": "supported",
+      "evidence": [
+        {
+          "quote": "Above USD 10,000: High-value procurement requires final approval from the Fleet Director.",
+          "chunk_id": "purchasing-policy#8"
+        },
+        {
+          "quote": "USD 1,000 to USD 10,000: These orders require dual approval from both the Technical Superintendent and the Purchase Manager.",
+          "chunk_id": "purchasing-policy#7"
+        },
+        {
+          "quote": "Up to USD 1,000: Approval authority rests with the Technical Superintendent.",
+          "chunk_id": "purchasing-policy#7"
+        }
+      ],
+      "tool": "",
+      "missing": "",
+      "lexical_coverage": 0.89,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "purchasing-policy#8",
+          "dense": 0.804
+        },
+        {
+          "chunk_id": "purchasing-policy#5",
+          "dense": 0.769
+        },
+        {
+          "chunk_id": "purchasing-policy#7",
+          "dense": 0.798
+        },
+        {
+          "chunk_id": "purchasing-policy#16",
+          "dense": 0.737
+        },
+        {
+          "chunk_id": "purchasing-policy#6",
+          "dense": 0.781
+        }
+      ]
+    },
+    {
+      "topic": "Weather outlook",
+      "description": "Provide the weather forecast for the delivery port to help plan vessel deliveries.",
+      "verdict": "tool",
+      "model_verdict": "unsupported",
+      "evidence": [],
+      "tool": "weather",
+      "missing": "The documents do not provide any specific information about weather conditions or forecasts for the delivery port. While the topic requires a weather outlook to plan vessel deliveries, the retrieved passages only mention that weather conditions affect delivery schedules but do not offer any actual weather data or forecasts.",
+      "lexical_coverage": 0.89,
+      "notes": [
+        "topic needs live data the 'weather' tool provides (registry capability match)"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#7",
+          "dense": 0.775
+        },
+        {
+          "chunk_id": "purchasing-policy#12",
+          "dense": 0.733
+        },
+        {
+          "chunk_id": "supplier-terms-sup-01-harbourlin#8",
+          "dense": 0.727
+        },
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#6",
+          "dense": 0.701
+        },
+        {
+          "chunk_id": "supplier-terms-sup-01-harbourlin#3",
+          "dense": 0.705
+        }
+      ]
+    },
+    {
+      "topic": "Shipment tracking",
+      "description": "Track the live status of shipments that are already in transit.",
+      "verdict": "unsupported",
+      "model_verdict": "unsupported",
+      "evidence": [],
+      "tool": "",
+      "missing": "The documents do not provide any information about tracking the live status of shipments in transit. They only discuss order placement, delivery charges, and logistical planning, but no mention is made of tracking systems, real-time updates, or status monitoring tools.",
+      "lexical_coverage": 0.67,
+      "notes": [],
+      "retrieved": [
+        {
+          "chunk_id": "supplier-terms-sup-02-straits#3",
+          "dense": 0.692
+        },
+        {
+          "chunk_id": "purchasing-policy#12",
+          "dense": 0.675
+        },
+        {
+          "chunk_id": "supplier-terms-sup-03-gulfmarine#4",
+          "dense": 0.659
+        },
+        {
+          "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+          "dense": 0.657
+        },
+        {
+          "chunk_id": "supplier-terms-sup-03-gulfmarine#8",
+          "dense": 0.646
+        }
+      ]
+    }
+  ],
+  "coverage": 0.667,
+  "supported": [
+    "Part details",
+    "Approval rules"
+  ],
+  "tool_backed": [
+    {
+      "topic": "Weather outlook",
+      "tool": "weather"
+    }
+  ],
+  "partial": [
+    {
+      "topic": "Order total calculation",
+      "missing": "The documents do not specify how discounts are applied or calculated, nor do they provide a clear method for handling minimum order quantities in the total cost calculation."
+    },
+    {
+      "topic": "Supplier terms",
+      "missing": "The documents do not specify the free-delivery limits for the part's supplier. They mention USD 2,500 for one supplier and USD 1,500 for another, but not a unified limit for the part's supplier."
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Shipment tracking",
+      "missing": "The documents do not provide any information about tracking the live status of shipments in transit. They only discuss order placement, delivery charges, and logistical planning, but no mention is made of tracking systems, real-time updates, or status monitoring tools."
+    }
+  ],
+  "disagreements": 1
+}

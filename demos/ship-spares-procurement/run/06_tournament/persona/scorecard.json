@@ -1,0 +1,124 @@
+{
+  "label": "tournament:persona",
+  "agent_fingerprint": "6410e284f3ec",
+  "overall": {
+    "passed": 15,
+    "n": 17,
+    "rate": 0.8824,
+    "ci95": [
+      0.657,
+      0.967
+    ]
+  },
+  "dev": {
+    "passed": 15,
+    "n": 17,
+    "rate": 0.8824,
+    "ci95": [
+      0.657,
+      0.967
+    ]
+  },
+  "holdout": {
+    "passed": 0,
+    "n": 0,
+    "rate": null,
+    "ci95": [
+      0.0,
+      1.0
+    ]
+  },
+  "by_kind": {
+    "answerable": {
+      "passed": 6,
+      "n": 6,
+      "rate": 1.0,
+      "ci95": [
+        0.61,
+        1.0
+      ]
+    },
+    "application": {
+      "passed": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+        0.342,
+        1.0
+      ]
+    },
+    "edge": {
+      "passed": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+        0.342,
+        1.0
+      ]
+    },
+    "gap": {
+      "passed": 1,
+      "n": 1,
+      "rate": 1.0,
+      "ci95": [
+        0.207,
+        1.0
+      ]
+    },
+    "multi_doc": {
+      "passed": 0,
+      "n": 2,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.658
+      ]
+    },
+    "must_refuse": {
+      "passed": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+        0.342,
+        1.0
+      ]
+    },
+    "tool": {
+      "passed": 2,
+      "n": 2,
+      "rate": 1.0,
+      "ci95": [
+        0.342,
+        1.0
+      ]
+    }
+  },
+  "metrics": {
+    "fact_recall_mean": 0.962,
+    "grounded_rate": 0.929,
+    "retrieval_recall": 1.0,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 0.01,
+    "runtime_errors": 0
+  },
+  "failures": {
+    "hallucination": 1,
+    "prompt_defect": 1
+  },
+  "failures_dev": {
+    "hallucination": 1,
+    "prompt_defect": 1
+  },
+  "failure_subtypes": {
+    "hallucination/unsupported_claims": 1,
+    "prompt_defect/incomplete_or_wrong": 1
+  },
+  "tools_used": {
+    "csv_lookup": 9,
+    "calculator": 1,
+    "weather": 1
+  }
+}

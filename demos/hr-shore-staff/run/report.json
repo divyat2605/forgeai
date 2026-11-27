@@ -1,0 +1,92 @@
+{
+  "agent": "Kestrel HR Assistant",
+  "holdout": {
+    "passed": 12,
+    "n": 13,
+    "rate": 0.9231,
+    "ci95": [
+      0.667,
+      0.986
+    ]
+  },
+  "dev": {
+    "passed": 16,
+    "n": 16,
+    "rate": 1.0,
+    "ci95": [
+      0.806,
+      1.0
+    ]
+  },
+  "overall": {
+    "passed": 28,
+    "n": 29,
+    "rate": 0.9655,
+    "ci95": [
+      0.828,
+      0.994
+    ]
+  },
+  "baseline": {
+    "holdout": {
+      "passed": 13,
+      "n": 13,
+      "rate": 1.0,
+      "ci95": [
+        0.772,
+        1.0
+      ]
+    },
+    "dev": {
+      "passed": 14,
+      "n": 16,
+      "rate": 0.875,
+      "ci95": [
+        0.64,
+        0.965
+      ]
+    }
+  },
+  "failures_final": {
+    "retrieval_miss": 1
+  },
+  "metrics_final": {
+    "fact_recall_mean": 0.979,
+    "grounded_rate": 1.0,
+    "retrieval_recall": 0.958,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 0.0,
+    "runtime_errors": 0
+  },
+  "canaries": {
+    "gold_pass": 1.0,
+    "corrupted_fail": 1.0,
+    "padded_pass": 1.0,
+    "fabrication_caught": 1.0,
+    "overall": 1.0,
+    "n_canaries": 24,
+    "verbosity_effect": 0.0
+  },
+  "gaps": [
+    {
+      "topic": "Payroll and income-tax deductions",
+      "missing": "The documents do not provide information about payroll processes or income-tax deductions. They only mention payroll-related allowances (such as internet reimbursement) but do not explain how income-tax deductions are calculated, withheld, or reported."
+    },
+    {
+      "topic": "Health insurance claims",
+      "missing": "The documents do not provide any information about the process of submitting health insurance claims, including how to submit claims, required documentation, approval workflows, or any related policies. The retrieved passages only cover travel and expense claims, sick leave, and leave requests, which are unrelated to health insurance claims."
+    }
+  ],
+  "tools": [],
+  "iterations": 1,
+  "cost": {
+    "wall_seconds": 0.4,
+    "calls": 346,
+    "cache_hits": 346,
+    "tokens_in": 0,
+    "tokens_out": 0
+  }
+}

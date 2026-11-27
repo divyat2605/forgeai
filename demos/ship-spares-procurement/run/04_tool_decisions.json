@@ -1,0 +1,54 @@
+[
+  {
+    "tool": "csv_lookup",
+    "attach": true,
+    "serves_topic": "Approval rules",
+    "model_said": true,
+    "model_reason": "The purchasing_policy.pdf contains approval rules based on the part's cost and quantity.",
+    "final_reason": "The purchasing_policy.pdf contains approval rules based on the part's cost and quantity.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": true,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "calculator",
+    "attach": true,
+    "serves_topic": "Order total calculation",
+    "model_said": true,
+    "model_reason": "The calculator is needed to compute the total cost for a given quantity of a part, including unit price and any applicable discounts or minimum order quantities.",
+    "final_reason": "The calculator is needed to compute the total cost for a given quantity of a part, including unit price and any applicable discounts or minimum order quantities.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": true,
+      "groundability_requires": false
+    }
+  },
+  {
+    "tool": "weather",
+    "attach": true,
+    "serves_topic": "Weather outlook",
+    "model_said": true,
+    "model_reason": "The weather tool provides the weather forecast for the delivery port to help plan vessel deliveries.",
+    "final_reason": "The weather tool provides the weather forecast for the delivery port to help plan vessel deliveries.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": true,
+      "groundability_requires": true
+    }
+  },
+  {
+    "tool": "current_date",
+    "attach": false,
+    "serves_topic": "",
+    "model_said": false,
+    "model_reason": "The current_date tool is not needed for the topics covered by FleetSpares.",
+    "final_reason": "The current_date tool is not needed for the topics covered by FleetSpares.",
+    "gates": {
+      "precondition": true,
+      "need_in_requirements": false,
+      "groundability_requires": false
+    }
+  }
+]

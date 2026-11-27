@@ -1,0 +1,124 @@
+{
+  "label": "iteration 0",
+  "agent_fingerprint": "016fe657ab28",
+  "overall": {
+    "passed": 26,
+    "n": 30,
+    "rate": 0.8667,
+    "ci95": [
+      0.703,
+      0.947
+    ]
+  },
+  "dev": {
+    "passed": 15,
+    "n": 17,
+    "rate": 0.8824,
+    "ci95": [
+      0.657,
+      0.967
+    ]
+  },
+  "holdout": {
+    "passed": 11,
+    "n": 13,
+    "rate": 0.8462,
+    "ci95": [
+      0.578,
+      0.957
+    ]
+  },
+  "by_kind": {
+    "answerable": {
+      "passed": 10,
+      "n": 10,
+      "rate": 1.0,
+      "ci95": [
+        0.722,
+        1.0
+      ]
+    },
+    "application": {
+      "passed": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+        0.51,
+        1.0
+      ]
+    },
+    "edge": {
+      "passed": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+        0.51,
+        1.0
+      ]
+    },
+    "gap": {
+      "passed": 1,
+      "n": 1,
+      "rate": 1.0,
+      "ci95": [
+        0.207,
+        1.0
+      ]
+    },
+    "multi_doc": {
+      "passed": 2,
+      "n": 4,
+      "rate": 0.5,
+      "ci95": [
+        0.15,
+        0.85
+      ]
+    },
+    "must_refuse": {
+      "passed": 4,
+      "n": 4,
+      "rate": 1.0,
+      "ci95": [
+        0.51,
+        1.0
+      ]
+    },
+    "tool": {
+      "passed": 1,
+      "n": 3,
+      "rate": 0.3333,
+      "ci95": [
+        0.061,
+        0.792
+      ]
+    }
+  },
+  "metrics": {
+    "fact_recall_mean": 0.917,
+    "grounded_rate": 0.96,
+    "retrieval_recall": 1.0,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0,
+    "citation_rate": 1.0,
+    "latency_p50_s": 0.0,
+    "latency_p95_s": 0.0,
+    "runtime_errors": 0
+  },
+  "failures": {
+    "prompt_defect": 3,
+    "hallucination": 1
+  },
+  "failures_dev": {
+    "prompt_defect": 1,
+    "hallucination": 1
+  },
+  "failure_subtypes": {
+    "prompt_defect/incomplete_or_wrong": 3,
+    "hallucination/unsupported_claims": 1
+  },
+  "tools_used": {
+    "csv_lookup": 13,
+    "calculator": 2,
+    "weather": 1
+  }
+}

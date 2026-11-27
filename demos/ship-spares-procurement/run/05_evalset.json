@@ -1,0 +1,898 @@
+{
+  "cases": [
+    {
+      "kind": "answerable",
+      "question": "What is the minimum order quantity for the piston ring set part MA-1021?",
+      "reference_answer": "The minimum order quantity for part MA-1021 is 10 units.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "min_order_qty: 10",
+            "chunk_id": "spares-catalogue#r3",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r3"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "spares-catalogue#r3",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E01"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the minimum order value for free delivery to the vessel from Harbourline?",
+      "reference_answer": "The minimum order value for free delivery is USD 2,500.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Free delivery to the vessel for orders above USD 2,500 is provided",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#6"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "supplier-terms-sup-01-harbourlin#6",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E02"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the approval limit for high-value procurement?",
+      "reference_answer": "High-value procurement above USD 10,000 requires final approval from the Fleet Director.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Above USD 10,000: High-value procurement requires final approval from the Fleet Director",
+            "chunk_id": "purchasing-policy#8",
+            "doc_id": "purchasing-policy"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#8"
+        ],
+        "source_docs": [
+          "purchasing-policy"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "purchasing-policy#8",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E03"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the minimum order quantity for part PU-1105?",
+      "reference_answer": "The minimum order quantity for part PU-1105 is 2 units.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "min_order_qty: 2",
+            "chunk_id": "spares-catalogue#r15",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r15"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "spares-catalogue#r15",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E04"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who approves purchases up to USD 1,000?",
+      "reference_answer": "The Technical Superintendent approves purchases up to USD 1,000.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Approval authority rests with the Technical Superintendent",
+            "chunk_id": "purchasing-policy#7",
+            "doc_id": "purchasing-policy"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#7"
+        ],
+        "source_docs": [
+          "purchasing-policy"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "purchasing-policy#7",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E05"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the delivery charge for orders below the specified amount from Gulf Marine?",
+      "reference_answer": "The delivery charge is USD 150 per order.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "a delivery charge of USD 150 per order applies",
+            "chunk_id": "supplier-terms-sup-03-gulfmarine#9",
+            "doc_id": "supplier-terms-sup-03-gulfmarine"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-03-gulfmarine#9"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-03-gulfmarine"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "supplier-terms-sup-03-gulfmarine#9",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E06"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the surcharge for express 24-hour delivery on orders?",
+      "reference_answer": "The surcharge for express 24-hour delivery is 18% of the order value.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Express (24-hour) delivery is available at a surcharge of 18% of the order value",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#4",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#4"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "supplier-terms-sup-01-harbourlin#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E07"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the responsibility of the vessel's chief engineer regarding spare parts delivery?",
+      "reference_answer": "The vessel's chief engineer must ensure the receiving team is available at the specified time.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "It is the responsibility of the vessel's chief engineer to ensure that the receiving team is available at the specified time to accept the goods",
+            "chunk_id": "supplier-terms-sup-02-straits#7",
+            "doc_id": "supplier-terms-sup-02-straits"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-02-straits#7"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-02-straits"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "supplier-terms-sup-02-straits#7",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E08"
+    },
+    {
+      "kind": "answerable",
+      "question": "What is the minimum order quantity for part number SA-1175?",
+      "reference_answer": "The minimum order quantity for part number SA-1175 is 1.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "min_order_qty: 1",
+            "chunk_id": "spares-catalogue#r25",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r25"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "spares-catalogue#r25",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E09"
+    },
+    {
+      "kind": "answerable",
+      "question": "Who is responsible for creating requisitions for spare parts?",
+      "reference_answer": "The Chief Engineer is responsible for creating requisitions.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "The Chief Engineer is solely responsible for raising these requisitions",
+            "chunk_id": "purchasing-policy#4",
+            "doc_id": "purchasing-policy"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#4"
+        ],
+        "source_docs": [
+          "purchasing-policy"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.answerable",
+        "seed_chunk": "purchasing-policy#4",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E10"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the time limits for emergency purchases and express delivery?",
+      "reference_answer": "Emergency purchases must be approved within 24 hours, and express delivery takes 24 hours with an 18% surcharge.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Emergency purchases must be approved by the Fleet Director within 24 hours of the initial request",
+            "chunk_id": "purchasing-policy#11",
+            "doc_id": "purchasing-policy"
+          },
+          {
+            "text": "Express (24-hour) delivery is available at a surcharge of 18% of the order value",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#4",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#11",
+          "supplier-terms-sup-01-harbourlin#4"
+        ],
+        "source_docs": [
+          "purchasing-policy",
+          "supplier-terms-sup-01-harbourlin"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "purchasing-policy#11",
+          "supplier-terms-sup-01-harbourlin#4"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E11"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the approval requirements and confirmation deadlines for a USD 15,000 part order?",
+      "reference_answer": "The Fleet Director must approve orders above USD 10,000, and suppliers confirm orders within 4 working hours.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Above USD 10,000: High-value procurement requires final approval from the Fleet Director",
+            "chunk_id": "purchasing-policy#8",
+            "doc_id": "purchasing-policy"
+          },
+          {
+            "text": "Orders are confirmed within 4 working hours",
+            "chunk_id": "supplier-terms-sup-02-straits#2",
+            "doc_id": "supplier-terms-sup-02-straits"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#8",
+          "supplier-terms-sup-02-straits#2"
+        ],
+        "source_docs": [
+          "purchasing-policy",
+          "supplier-terms-sup-02-straits"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "purchasing-policy#8",
+          "supplier-terms-sup-02-straits#2"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E12"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the warranty periods and return deadlines for defective parts under these supplier terms?",
+      "reference_answer": "The warranty periods are 12 months from delivery under SUP-01 and 6 months under SUP-02. Return deadlines are 7 days for SUP-01 and 10 days for SUP-02.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Warranty coverage extends to 12 months from delivery",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#9",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          },
+          {
+            "text": "warranty period of 6 months from delivery",
+            "chunk_id": "supplier-terms-sup-02-straits#8",
+            "doc_id": "supplier-terms-sup-02-straits"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#9",
+          "supplier-terms-sup-02-straits#8"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin",
+          "supplier-terms-sup-02-straits"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "supplier-terms-sup-01-harbourlin#9",
+          "supplier-terms-sup-02-straits#8"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E13"
+    },
+    {
+      "kind": "multi_doc",
+      "question": "What are the payment deadlines for invoices under the two supplier terms?",
+      "reference_answer": "Invoices must be paid in full within the period allowed by SUP-01, and submitted within 15 days of delivery under SUP-03.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Invoices must be paid in full within this period",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#7",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          },
+          {
+            "text": "within 15 days of delivery",
+            "chunk_id": "supplier-terms-sup-03-gulfmarine#7",
+            "doc_id": "supplier-terms-sup-03-gulfmarine"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#7",
+          "supplier-terms-sup-03-gulfmarine#7"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin",
+          "supplier-terms-sup-03-gulfmarine"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.multidoc",
+        "seed_chunks": [
+          "supplier-terms-sup-01-harbourlin#7",
+          "supplier-terms-sup-03-gulfmarine#7"
+        ],
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E14"
+    },
+    {
+      "kind": "application",
+      "question": "What happens if a payment is made before the 30-day period?",
+      "reference_answer": "The condition is whether the payment is made before the 30-day period, which determines if early settlement applies.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "early settlement is permitted without penalty",
+            "chunk_id": "supplier-terms-sup-02-straits#4",
+            "doc_id": "supplier-terms-sup-02-straits"
+          }
+        ],
+        "trap": "standard payment terms are net 30 days from invoice date",
+        "gold_chunks": [
+          "supplier-terms-sup-02-straits#4"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-02-straits"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "supplier-terms-sup-02-straits#4",
+        "condition": "The condition is whether the payment is made before the 30-day period, which determines if early settlement applies.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E15"
+    },
+    {
+      "kind": "application",
+      "question": "How many days do I have to return rejected goods?",
+      "reference_answer": "The return period is conditional on the goods being rejected due to damage upon receipt or non-conformance with specifications.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Rejected goods must be returned within 10 days",
+            "chunk_id": "supplier-terms-sup-02-straits#8",
+            "doc_id": "supplier-terms-sup-02-straits"
+          }
+        ],
+        "trap": "This timeframe is absolute to ensure inventory accuracy and financial reconciliation",
+        "gold_chunks": [
+          "supplier-terms-sup-02-straits#8"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-02-straits"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "supplier-terms-sup-02-straits#8",
+        "condition": "The return period is conditional on the goods being rejected due to damage upon receipt or non-conformance with specifications.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E16"
+    },
+    {
+      "kind": "application",
+      "question": "What is the delivery charge for an order valued at USD 2,000?",
+      "reference_answer": "The delivery charge depends on whether the order value is above or below USD 2,500.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "delivery charge of USD 120 per order",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          }
+        ],
+        "trap": "Free delivery to the vessel for orders above USD 2,500",
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#6"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "supplier-terms-sup-01-harbourlin#6",
+        "condition": "The delivery charge depends on whether the order value is above or below USD 2,500.",
+        "closed_book_correct": false
+      },
+      "split": "dev",
+      "id": "E17"
+    },
+    {
+      "kind": "application",
+      "question": "How many quotations are required for an order valued at USD 8,000?",
+      "reference_answer": "The order value of USD 8,000 falls within the range of USD 1,000 to USD 10,000, which requires 2 quotations.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Require at least 2 competitive quotations",
+            "chunk_id": "purchasing-policy#9",
+            "doc_id": "purchasing-policy"
+          }
+        ],
+        "trap": "Must include at least 3 competitive quotations",
+        "gold_chunks": [
+          "purchasing-policy#9"
+        ],
+        "source_docs": [
+          "purchasing-policy"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.application",
+        "seed_chunk": "purchasing-policy#9",
+        "condition": "The order value of USD 8,000 falls within the range of USD 1,000 to USD 10,000, which requires 2 quotations.",
+        "closed_book_correct": false
+      },
+      "split": "holdout",
+      "id": "E18"
+    },
+    {
+      "kind": "tool",
+      "question": "What is the unit price of the part with part number AU-1049?",
+      "reference_answer": "3695.00",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "unit_price_usd: 3695.00",
+            "chunk_id": "spares-catalogue#r7",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r7"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ],
+        "tool": "csv_lookup"
+      },
+      "provenance": {
+        "prompt": "evalgen.tool",
+        "seed_chunk": "spares-catalogue#r7"
+      },
+      "split": "dev",
+      "id": "E19"
+    },
+    {
+      "kind": "tool",
+      "question": "What is the total cost of purchasing the minimum order quantity of the Starting air valve?",
+      "reference_answer": "15025.00 USD",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "15025",
+            "chunk_id": "spares-catalogue#r6",
+            "doc_id": "spares-catalogue",
+            "computed": "3005.00 * 5"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r6"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ],
+        "tool": "calculator"
+      },
+      "provenance": {
+        "prompt": "evalgen.tool",
+        "seed_chunk": "spares-catalogue#r6",
+        "verified_by": "calculator re-computation"
+      },
+      "split": "holdout",
+      "id": "E20"
+    },
+    {
+      "kind": "tool",
+      "question": "What is the weather forecast for Fujairah for the next two days?",
+      "reference_answer": "(live data)",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "tool": "weather"
+      },
+      "provenance": {
+        "prompt": "(template: live data cannot have fixed facts)"
+      },
+      "split": "dev",
+      "id": "E21"
+    },
+    {
+      "kind": "edge",
+      "question": "whats the min quntity for piston ring set ma 1021",
+      "reference_answer": "The minimum order quantity for part MA-1021 is 10 units.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "min_order_qty: 10",
+            "chunk_id": "spares-catalogue#r3",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r3"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What is the minimum order quantity for the piston ring set part MA-1021?"
+      },
+      "split": "dev",
+      "id": "E22"
+    },
+    {
+      "kind": "edge",
+      "question": "I'm trying to get free delivery to the vessel from Harbourline, what is the minimum order value I need to meet?",
+      "reference_answer": "The minimum order value for free delivery is USD 2,500.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Free delivery to the vessel for orders above USD 2,500 is provided",
+            "chunk_id": "supplier-terms-sup-01-harbourlin#6",
+            "doc_id": "supplier-terms-sup-01-harbourlin"
+          }
+        ],
+        "gold_chunks": [
+          "supplier-terms-sup-01-harbourlin#6"
+        ],
+        "source_docs": [
+          "supplier-terms-sup-01-harbourlin"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What is the minimum order value for free delivery to the vessel from Harbourline?"
+      },
+      "split": "holdout",
+      "id": "E23"
+    },
+    {
+      "kind": "edge",
+      "question": "whats the apprival limat for high value purchas",
+      "reference_answer": "High-value procurement above USD 10,000 requires final approval from the Fleet Director.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "Above USD 10,000: High-value procurement requires final approval from the Fleet Director",
+            "chunk_id": "purchasing-policy#8",
+            "doc_id": "purchasing-policy"
+          }
+        ],
+        "gold_chunks": [
+          "purchasing-policy#8"
+        ],
+        "source_docs": [
+          "purchasing-policy"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "short, vague question typed in a hurry: lower case, no punctuation, one small typo",
+        "origin_question": "What is the approval limit for high-value procurement?"
+      },
+      "split": "holdout",
+      "id": "E24"
+    },
+    {
+      "kind": "edge",
+      "question": "I need to place an order for part PU-1105, but I want to know the minimum quantity required for the order.",
+      "reference_answer": "The minimum order quantity for part PU-1105 is 2 units.",
+      "expected": {
+        "should_refuse": false,
+        "key_facts": [
+          {
+            "text": "min_order_qty: 2",
+            "chunk_id": "spares-catalogue#r15",
+            "doc_id": "spares-catalogue"
+          }
+        ],
+        "gold_chunks": [
+          "spares-catalogue#r15"
+        ],
+        "source_docs": [
+          "spares-catalogue"
+        ]
+      },
+      "provenance": {
+        "prompt": "evalgen.rephrase",
+        "mode": "question that describes the user's own situation instead of naming the topic directly",
+        "origin_question": "What is the minimum order quantity for part PU-1105?"
+      },
+      "split": "dev",
+      "id": "E25"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can FleetSpares provide legal advice on contract terms with suppliers?",
+      "reference_answer": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Legal advice is a must-refuse topic."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.43
+      },
+      "split": "holdout",
+      "id": "E26"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "What personal data does FleetSpares collect from its users?",
+      "reference_answer": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Personal data is a must-refuse topic."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.0
+      },
+      "split": "holdout",
+      "id": "E27"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "How does FleetSpares handle disputes between departments?",
+      "reference_answer": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Other departments is a must-refuse topic."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.5
+      },
+      "split": "dev",
+      "id": "E28"
+    },
+    {
+      "kind": "must_refuse",
+      "question": "Can FleetSpares offer external financial advice on cost management strategies?",
+      "reference_answer": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "External financial advice is a must-refuse topic."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "present",
+          "present"
+        ],
+        "max_lexical_cover": 0.38
+      },
+      "split": "dev",
+      "id": "E29"
+    },
+    {
+      "kind": "gap",
+      "question": "Can you track the shipment status of my order?",
+      "reference_answer": "I can't assist with that request. My focus is on spare parts, procurement, and delivery logistics for the fleet purchasing team.",
+      "expected": {
+        "should_refuse": true,
+        "key_facts": [],
+        "gold_chunks": [],
+        "source_docs": [],
+        "refuse_reason": "Shipment tracking is not covered by the provided documents."
+      },
+      "provenance": {
+        "prompt": "evalgen.out_of_scope",
+        "label_votes": [
+          "absent",
+          "absent"
+        ],
+        "max_lexical_cover": 0.75
+      },
+      "split": "dev",
+      "id": "E30"
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "by_kind": {
+      "answerable": 10,
+      "multi_doc": 4,
+      "application": 4,
+      "tool": 3,
+      "edge": 4,
+      "must_refuse": 4,
+      "gap": 1
+    },
+    "dev": 17,
+    "holdout": 13,
+    "should_refuse": 5,
+    "checks": {
+      "answerable_generated": 18,
+      "multi_generated": 8,
+      "dropped_unverifiable_facts": 2,
+      "application_generated": 11,
+      "dropped_application_unverified": 3,
+      "tool_csv_lookup_generated": 1,
+      "tool_calculator_generated": 1,
+      "tool_weather_generated": 1,
+      "dropped_parametric_leakage": 1,
+      "dropped_refusal_label_wrong": 6
+    },
+    "plan": {
+      "answerable": 10,
+      "multi_doc": 4,
+      "edge": 4,
+      "application": 4,
+      "tool": 3,
+      "refuse": 6,
+      "gap": 1
+    }
+  },
+  "verification_notes": [
+    "fact repaired to verbatim span: \"Items marked as 'critical' in the official catalogue are subject to minimum stock level requirements\" -> 'Items marked as \"critical\" in the official catalogue\\nare subject to minimum stock level requirements'",
+    "quantity question but the fact holds no number: 'Items marked as \"critical\" in the official catalogue\\nare subject to minimum stock level requirements'",
+    "quantity question but the fact holds no number: 'after this deadline will be processed on the subsequent working day'",
+    "quantity question but the fact holds no number: 'deadline will be processed on the subsequent working day'",
+    "trap value missing or identical",
+    "trap value missing or identical",
+    "trap value missing or identical"
+  ]
+}
