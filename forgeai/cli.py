@@ -242,7 +242,9 @@ def cmd_replay(args) -> int:
     if (src / "tool_record.json").exists():
         shutil.copy2(src / "tool_record.json", dst / "tool_record.json")
     req = read_json(src / "02_requirements.json")
-    answers = [q["answer"] for q in req.get("interview", [])]
+    # replay the interview exactly: recorded answers keep their source; defaulted ones stay defaults
+    answers = [None if q.get("source") == "default" else {"answer": q["answer"], "source": q.get("source")}
+               for q in req.get("interview", [])]
     write_json(dst / "_answers.json", answers)
     brief = (src / "brief.md").read_text(encoding="utf-8")
     started = _dt.datetime.fromisoformat(man["started"]) if man.get("started") else None

@@ -96,8 +96,10 @@ def select_tools(run: Run) -> list[dict]:
     need_text = " ".join(f"{t['topic']} {t.get('description', '')}" for t in req["must_answer"]
                          if t["topic"] not in gap_topics).lower()
     tool_backed = {x["tool"] for x in g.get("tool_backed", [])}
-    table_evidence = any(any("#r" in r["chunk_id"] for r in t["retrieved"][:2]) for t in g.get("topics", [])
-                         if t["verdict"] != "unsupported")
+    # topics whose verified evidence (or best passage) is a table row: exact lookup is evidently needed
+    table_topics = [t["topic"] for t in g.get("topics", []) if t["verdict"] in ("supported", "partial") and
+                    (any("#r" in e["chunk_id"] for e in t["evidence"]) or any("#r" in r["chunk_id"] for r in t["retrieved"][:1]))]
+    table_evidence = bool(table_topics)
     out = []
     for name in REGISTRY:
         d = by_tool.get(name, {"tool": name, "attach": False, "serves_topic": "", "reason": "(no decision returned)"})
@@ -116,8 +118,10 @@ def select_tools(run: Run) -> list[dict]:
             attach, why = False, "vetoed: no supported requirement mentions a need this tool serves"
         if not attach and name in tool_backed and pre[name]:
             attach, why = True, "added: groundability audit found a required topic only this tool can serve"
-        if not attach and name == "csv_lookup" and pre[name] and table_evidence and need:
-            attach, why = True, "added: required topics are answered by table rows; exact lookup needed"
+        if not attach and name == "csv_lookup" and pre[name] and table_evidence:
+            attach, why = True, (f"added: supported topic(s) {', '.join(table_topics[:3])} are answered by table rows; "
+                                 "exact lookup needed")
+            d = {**d, "serves_topic": table_topics[0]}
         serves = d.get("serves_topic", "")
         if attach and not _topic_match(serves, req["must_answer"]):
             m = next((t for t in req["must_answer"] if re.search(NEED_PATTERNS[name],

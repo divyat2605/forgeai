@@ -61,6 +61,7 @@ def _manifest(run: Run, status: str, extra: dict | None = None) -> None:
         "platform": {"python": sys.version.split()[0], "os": platform.platform(), "machine": platform.machine()},
         "settings": run.settings.public(),
         "docs_dir": rel_posix(run.docs_dir, run.run_dir) if run.docs_dir else None,
+        "answers_file": run.__dict__.get("_answers_file"),
         "documents": [{"path": d.path, "sha256": d.sha256} for d in run.docs],
         "prompt_sha256": all_prompt_hashes(),
         "meter": run.gw.meter.snapshot(),
@@ -90,6 +91,15 @@ def build(settings: Settings, brief: str, docs_dir: Path, out_root: Path = Path(
     stamp = (now or _dt.datetime.now(IST)).strftime("%Y%m%d-%H%M%S")
     run_dir = Path(run_dir) if run_dir else Path(out_root) / f"{name or slugify(brief, 32)}-{stamp}"
     run_dir.mkdir(parents=True, exist_ok=True)
+    # a run folder must hold only this run's artifacts: clear leftovers (the replay cache and recorded
+    # tool results are kept, they are inputs), so appended logs never mix two runs
+    import shutil as _sh
+    if any(run_dir.iterdir()) and not (run_dir / "manifest.json").exists() and not (run_dir / "llm_cache.sqlite").exists():
+        raise FileExistsError(f"{run_dir} is not empty and is not a ForgeAI run folder - refusing to write into it")
+    for p in list(run_dir.iterdir()):
+        if p.name in ("llm_cache.sqlite", "tool_record.json", "_answers.json"):
+            continue
+        _sh.rmtree(p, ignore_errors=True) if p.is_dir() else p.unlink(missing_ok=True)
     gw = make_gateway(settings, run_dir, backend=backend)
     run = Run(settings=settings, run_dir=run_dir, gw=gw, brief=brief.strip(), docs_dir=docs_dir)
     run.__dict__["_now"] = now or _dt.datetime.now(IST)
@@ -101,6 +111,7 @@ def build(settings: Settings, brief: str, docs_dir: Path, out_root: Path = Path(
            f"embed {settings.embed_model} | {settings.backend}{' | REPLAY' if settings.replay else ''}")
     if family(settings.agent_model) == family(settings.judge_model):
         C.warn("judge and agent are the same model family: self-preference risk (use --judge-model)")
+    run.__dict__["_answers_file"] = rel_posix(answers_file, run_dir) if answers_file else None
     _manifest(run, "running")
     try:
         return _build(run, answers_file, force)

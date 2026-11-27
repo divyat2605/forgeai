@@ -85,8 +85,8 @@ def _ask(questions: list[dict], run: Run, answers_file: Path | None) -> list[dic
             notes = Path(answers_file).read_text(encoding="utf-8")
         else:
             data = read_json(answers_file)
-            if isinstance(data, list):
-                preset = {i: a for i, a in enumerate(data)}
+            if isinstance(data, list):   # replay format: [{"answer", "source"} | null, ...] keeps answer sources
+                preset = {i: a for i, a in enumerate(data) if a}
             elif isinstance(data, dict):
                 preset = {i: data.get(q["question"], data.get(str(i + 1))) for i, q in enumerate(questions)}
     if notes:
@@ -107,7 +107,11 @@ def _ask(questions: list[dict], run: Run, answers_file: Path | None) -> list[dic
     for i, q in enumerate(questions):
         ans, source = None, "default"
         if preset.get(i):
-            ans, source = str(preset[i]), ("requester-notes" if notes else "answers-file")
+            item = preset[i]
+            if isinstance(item, dict):
+                ans, source = str(item.get("answer", "")), item.get("source", "answers-file")
+            else:
+                ans, source = str(item), ("requester-notes" if notes else "answers-file")
         elif interactive:
             C.out(f"\n  {C.style(f'Q{i + 1}/{len(questions)}', 'bold')} {q['question']}")
             C.out(C.style(f"      (why: {q['why']})", "grey"))

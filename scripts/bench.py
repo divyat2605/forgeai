@@ -68,7 +68,11 @@ def main() -> int:
         row["expected"] = "stop" if name in EXPECT_STOP else "build"
         row["ok"] = (row["status"].startswith("stopped")) == (name in EXPECT_STOP)
         rows.append(row)
-    (ROOT / "bench" / "results.json").write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+    prev = ROOT / "bench" / "results.json"
+    if a.only and prev.exists():   # re-running some briefs keeps the others' rows
+        keep = [r for r in json.loads(prev.read_text(encoding="utf-8")) if r["name"] not in {x["name"] for x in rows}]
+        rows = sorted(keep + rows, key=lambda r: r["name"])
+    prev.write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
     L = ["# Factory benchmark (briefs the factory was never tuned on)", "",
          "| Brief | Expected | Outcome | Cases | Tools attached | Gaps flagged | Holdout baseline -> final | Judge canaries | Minutes |",
          "|---|---|---|---|---|---|---|---|---|"]
