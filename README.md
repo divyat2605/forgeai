@@ -24,11 +24,11 @@ It runs on small local models, and every claim those models make is checked by c
 ## 🎬 Demo video (7 min)
 
 <p align="center">
-  <a href="https://github.com/divyat2605/forgeai/releases/download/v1.0.0/ForgeAI-demo.mp4">
+  <a href="https://divyat2605.github.io/forgeai/">
     <img src="docs/assets/demo-thumb.jpg" alt="ForgeAI demo: a live, unattended build on an unseen brief" width="100%">
   </a>
   <br>
-  <sub><b><a href="https://github.com/divyat2605/forgeai/releases/download/v1.0.0/ForgeAI-demo.mp4">▶ Watch the demo</a></b>: a genuine, unattended run on a brief the factory had never seen (camera &amp; lighting hire desk, empty cache, 100% local). The guard flags the unsupported topic, tools are gated, one patch is accepted and others are rejected, and the report leads with the holdout score. Then chat with both committed agents, and CI.</sub>
+  <sub><b><a href="https://divyat2605.github.io/forgeai/">▶ Watch the demo</a></b> (plays in the browser · <a href="https://github.com/divyat2605/forgeai/releases/download/v1.0.0/ForgeAI-demo.mp4">download MP4</a>): a genuine, unattended run on a brief the factory had never seen (camera &amp; lighting hire desk, empty cache, 100% local). The guard flags the unsupported topic, tools are gated, one patch is accepted and others are rejected, and the report leads with the holdout score. Then chat with both committed agents, and CI.</sub>
 </p>
 
 ---
